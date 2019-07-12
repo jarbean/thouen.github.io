@@ -90,13 +90,18 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Thouen&#39;s Blog">
-<meta property="og:url" content="https://thouen.github.io/index.html">
+  <meta name="description" content="声明：  本教程不完善，只满足自用需求，不保证适用于任何人，也不为任何人负任何责任。如果你只是一个Linux新手，建议安装Deepin（深度）、Ubuntu、Linux Mint或者基于Archlinux的Manjaro等其他Linux发行版。没有网络请放弃安装ArchLinux。本教程的不足之处还请不吝指出。    制作启动盘下载系统你可以从清华大学开源镜像站、中科大开源镜像站或者选择其他镜像源">
+<meta name="keywords" content="Linux,Archlinux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Archlinux桌面版安装教程">
+<meta property="og:url" content="https://thouen.github.io/2019/07/12/Archlinux-desktop-installation-tutorial/index.html">
 <meta property="og:site_name" content="Thouen&#39;s Blog">
+<meta property="og:description" content="声明：  本教程不完善，只满足自用需求，不保证适用于任何人，也不为任何人负任何责任。如果你只是一个Linux新手，建议安装Deepin（深度）、Ubuntu、Linux Mint或者基于Archlinux的Manjaro等其他Linux发行版。没有网络请放弃安装ArchLinux。本教程的不足之处还请不吝指出。    制作启动盘下载系统你可以从清华大学开源镜像站、中科大开源镜像站或者选择其他镜像源">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-07-12T14:35:17.251Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Thouen&#39;s Blog">
+<meta name="twitter:title" content="Archlinux桌面版安装教程">
+<meta name="twitter:description" content="声明：  本教程不完善，只满足自用需求，不保证适用于任何人，也不为任何人负任何责任。如果你只是一个Linux新手，建议安装Deepin（深度）、Ubuntu、Linux Mint或者基于Archlinux的Manjaro等其他Linux发行版。没有网络请放弃安装ArchLinux。本教程的不足之处还请不吝指出。    制作启动盘下载系统你可以从清华大学开源镜像站、中科大开源镜像站或者选择其他镜像源">
 
 
 
@@ -104,7 +109,7 @@
 
   
   
-  <link rel="canonical" href="https://thouen.github.io/">
+  <link rel="canonical" href="https://thouen.github.io/2019/07/12/Archlinux-desktop-installation-tutorial/">
 
 
 
@@ -114,7 +119,7 @@
   };
 </script>
 
-  <title>Thouen's Blog</title>
+  <title>Archlinux桌面版安装教程 | Thouen's Blog</title>
   
 
 
@@ -162,8 +167,7 @@
     
   
 
-  <div class="container sidebar-position-right 
-  page-home">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -201,7 +205,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
 
     
     
@@ -305,9 +309,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -339,10 +343,8 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/12/Archlinux-desktop-installation-tutorial/" class="post-title-link" itemprop="url">Archlinux桌面版安装教程</a>
+          <h1 class="post-title" itemprop="name headline">Archlinux桌面版安装教程
+
               
             
           </h1>
@@ -411,9 +413,7 @@
       
 
       
-        
-          
-            <p>声明：</p>
+        <p>声明：</p>
 <blockquote>
 <p>本教程不完善，只满足自用需求，不保证适用于任何人，也不为任何人负任何责任。<br>如果你只是一个Linux新手，建议安装Deepin（深度）、Ubuntu、Linux Mint或者基于Archlinux的Manjaro等其他Linux发行版。<br>没有网络请放弃安装ArchLinux。<br>本教程的不足之处还请不吝指出。  </p>
 </blockquote>
@@ -542,13 +542,13 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> GTK_IM_MODULE=ibus</span><br><span class="line"><span class="built_in">export</span> QT_IM_MODULE=ibus</span><br><span class="line"><span class="built_in">export</span> XMODIFIERS=<span class="string">"@im=ibus"</span></span><br></pre></td></tr></table></figure>
 
 
-          
-        
       
     </div>
 
     
 
+    
+      
     
 
     
@@ -566,373 +566,41 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://thouen.github.io/2019/07/12/My-packages-installed-in-ArchLinux/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Thouen">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Thouen's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
         
+          
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/12/My-packages-installed-in-ArchLinux/" class="post-title-link" itemprop="url">My packages installed in Archlinux</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
+        <div class="post-tags">
           
+            <a href="/tags/Linux/" rel="tag"># Linux</a>
           
+            <a href="/tags/Archlinux/" rel="tag"># Archlinux</a>
           
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-07-12 10:21:19 / Modified: 11:33:37" itemprop="dateCreated datePublished" datetime="2019-07-12T10:21:19+08:00">2019-07-12</time>
-            </span>
-          
-
-          
-            
-
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Adobe-Flash-Player"><a href="#Adobe-Flash-Player" class="headerlink" title="Adobe Flash Player"></a>Adobe Flash Player</h1><p><code>flashplugin</code></p>
-<h1 id="CMake"><a href="#CMake" class="headerlink" title="CMake"></a>CMake</h1><p><code>cmake</code></p>
-<h1 id="Celestia"><a href="#Celestia" class="headerlink" title="Celestia"></a>Celestia</h1><p><code>celestia</code></p>
-<h1 id="Chemtool"><a href="#Chemtool" class="headerlink" title="Chemtool"></a>Chemtool</h1><p><code>chemtool</code></p>
-<h1 id="Code-OSS"><a href="#Code-OSS" class="headerlink" title="Code-OSS"></a>Code-OSS</h1><p><code>code</code></p>
-<h1 id="Code-Blocks-IDE"><a href="#Code-Blocks-IDE" class="headerlink" title="Code::Blocks IDE"></a>Code::Blocks IDE</h1><p><code>codeblocks</code></p>
-<h1 id="Dconf"><a href="#Dconf" class="headerlink" title="Dconf"></a>Dconf</h1><p><code>dconf-editor</code></p>
-<h1 id="Devhelp"><a href="#Devhelp" class="headerlink" title="Devhelp"></a>Devhelp</h1><p><code>devhelp</code></p>
-<h1 id="Fcitx"><a href="#Fcitx" class="headerlink" title="Fcitx"></a>Fcitx</h1><p><code>fcitx-im</code></p>
-<h1 id="Firefox"><a href="#Firefox" class="headerlink" title="Firefox"></a>Firefox</h1><p><code>firefox</code></p>
-<h1 id="Gnome"><a href="#Gnome" class="headerlink" title="Gnome"></a>Gnome</h1><p><code>gnome gnome-extra</code></p>
-<h1 id="Gnome-Tweaks"><a href="#Gnome-Tweaks" class="headerlink" title="Gnome Tweaks"></a>Gnome Tweaks</h1><p><code>gnome-tweaks</code></p>
-<h1 id="GNU-Image-Manipulation-Program"><a href="#GNU-Image-Manipulation-Program" class="headerlink" title="GNU Image Manipulation Program"></a>GNU Image Manipulation Program</h1><p><code>gimp</code></p>
-<h1 id="GParted"><a href="#GParted" class="headerlink" title="GParted"></a>GParted</h1><p><code>gparted</code></p>
-<h1 id="GVim"><a href="#GVim" class="headerlink" title="GVim"></a>GVim</h1><p><code>gvim</code></p>
-<h1 id="HexChat"><a href="#HexChat" class="headerlink" title="HexChat"></a>HexChat</h1><p><code>hexchat</code></p>
-<h1 id="LibreOffice"><a href="#LibreOffice" class="headerlink" title="LibreOffice"></a>LibreOffice</h1><p><code>libreoffice-still</code></p>
-<h1 id="Oracle-VM-VirtualBox"><a href="#Oracle-VM-VirtualBox" class="headerlink" title="Oracle VM VirtualBox"></a>Oracle VM VirtualBox</h1><p><code>virtualbox</code></p>
-<h1 id="Seahorse"><a href="#Seahorse" class="headerlink" title="Seahorse"></a>Seahorse</h1><p><code>seahorse</code></p>
-<h1 id="Stellarium"><a href="#Stellarium" class="headerlink" title="Stellarium"></a>Stellarium</h1><p><code>stellarium</code></p>
-<h1 id="Terminator"><a href="#Terminator" class="headerlink" title="Terminator"></a>Terminator</h1><p><code>terminator</code></p>
-<h1 id="Thunderbird"><a href="#Thunderbird" class="headerlink" title="Thunderbird"></a>Thunderbird</h1><p><code>thunderbird</code></p>
-<h1 id="VMPK"><a href="#VMPK" class="headerlink" title="VMPK"></a>VMPK</h1><p><code>vmpk</code></p>
-<h1 id="uGet"><a href="#uGet" class="headerlink" title="uGet"></a>uGet</h1><p><code>uget</code></p>
-<h1 id="StarDict"><a href="#StarDict" class="headerlink" title="StarDict"></a>StarDict</h1><p><code>stardict</code></p>
-<h1 id="curl"><a href="#curl" class="headerlink" title="curl"></a>curl</h1><p><code>curl</code></p>
-<h1 id="GCC"><a href="#GCC" class="headerlink" title="GCC"></a>GCC</h1><p><code>gcc</code></p>
-<h1 id="Go"><a href="#Go" class="headerlink" title="Go"></a>Go</h1><p><code>go</code></p>
-<h1 id="Jdk-OpenJDK"><a href="#Jdk-OpenJDK" class="headerlink" title="Jdk-OpenJDK"></a>Jdk-OpenJDK</h1><p>`jdk-openjdk</p>
-<h1 id="Julia"><a href="#Julia" class="headerlink" title="Julia"></a>Julia</h1><p><code>julia</code></p>
-<h1 id="Lua"><a href="#Lua" class="headerlink" title="Lua"></a>Lua</h1><p><code>lua</code></p>
-<h1 id="MariaDB"><a href="#MariaDB" class="headerlink" title="MariaDB"></a>MariaDB</h1><p><code>mariadb</code></p>
-<h1 id="Maven"><a href="#Maven" class="headerlink" title="Maven"></a>Maven</h1><p><code>maven</code></p>
-<h1 id="Nano"><a href="#Nano" class="headerlink" title="Nano"></a>Nano</h1><p><code>nano</code></p>
-<h1 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h1><p><code>nodejs</code></p>
-<h1 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h1><p><code>npm</code></p>
-<h1 id="p7zip"><a href="#p7zip" class="headerlink" title="p7zip"></a>p7zip</h1><p><code>p7zip</code></p>
-<h1 id="Ruby"><a href="#Ruby" class="headerlink" title="Ruby"></a>Ruby</h1><p><code>ruby</code></p>
-<h1 id="sudo"><a href="#sudo" class="headerlink" title="sudo"></a>sudo</h1><p><code>sudo</code></p>
-<h1 id="Tomcat"><a href="#Tomcat" class="headerlink" title="Tomcat"></a>Tomcat</h1><p><code>tomcat8 tomcat-native</code></p>
-<h1 id="VirtualBox"><a href="#VirtualBox" class="headerlink" title="VirtualBox"></a>VirtualBox</h1><p><code>virtualbox</code></p>
-<h1 id="w3m"><a href="#w3m" class="headerlink" title="w3m"></a>w3m</h1><p><code>w3m</code></p>
-<h1 id="wget"><a href="#wget" class="headerlink" title="wget"></a>wget</h1><p><code>wget</code></p>
-<h1 id="wqy-microhei"><a href="#wqy-microhei" class="headerlink" title="wqy-microhei"></a>wqy-microhei</h1><p><code>wqy-microhei</code></p>
-<h1 id="BaiduNetdisk"><a href="#BaiduNetdisk" class="headerlink" title="BaiduNetdisk"></a>BaiduNetdisk</h1><p><code>baidunetdisk</code></p>
-<h1 id="iease-Music"><a href="#iease-Music" class="headerlink" title="iease-Music"></a>iease-Music</h1><p><code>iease-music</code></p>
-<h1 id="Intellij-Idea"><a href="#Intellij-Idea" class="headerlink" title="Intellij Idea"></a>Intellij Idea</h1><p><code>intellij-idea-ultimate-edition</code></p>
-<h1 id="MacOS-Icon-Theme"><a href="#MacOS-Icon-Theme" class="headerlink" title="MacOS Icon Theme"></a>MacOS Icon Theme</h1><p><code>macos-icon-theme</code></p>
-<h1 id="Mojava-GTK-Theme"><a href="#Mojava-GTK-Theme" class="headerlink" title="Mojava-GTK-Theme"></a>Mojava-GTK-Theme</h1><p><code>mojava-gtk-theme-git</code></p>
-<h1 id="Netease-Cloud-Music"><a href="#Netease-Cloud-Music" class="headerlink" title="Netease Cloud Music"></a>Netease Cloud Music</h1><p><code>netease-cloud-music</code></p>
-<h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><p><code>nodejs-hexo</code></p>
-<h1 id="Rarcrack"><a href="#Rarcrack" class="headerlink" title="Rarcrack"></a>Rarcrack</h1><p><code>rarcrack</code></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
       
 
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://thouen.github.io/2019/07/10/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Thouen">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Thouen's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/10/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-              
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-07-10 20:59:30" itemprop="dateCreated datePublished" datetime="2019-07-10T20:59:30+08:00">2019-07-10</time>
-            </span>
-          
-
-          
-
-          
-
-          
+              <a href="/2019/07/12/My-packages-installed-in-ArchLinux/" rel="next" title="My packages installed in Archlinux">
+                <i class="fa fa-chevron-left"></i> My packages installed in Archlinux
+              </a>
             
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-          
-
-          
-          
-
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -942,14 +610,15 @@
   </article>
 
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -969,8 +638,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1031,6 +709,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#制作启动盘"><span class="nav-number">1.</span> <span class="nav-text">制作启动盘</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#下载系统"><span class="nav-number">1.1.</span> <span class="nav-text">下载系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用u盘制作启动盘"><span class="nav-number">1.2.</span> <span class="nav-text">使用u盘制作启动盘</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux平台"><span class="nav-number">1.2.1.</span> <span class="nav-text">Linux平台</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Windows平台"><span class="nav-number">1.2.2.</span> <span class="nav-text">Windows平台</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#启动电脑并配置BIOS"><span class="nav-number">2.</span> <span class="nav-text">启动电脑并配置BIOS</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装系统"><span class="nav-number">3.</span> <span class="nav-text">安装系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#进入安装环境"><span class="nav-number">3.1.</span> <span class="nav-text">进入安装环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#联网"><span class="nav-number">3.2.</span> <span class="nav-text">联网</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#连接无线网络"><span class="nav-number">3.2.1.</span> <span class="nav-text">连接无线网络</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#静态IP"><span class="nav-number">3.2.2.</span> <span class="nav-text">静态IP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#动态IP"><span class="nav-number">3.2.3.</span> <span class="nav-text">动态IP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#检查网络连接"><span class="nav-number">3.2.4.</span> <span class="nav-text">检查网络连接</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更新系统时间"><span class="nav-number">3.3.</span> <span class="nav-text">更新系统时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#建立硬盘分区"><span class="nav-number">3.4.</span> <span class="nav-text">建立硬盘分区</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#查看硬盘"><span class="nav-number">3.4.1.</span> <span class="nav-text">查看硬盘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#建立分区表"><span class="nav-number">3.4.2.</span> <span class="nav-text">建立分区表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#挂载分区"><span class="nav-number">3.4.3.</span> <span class="nav-text">挂载分区</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装基本系统"><span class="nav-number">3.5.</span> <span class="nav-text">安装基本系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装引导程序"><span class="nav-number">3.6.</span> <span class="nav-text">安装引导程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重启系统"><span class="nav-number">3.7.</span> <span class="nav-text">重启系统</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#个性化配置"><span class="nav-number">4.</span> <span class="nav-text">个性化配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装必备软件包"><span class="nav-number">4.1.</span> <span class="nav-text">安装必备软件包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地化文本"><span class="nav-number">4.2.</span> <span class="nav-text">本地化文本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装图形界面"><span class="nav-number">4.3.</span> <span class="nav-text">安装图形界面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Gnome"><span class="nav-number">4.3.1.</span> <span class="nav-text">Gnome</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deepin"><span class="nav-number">4.3.2.</span> <span class="nav-text">Deepin</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#KDE"><span class="nav-number">4.3.3.</span> <span class="nav-text">KDE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#XFCE"><span class="nav-number">4.3.4.</span> <span class="nav-text">XFCE</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#中文字体"><span class="nav-number">4.4.</span> <span class="nav-text">中文字体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#中文输入法安装"><span class="nav-number">4.5.</span> <span class="nav-text">中文输入法安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#fcitx"><span class="nav-number">4.5.1.</span> <span class="nav-text">fcitx</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ibus"><span class="nav-number">4.5.2.</span> <span class="nav-text">ibus</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -1157,6 +852,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
 
   <script src="/js/next-boot.js?v=7.2.0"></script>
 
@@ -1170,6 +869,8 @@
 
   
 
+
+  
 
 
   
