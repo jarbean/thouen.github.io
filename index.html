@@ -14,7 +14,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html class="theme-next gemini use-motion" lang="zh-Hans">
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -68,7 +68,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Gemini',
     version: '7.2.0',
     sidebar: {"position":"right","display":"post","offset":12,"onmobile":false},
     back2top: true,
@@ -284,9 +284,6 @@
   
 
   
-    
-
-  
 
   
 </nav>
@@ -302,6 +299,9 @@
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+            
+
           
           <div id="content" class="content">
             
@@ -322,7 +322,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://thouen.github.io/2019/07/12/Archlinux-desktop-installation-tutorial/">
+    <link itemprop="mainEntityOfPage" href="https://thouen.github.io/2019/07/12/My-packages-installed-in-ArchLinux/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Thouen">
@@ -342,7 +342,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/07/12/Archlinux-desktop-installation-tutorial/" class="post-title-link" itemprop="url">Archlinux桌面版安装教程</a>
+                <a href="/2019/07/12/My-packages-installed-in-ArchLinux/" class="post-title-link" itemprop="url">Archlinux常用软件</a>
               
             
           </h1>
@@ -367,13 +367,23 @@
                 
               
 
-              <time title="Created: 2019-07-12 14:05:04 / Modified: 22:35:17" itemprop="dateCreated datePublished" datetime="2019-07-12T14:05:04+08:00">2019-07-12</time>
+              <time title="Created: 2019-07-12 10:21:19" itemprop="dateCreated datePublished" datetime="2019-07-12T10:21:19+08:00">2019-07-12</time>
             </span>
           
 
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-07-14 20:59:58" itemprop="dateModified" datetime="2019-07-14T20:59:58+08:00">2019-07-14</time>
+              </span>
             
           
 
@@ -412,137 +422,20 @@
 
       
         
+          <h1 id="Archlinux官方仓库"><a href="#Archlinux官方仓库" class="headerlink" title="Archlinux官方仓库"></a>Archlinux官方仓库</h1><h2 id="Adobe-Flash-Player"><a href="#Adobe-Flash-Player" class="headerlink" title="Adobe Flash Player"></a>Adobe Flash Player</h2><p>flash插件。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pacman -S flashplugin</span><br></pre></td></tr></table></figure>
+
+<h2 id="CMake"><a href="#CMake" class="headerlink" title="CMake"></a>CMake</h2><p>一个跨平台的安装（编译工具）。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pacman -S cmake</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
           
-            <p>声明：</p>
-<blockquote>
-<p>本教程不完善，只满足自用需求，不保证适用于任何人，也不为任何人负任何责任。<br>如果你只是一个Linux新手，建议安装Deepin（深度）、Ubuntu、Linux Mint或者基于Archlinux的Manjaro等其他Linux发行版。<br>没有网络请放弃安装ArchLinux。<br>本教程的不足之处还请不吝指出。  </p>
-</blockquote>
-<h1 id="制作启动盘"><a href="#制作启动盘" class="headerlink" title="制作启动盘"></a>制作启动盘</h1><h2 id="下载系统"><a href="#下载系统" class="headerlink" title="下载系统"></a>下载系统</h2><p>你可以从<a href="https://mirrors.tuna.tsinghua.edu.cn/archlinux/iso/latest/" target="_blank" rel="noopener">清华大学开源镜像站</a>、<a href="https://mirrors.ustc.edu.cn/archlinux/iso/latest/" target="_blank" rel="noopener">中科大开源镜像站</a>或者选择<a href="https://www.archlinux.org/download/#download-mirrors" target="_blank" rel="noopener">其他镜像源</a>下载最新的ArchLinux系统。<br>下载完成之后你还可以使用Md5或sha1方式校验一下。</p>
-<h2 id="使用u盘制作启动盘"><a href="#使用u盘制作启动盘" class="headerlink" title="使用u盘制作启动盘"></a>使用u盘制作启动盘</h2><h3 id="Linux平台"><a href="#Linux平台" class="headerlink" title="Linux平台"></a>Linux平台</h3><p>首先，确定U盘挂载成功。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ lsblk</span><br></pre></td></tr></table></figure>
-
-<p>开始制作：if是你下载的archlinux系统iso文件路径，of是你的u盘位置，一般情况下为<code>/dev/sdb</code>。一定要等到sync完成，所有数据写入之后再拔掉u盘。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo dd bs=4M <span class="keyword">if</span>=archlinux.iso of=/dev/sdx status=progress &amp;&amp; sync</span><br></pre></td></tr></table></figure>
-
-<h3 id="Windows平台"><a href="#Windows平台" class="headerlink" title="Windows平台"></a>Windows平台</h3><p>建议使用<a href="https://rufus.akeo.ie/?locale=zh_CN/" target="_blank" rel="noopener">Rufus</a>或<a href="http://sourceforge.net/p/usbwriter/wiki/Documentation/" target="_blank" rel="noopener">USBwriter</a>制作启动盘。不要用UtralISO（软碟通），因为没有用。</p>
-<h1 id="启动电脑并配置BIOS"><a href="#启动电脑并配置BIOS" class="headerlink" title="启动电脑并配置BIOS"></a>启动电脑并配置BIOS</h1><p>开机或重启 -&gt; 打开BIOS -&gt; 设置允许电脑从u盘启动。</p>
-<h1 id="安装系统"><a href="#安装系统" class="headerlink" title="安装系统"></a>安装系统</h1><h2 id="进入安装环境"><a href="#进入安装环境" class="headerlink" title="进入安装环境"></a>进入安装环境</h2><p>电脑从u盘启动后，看到Arch菜单出现，选择Boot Arch Linux，点击<code>Enter</code>进入安装环境。屏幕上如果报错请检查BIOS配置，问题比较复杂的建议百度或者放弃安装。</p>
-<h2 id="联网"><a href="#联网" class="headerlink" title="联网"></a>联网</h2><h3 id="连接无线网络"><a href="#连接无线网络" class="headerlink" title="连接无线网络"></a>连接无线网络</h3><p>参考<a href="https://wiki.archlinux.org/index.php/Wireless_network_configuration" target="_blank" rel="noopener">链接</a></p>
-<h3 id="静态IP"><a href="#静态IP" class="headerlink" title="静态IP"></a>静态IP</h3><p>参考<a href="https://wiki.archlinux.org/index.php/Network_configuration#Static_IP_address" target="_blank" rel="noopener">链接</a></p>
-<h3 id="动态IP"><a href="#动态IP" class="headerlink" title="动态IP"></a>动态IP</h3><p>参考<a href="https://wiki.archlinux.org/index.php/Network_configuration#DHCP" target="_blank" rel="noopener">链接</a></p>
-<h3 id="检查网络连接"><a href="#检查网络连接" class="headerlink" title="检查网络连接"></a>检查网络连接</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ping www.baidu.com</span><br></pre></td></tr></table></figure>
-
-<h2 id="更新系统时间"><a href="#更新系统时间" class="headerlink" title="更新系统时间"></a>更新系统时间</h2><p>开启时间同步</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ timedatectl <span class="built_in">set</span>-ntp <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="建立硬盘分区"><a href="#建立硬盘分区" class="headerlink" title="建立硬盘分区"></a>建立硬盘分区</h2><h3 id="查看硬盘"><a href="#查看硬盘" class="headerlink" title="查看硬盘"></a>查看硬盘</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ fdisk -l</span><br></pre></td></tr></table></figure>
-
-<h3 id="建立分区表"><a href="#建立分区表" class="headerlink" title="建立分区表"></a>建立分区表</h3><table>
-<thead>
-<tr>
-<th>挂载点</th>
-<th>大小</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>/mnt/efi</td>
-<td>512MiB</td>
-<td>引导分区</td>
-</tr>
-<tr>
-<td>/mnt</td>
-<td>500MiB~50GiB</td>
-<td>根目录</td>
-</tr>
-<tr>
-<td>[swap]</td>
-<td>内存条1～2倍大小</td>
-<td>Linux交换空间</td>
-</tr>
-<tr>
-<td>/home</td>
-<td>剩余空间</td>
-<td>家目录</td>
-</tr>
-<tr>
-<td>### 格式化分区</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>注意：根据自己分区的情况进行格式化，谨慎操作。</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ mkfs.ext4 /dev/sda1</span><br><span class="line">$ mkfs.ext4 /dev/sda2</span><br><span class="line">$ mkswap /dev/sda3</span><br><span class="line">$ mkfs.ext4 /dev/sda4</span><br></pre></td></tr></table></figure></td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<h3 id="挂载分区"><a href="#挂载分区" class="headerlink" title="挂载分区"></a>挂载分区</h3><p>注意：根据自己分区的情况进行挂载，谨慎操作。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ mount /dev/sda2 /mnt</span><br><span class="line">$ mkdir /mnt/efi</span><br><span class="line">$ mount /dev/sda1 /mnt/efi</span><br><span class="line">$ mkdir /mnt/home</span><br><span class="line">$ mount /dev/sda4 /mnt/home</span><br><span class="line">$ swapon /dev/sda3</span><br></pre></td></tr></table></figure>
-
-<h2 id="安装基本系统"><a href="#安装基本系统" class="headerlink" title="安装基本系统"></a>安装基本系统</h2><p>安装base组</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pacstrap /mnt base</span><br></pre></td></tr></table></figure>
-
-<p>安装base-devel组（开发用的一些组件）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pacstrap /mnt base-devel</span><br></pre></td></tr></table></figure>
-
-<p>退出chroot环境</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
-
-<p>设置root用户的密码</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ passwd</span><br></pre></td></tr></table></figure>
-
-<h2 id="安装引导程序"><a href="#安装引导程序" class="headerlink" title="安装引导程序"></a>安装引导程序</h2><p>安装<code>grub</code>和<code>efibootmgr</code>软件包</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pacman -S grub efibootmgr os-prober</span><br></pre></td></tr></table></figure>
-
-<p>安装GRUB并生成主配置文件，谨慎操作</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ grub-install --target=x86_64-efi --efi-directory=/mnt/efi --bootloader-id=GRUB</span><br><span class="line">$ grub-mkconfig -o /boot/grub/grub.cfg</span><br></pre></td></tr></table></figure>
-
-<h2 id="重启系统"><a href="#重启系统" class="headerlink" title="重启系统"></a>重启系统</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">exit</span></span><br><span class="line">$ reboot</span><br></pre></td></tr></table></figure>
-
-<h1 id="个性化配置"><a href="#个性化配置" class="headerlink" title="个性化配置"></a>个性化配置</h1><h2 id="安装必备软件包"><a href="#安装必备软件包" class="headerlink" title="安装必备软件包"></a>安装必备软件包</h2><p>###</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ pacman -S vim</span><br><span class="line">$ pacman -S sudo</span><br><span class="line">$ pacman -S pacaur</span><br></pre></td></tr></table></figure>
-
-<h2 id="本地化文本"><a href="#本地化文本" class="headerlink" title="本地化文本"></a>本地化文本</h2><p>修改<code>/etc/locale.gen</code>文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim /etc/locale.gen</span><br></pre></td></tr></table></figure>
-
-<p>移除你需要语言对应行前面的<code>#</code>,如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">en_US.UTF-8 UTF-8</span><br><span class="line">zh_CN.UTF-8 UTF-8</span><br></pre></td></tr></table></figure>
-
-<p>执行<code>locale-gen</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ locale-gen</span><br></pre></td></tr></table></figure>
-
-<h2 id="安装图形界面"><a href="#安装图形界面" class="headerlink" title="安装图形界面"></a>安装图形界面</h2><h3 id="Gnome"><a href="#Gnome" class="headerlink" title="Gnome"></a>Gnome</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ pacman -S gnome gnome-extra</span><br><span class="line">$ systemctl <span class="built_in">enable</span> gdm</span><br></pre></td></tr></table></figure>
-
-<h3 id="Deepin"><a href="#Deepin" class="headerlink" title="Deepin"></a>Deepin</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ pacman -S deepin deepin-extra lightdm</span><br><span class="line">$ systemctl <span class="built_in">enable</span> lightdm</span><br></pre></td></tr></table></figure>
-
-<h3 id="KDE"><a href="#KDE" class="headerlink" title="KDE"></a>KDE</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ pacman -S plasma sddm</span><br><span class="line">$ systemctl <span class="built_in">enable</span> sddm</span><br></pre></td></tr></table></figure>
-
-<h3 id="XFCE"><a href="#XFCE" class="headerlink" title="XFCE"></a>XFCE</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ pacman -S xfce4 lightdm</span><br><span class="line">$ systemctl <span class="built_in">enable</span> lightdm</span><br></pre></td></tr></table></figure>
-
-<h2 id="中文字体"><a href="#中文字体" class="headerlink" title="中文字体"></a>中文字体</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pacman -S wqy-microhei wqy-zenhei</span><br></pre></td></tr></table></figure>
-
-<h2 id="中文输入法安装"><a href="#中文输入法安装" class="headerlink" title="中文输入法安装"></a>中文输入法安装</h2><h3 id="fcitx"><a href="#fcitx" class="headerlink" title="fcitx"></a>fcitx</h3><p>安装fcitx</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ pacman -S fcitx-im fcitx-configtool</span><br><span class="line">$ pacaur -S fcitx-sogoupinyin</span><br></pre></td></tr></table></figure>
-
-<p>启用fcitx:在<code>～/.bashrc</code>文件中添加如下内容</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> GTK_IM_MODULE=fcitx</span><br><span class="line"><span class="built_in">export</span> QT_IM_MODULE=fcitx</span><br><span class="line"><span class="built_in">export</span> XMODIFIERS=<span class="string">"@im=fcitx"</span></span><br></pre></td></tr></table></figure>
-
-<p>使用Gnome桌面的同学还应执行下面的代码</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gsettings <span class="built_in">set</span> org.gnome.settings-daemon.plugins.xsettings overrides <span class="string">"&#123;'Gtk/IMModule':&lt;'fcitx'&gt;&#125;"</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="ibus"><a href="#ibus" class="headerlink" title="ibus"></a>ibus</h3><p>安装ibus</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pacman -S ibus ibus-pinyin</span><br></pre></td></tr></table></figure>
-
-<p>启用fcitx:在<code>～/.bashrc</code>文件中添加如下内容</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> GTK_IM_MODULE=ibus</span><br><span class="line"><span class="built_in">export</span> QT_IM_MODULE=ibus</span><br><span class="line"><span class="built_in">export</span> XMODIFIERS=<span class="string">"@im=ibus"</span></span><br></pre></td></tr></table></figure>
-
-
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/07/12/My-packages-installed-in-ArchLinux/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
           
+          <!--/noindex-->
         
       
     </div>
@@ -599,7 +492,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://thouen.github.io/2019/07/12/My-packages-installed-in-ArchLinux/">
+    <link itemprop="mainEntityOfPage" href="https://thouen.github.io/2019/07/11/Archlinux-desktop-installation-tutorial/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Thouen">
@@ -619,7 +512,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/07/12/My-packages-installed-in-ArchLinux/" class="post-title-link" itemprop="url">My packages installed in Archlinux</a>
+                <a href="/2019/07/11/Archlinux-desktop-installation-tutorial/" class="post-title-link" itemprop="url">Archlinux桌面版安装教程</a>
               
             
           </h1>
@@ -644,13 +537,23 @@
                 
               
 
-              <time title="Created: 2019-07-12 10:21:19 / Modified: 11:33:37" itemprop="dateCreated datePublished" datetime="2019-07-12T10:21:19+08:00">2019-07-12</time>
+              <time title="Created: 2019-07-11 14:05:04" itemprop="dateCreated datePublished" datetime="2019-07-11T14:05:04+08:00">2019-07-11</time>
             </span>
           
 
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-07-14 21:01:53" itemprop="dateModified" datetime="2019-07-14T21:01:53+08:00">2019-07-14</time>
+              </span>
             
           
 
@@ -689,61 +592,18 @@
 
       
         
+          <h1 id="制作启动盘"><a href="#制作启动盘" class="headerlink" title="制作启动盘"></a>制作启动盘</h1><h2 id="下载系统"><a href="#下载系统" class="headerlink" title="下载系统"></a>下载系统</h2><p>你可以从<a href="https://mirrors.tuna.tsinghua.edu.cn/archlinux/iso/latest/" target="_blank" rel="noopener">清华大学开源镜像站</a>、<a href="https://mirrors.ustc.edu.cn/archlinux/iso/latest/" target="_blank" rel="noopener">中科大开源镜像站</a>或者选择<a href="https://www.archlinux.org/download/#download-mirrors" target="_blank" rel="noopener">其他镜像源</a>下载最新的ArchLinux系统。<br>下载完成之后你还可以使用Md5或sha1方式校验一下。</p>
+<h2 id="使用u盘制作启动盘"><a href="#使用u盘制作启动盘" class="headerlink" title="使用u盘制作启动盘"></a>使用u盘制作启动盘</h2><h3 id="Linux平台"><a href="#Linux平台" class="headerlink" title="Linux平台"></a>Linux平台</h3><p>确定U盘是否挂载成功。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ lsblk</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
           
-            <h1 id="Adobe-Flash-Player"><a href="#Adobe-Flash-Player" class="headerlink" title="Adobe Flash Player"></a>Adobe Flash Player</h1><p><code>flashplugin</code></p>
-<h1 id="CMake"><a href="#CMake" class="headerlink" title="CMake"></a>CMake</h1><p><code>cmake</code></p>
-<h1 id="Celestia"><a href="#Celestia" class="headerlink" title="Celestia"></a>Celestia</h1><p><code>celestia</code></p>
-<h1 id="Chemtool"><a href="#Chemtool" class="headerlink" title="Chemtool"></a>Chemtool</h1><p><code>chemtool</code></p>
-<h1 id="Code-OSS"><a href="#Code-OSS" class="headerlink" title="Code-OSS"></a>Code-OSS</h1><p><code>code</code></p>
-<h1 id="Code-Blocks-IDE"><a href="#Code-Blocks-IDE" class="headerlink" title="Code::Blocks IDE"></a>Code::Blocks IDE</h1><p><code>codeblocks</code></p>
-<h1 id="Dconf"><a href="#Dconf" class="headerlink" title="Dconf"></a>Dconf</h1><p><code>dconf-editor</code></p>
-<h1 id="Devhelp"><a href="#Devhelp" class="headerlink" title="Devhelp"></a>Devhelp</h1><p><code>devhelp</code></p>
-<h1 id="Fcitx"><a href="#Fcitx" class="headerlink" title="Fcitx"></a>Fcitx</h1><p><code>fcitx-im</code></p>
-<h1 id="Firefox"><a href="#Firefox" class="headerlink" title="Firefox"></a>Firefox</h1><p><code>firefox</code></p>
-<h1 id="Gnome"><a href="#Gnome" class="headerlink" title="Gnome"></a>Gnome</h1><p><code>gnome gnome-extra</code></p>
-<h1 id="Gnome-Tweaks"><a href="#Gnome-Tweaks" class="headerlink" title="Gnome Tweaks"></a>Gnome Tweaks</h1><p><code>gnome-tweaks</code></p>
-<h1 id="GNU-Image-Manipulation-Program"><a href="#GNU-Image-Manipulation-Program" class="headerlink" title="GNU Image Manipulation Program"></a>GNU Image Manipulation Program</h1><p><code>gimp</code></p>
-<h1 id="GParted"><a href="#GParted" class="headerlink" title="GParted"></a>GParted</h1><p><code>gparted</code></p>
-<h1 id="GVim"><a href="#GVim" class="headerlink" title="GVim"></a>GVim</h1><p><code>gvim</code></p>
-<h1 id="HexChat"><a href="#HexChat" class="headerlink" title="HexChat"></a>HexChat</h1><p><code>hexchat</code></p>
-<h1 id="LibreOffice"><a href="#LibreOffice" class="headerlink" title="LibreOffice"></a>LibreOffice</h1><p><code>libreoffice-still</code></p>
-<h1 id="Oracle-VM-VirtualBox"><a href="#Oracle-VM-VirtualBox" class="headerlink" title="Oracle VM VirtualBox"></a>Oracle VM VirtualBox</h1><p><code>virtualbox</code></p>
-<h1 id="Seahorse"><a href="#Seahorse" class="headerlink" title="Seahorse"></a>Seahorse</h1><p><code>seahorse</code></p>
-<h1 id="Stellarium"><a href="#Stellarium" class="headerlink" title="Stellarium"></a>Stellarium</h1><p><code>stellarium</code></p>
-<h1 id="Terminator"><a href="#Terminator" class="headerlink" title="Terminator"></a>Terminator</h1><p><code>terminator</code></p>
-<h1 id="Thunderbird"><a href="#Thunderbird" class="headerlink" title="Thunderbird"></a>Thunderbird</h1><p><code>thunderbird</code></p>
-<h1 id="VMPK"><a href="#VMPK" class="headerlink" title="VMPK"></a>VMPK</h1><p><code>vmpk</code></p>
-<h1 id="uGet"><a href="#uGet" class="headerlink" title="uGet"></a>uGet</h1><p><code>uget</code></p>
-<h1 id="StarDict"><a href="#StarDict" class="headerlink" title="StarDict"></a>StarDict</h1><p><code>stardict</code></p>
-<h1 id="curl"><a href="#curl" class="headerlink" title="curl"></a>curl</h1><p><code>curl</code></p>
-<h1 id="GCC"><a href="#GCC" class="headerlink" title="GCC"></a>GCC</h1><p><code>gcc</code></p>
-<h1 id="Go"><a href="#Go" class="headerlink" title="Go"></a>Go</h1><p><code>go</code></p>
-<h1 id="Jdk-OpenJDK"><a href="#Jdk-OpenJDK" class="headerlink" title="Jdk-OpenJDK"></a>Jdk-OpenJDK</h1><p>`jdk-openjdk</p>
-<h1 id="Julia"><a href="#Julia" class="headerlink" title="Julia"></a>Julia</h1><p><code>julia</code></p>
-<h1 id="Lua"><a href="#Lua" class="headerlink" title="Lua"></a>Lua</h1><p><code>lua</code></p>
-<h1 id="MariaDB"><a href="#MariaDB" class="headerlink" title="MariaDB"></a>MariaDB</h1><p><code>mariadb</code></p>
-<h1 id="Maven"><a href="#Maven" class="headerlink" title="Maven"></a>Maven</h1><p><code>maven</code></p>
-<h1 id="Nano"><a href="#Nano" class="headerlink" title="Nano"></a>Nano</h1><p><code>nano</code></p>
-<h1 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h1><p><code>nodejs</code></p>
-<h1 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h1><p><code>npm</code></p>
-<h1 id="p7zip"><a href="#p7zip" class="headerlink" title="p7zip"></a>p7zip</h1><p><code>p7zip</code></p>
-<h1 id="Ruby"><a href="#Ruby" class="headerlink" title="Ruby"></a>Ruby</h1><p><code>ruby</code></p>
-<h1 id="sudo"><a href="#sudo" class="headerlink" title="sudo"></a>sudo</h1><p><code>sudo</code></p>
-<h1 id="Tomcat"><a href="#Tomcat" class="headerlink" title="Tomcat"></a>Tomcat</h1><p><code>tomcat8 tomcat-native</code></p>
-<h1 id="VirtualBox"><a href="#VirtualBox" class="headerlink" title="VirtualBox"></a>VirtualBox</h1><p><code>virtualbox</code></p>
-<h1 id="w3m"><a href="#w3m" class="headerlink" title="w3m"></a>w3m</h1><p><code>w3m</code></p>
-<h1 id="wget"><a href="#wget" class="headerlink" title="wget"></a>wget</h1><p><code>wget</code></p>
-<h1 id="wqy-microhei"><a href="#wqy-microhei" class="headerlink" title="wqy-microhei"></a>wqy-microhei</h1><p><code>wqy-microhei</code></p>
-<h1 id="BaiduNetdisk"><a href="#BaiduNetdisk" class="headerlink" title="BaiduNetdisk"></a>BaiduNetdisk</h1><p><code>baidunetdisk</code></p>
-<h1 id="iease-Music"><a href="#iease-Music" class="headerlink" title="iease-Music"></a>iease-Music</h1><p><code>iease-music</code></p>
-<h1 id="Intellij-Idea"><a href="#Intellij-Idea" class="headerlink" title="Intellij Idea"></a>Intellij Idea</h1><p><code>intellij-idea-ultimate-edition</code></p>
-<h1 id="MacOS-Icon-Theme"><a href="#MacOS-Icon-Theme" class="headerlink" title="MacOS Icon Theme"></a>MacOS Icon Theme</h1><p><code>macos-icon-theme</code></p>
-<h1 id="Mojava-GTK-Theme"><a href="#Mojava-GTK-Theme" class="headerlink" title="Mojava-GTK-Theme"></a>Mojava-GTK-Theme</h1><p><code>mojava-gtk-theme-git</code></p>
-<h1 id="Netease-Cloud-Music"><a href="#Netease-Cloud-Music" class="headerlink" title="Netease Cloud Music"></a>Netease Cloud Music</h1><p><code>netease-cloud-music</code></p>
-<h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><p><code>nodejs-hexo</code></p>
-<h1 id="Rarcrack"><a href="#Rarcrack" class="headerlink" title="Rarcrack"></a>Rarcrack</h1><p><code>rarcrack</code></p>
-
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/07/11/Archlinux-desktop-installation-tutorial/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
           
+          <!--/noindex-->
         
       
     </div>
@@ -850,6 +710,20 @@
           
 
           
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-07-14 21:01:23" itemprop="dateModified" datetime="2019-07-14T21:01:23+08:00">2019-07-14</time>
+              </span>
+            
+          
 
           
 
@@ -886,22 +760,19 @@
 
       
         
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/07/10/hello-world/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1008,7 +879,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -1020,6 +893,28 @@
 
           
 
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/thouen" title="GitHub &rarr; https://github.com/thouen" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="mailto:thouen@163.com" title="E-Mail &rarr; mailto:thouen@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i></a>
+                </span>
+              
+            </div>
           
 
           
@@ -1066,7 +961,7 @@
 
 
 
-  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.2.0</div>
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.2.0</div>
 
 
 
@@ -1152,7 +1047,10 @@
   
 
 
-  <script src="/js/schemes/muse.js?v=7.2.0"></script>
+  <script src="/js/affix.js?v=7.2.0"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.2.0"></script>
+
 
 
 
