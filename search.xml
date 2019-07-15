@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[如何在U盘设备上安装Archlinux？]]></title>
+    <url>%2F2019%2F07%2F15%2FInstalling-Archlinux-on-a-USB-key%2F</url>
+    <content type="text"><![CDATA[在已有的Archlinux上安装启动你的Archlinux，并安装软件包arch-install-scripts 1# pacman -S arch-install-scripts]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>Archlinux</tag>
+        <tag>Tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[我的Archlinux常用软件包]]></title>
+    <url>%2F2019%2F07%2F12%2FMy-packages-installed-in-ArchLinux%2F</url>
+    <content type="text"><![CDATA[Archlinux官方仓库CMake一个跨平台的安装（编译工具）。 1# pacman -S cmake Celestia开源3D天文软件。 1# pacman -S celestia Chemtool一款在Linux上绘制化学结构的软件。 1# pacman -S chemtool Code-OSSVScode，微软出品的轻量级文本编辑器。开源、免费、易扩展。 1# pacman -S code Code::Blocks IDE知名开源跨平台的C/C++轻量级IDE。 1# pacman codeblocks Dconf Editorgnome高级配置。 1# pacman -S dconf-editor Devhelp查看开发文档。 1# pacman -S devhelp Fcitxfcitx输入法。 1# pacman -S fcitx-im Firefox火狐浏览器。一个跨平台、开源的著名网页浏览器。 1# pacman -S firefox GnomeGnome桌面环境。Gnome是一款开源、易扩展的Linux桌面环境。 1# pacman -S gnome gnome-extra Gnome TweaksGnome美化、优化工具。 1# pacman -S gnome-tweaks GimpGimp全名GNU Image Manipulation Program，是一款跨平台、自由的图像处理程序，功能丰富，号称“Linux下的PhotoShop”。 1# pacman -S gimp GPartedLinux磁盘分区工具 1# pacman -S gparted VimLinux上的著名文本编辑器vi的加强版。 1# pacman -S vim gVim是Vim的图形前端，有图形界面需求的可以安装gVim。 1# pacman -S gvim HexChat支持多语言的跨平台、开源IRC客户端，用来聊天。 1# pacman -S hexchat LibreOffice开源、自由、跨平台的免费办公套件。稳定版： 1# pacman -S libreoffice-still 尝鲜版 1# pacman -S libreoffice-fresh Oracle VM VirtualBox开源、跨平台、免费的虚拟机软件。 1# pacman -S virtualbox Seahorse用于管理GnuPG密钥。 1# pacman -S seahorse StellariumStellarium 是一款虚拟星象仪的计算机软件。它可以根据观测者所处的时间和地点，计算天空中太阳、月球、行星和恒星的位置，并将其显示出来。它还可以绘制星座、虚拟天文现象（如流星雨、日食和月食等)。 1# pacman -S stellarium Terminator终端终结者。 1# pacman -S terminator ThunderbirdMozilla开发的开源邮件客户端。 1# pacman -S thunderbird VMPKvmpk uGetuget StarDictstardict curlcurl GCCgcc Gogo OpenJDKOpenJDK。 1# pacman -S jdk-openjdk Juliajulia Lualua MariaDBmariadb Mavenmaven Nanonano Node.jsnodejs npmnpm p7zipp7zip Rubyruby sud0sud0 Tomcattomcat8 tomcat-native VirtualBoxvirtualbox w3mw3m wgetwget wqy-microheiwqy-microhei AUR仓库BaiduNetdisk百度云盘。 1# pacaur -S baidunetdisk Intellij Ideaintellij-idea-ultimate-edition MacOS Icon Thememacos-icon-theme Mojava-GTK-Thememojava-gtk-theme-git Netease Cloud Musicnetease-cloud-music Hexonodejs-hexo Rarcrackrarcrack]]></content>
+      <categories>
+        <category>Software</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>Archlinux</tag>
+        <tag>Software</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Archlinux桌面版安装教程]]></title>
+    <url>%2F2019%2F07%2F11%2FArchlinux-desktop-installation-tutorial%2F</url>
+    <content type="text"><![CDATA[制作启动盘下载系统你可以从清华大学开源镜像站、中科大开源镜像站或者选择其他镜像源下载最新的ArchLinux系统。下载完成之后你还可以使用Md5或sha1方式校验一下。 使用u盘制作启动盘Linux平台确定U盘是否挂载成功。 1$ lsblk 开始制作：if是你下载的archlinux系统iso文件路径，of是你的u盘位置，一般情况下为/dev/sdb。一定要等到sync完成，所有数据写入之后再拔掉u盘。 1# dd bs=4M if=archlinux.iso of=/dev/sdx status=progress &amp;&amp; sync Windows平台建议使用Rufus或USBwriter制作启动盘。不要用UtralISO（软碟通），因为没有用。 启动电脑并配置BIOS开机或重启 -&gt; 打开BIOS -&gt; 设置允许电脑从u盘启动。 安装系统进入安装环境电脑从u盘启动后，看到Arch菜单出现，选择Boot Arch Linux，点击Enter进入安装环境。屏幕上如果报错请仔细检查BIOS配置。 联网安装Archlinux整个过程中需要使用网络，建议使用有线方式。 查看网卡1$ ip link 查询结果大致如下： 12341: enp1s0: &lt;NO-CARRIER,BROADCAST,MULTICAST,UP&gt; mtu 1500 qdisc fq_codel state DOWN mode DEFAULT group default qlen 1000 link/ether xx:xx:xx:xx:xx:xx brd ff:ff:ff:ff:ff:ff2: wlp2s0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue state UP mode DORMANT group default qlen 1000 link/ether xx:xx:xx:xx:xx:xx brd ff:ff:ff:ff:ff:ff 连接到有线网络名称以“enp”开始的是有线网卡，这里对应是“enp1s0”。使用如下命令连接到有线网络： 1$ systemctl start dhcpcd@enp1s0.service 连接到无线网络名称以“wl”开始的是无线网卡，这里对应是“wlp2s0”。使用如下命令连接到wifi： 1$ wifi-menu -o wlp2s0 命令执行完将弹出wifi选择图形界面，你可以通过键盘Up/Down键选择你需要连接的wifi，并使用Enter键选定。 测试网络连接连接到网络后，使用ping测试连接是否成功。 1$ ping www.baidu.com 更新系统时间开启时间同步 1$ timedatectl set-ntp true 建立硬盘分区查看硬盘1$ fdisk -l 建立分区表 挂载点 大小 说明 /mnt/efi 512MiB 引导分区 /mnt 500MiB~50GiB 根目录 [swap] 内存条1～2倍大小 Linux交换空间 /home 剩余空间 家目录 ### 格式化分区 注意：根据自己分区的情况进行格式化，谨慎操作。 1234# mkfs.ext4 /dev/sda1# mkfs.ext4 /dev/sda2# mkswap /dev/sda3# mkfs.ext4 /dev/sda4 挂载分区注意：根据自己分区的情况进行挂载，谨慎操作。 123456# mount /dev/sda2 /mnt# mkdir /mnt/efi# mount /dev/sda1 /mnt/efi# mkdir /mnt/home# mount /dev/sda4 /mnt/home# swapon /dev/sda3 安装基本系统安装base组 1# pacstrap /mnt base 安装base-devel组（开发用的一些组件） 1# pacstrap /mnt base-devel 退出chroot环境 1# exit 设置root用户的密码 1# passwd 安装引导程序安装grub和efibootmgr软件包 1# pacman -S grub efibootmgr os-prober 安装GRUB并生成主配置文件，谨慎操作 12# grub-install --target=x86_64-efi --efi-directory=/mnt/efi --bootloader-id=GRUB# grub-mkconfig -o /boot/grub/grub.cfg 重启系统12# exit# reboot 个性化配置安装必备软件包### 123# pacman -S vim# pacman -S sudo# pacman -S pacaur 本地化文本修改/etc/locale.gen文件 1# vim /etc/locale.gen 移除你需要语言对应行前面的#,如： 12en_US.UTF-8 UTF-8zh_CN.UTF-8 UTF-8 执行locale-gen 1# locale-gen 安装图形界面Gnome12# pacman -S gnome gnome-extra# systemctl enable gdm Deepin12# pacman -S deepin deepin-extra lightdm# systemctl enable lightdm KDE12# pacman -S plasma sddm# systemctl enable sddm XFCE12# pacman -S xfce4 lightdm# systemctl enable lightdm 中文字体1# pacman -S wqy-microhei wqy-zenhei 中文输入法安装fcitx安装fcitx 12# pacman -S fcitx-im fcitx-configtool# pacaur -S fcitx-sogoupinyin 启用fcitx:在～/.bashrc文件中添加如下内容 123export GTK_IM_MODULE=fcitxexport QT_IM_MODULE=fcitxexport XMODIFIERS="@im=fcitx" 使用Gnome桌面的同学还应执行下面的代码 1$ gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "&#123;'Gtk/IMModule':&lt;'fcitx'&gt;&#125;" ibus安装ibus 1# pacman -S ibus ibus-pinyin 启用fcitx:在～/.bashrc文件中添加如下内容 123export GTK_IM_MODULE=ibusexport QT_IM_MODULE=ibusexport XMODIFIERS="@im=ibus"]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>Archlinux</tag>
+        <tag>Tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2019%2F07%2F10%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Tutorial</tag>
+      </tags>
+  </entry>
+</search>
