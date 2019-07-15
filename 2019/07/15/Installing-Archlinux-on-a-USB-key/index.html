@@ -90,13 +90,18 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Thouen&#39;s Blog">
-<meta property="og:url" content="https://thouen.github.io/tags/Hexo/index.html">
+  <meta name="description" content="在已有的Archlinux上安装启动你的Archlinux，并安装软件包arch-install-scripts 1# pacman -S arch-install-scripts">
+<meta name="keywords" content="Linux,Archlinux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何在U盘设备上安装Archlinux？">
+<meta property="og:url" content="https://thouen.github.io/2019/07/15/Installing-Archlinux-on-a-USB-key/index.html">
 <meta property="og:site_name" content="Thouen&#39;s Blog">
+<meta property="og:description" content="在已有的Archlinux上安装启动你的Archlinux，并安装软件包arch-install-scripts 1# pacman -S arch-install-scripts">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-07-15T00:56:44.684Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Thouen&#39;s Blog">
+<meta name="twitter:title" content="如何在U盘设备上安装Archlinux？">
+<meta name="twitter:description" content="在已有的Archlinux上安装启动你的Archlinux，并安装软件包arch-install-scripts 1# pacman -S arch-install-scripts">
 
 
 
@@ -104,7 +109,7 @@
 
   
   
-  <link rel="canonical" href="https://thouen.github.io/tags/Hexo/">
+  <link rel="canonical" href="https://thouen.github.io/2019/07/15/Installing-Archlinux-on-a-USB-key/">
 
 
 
@@ -114,7 +119,7 @@
   };
 </script>
 
-  <title>Tag: Hexo | Thouen's Blog</title>
+  <title>如何在U盘设备上安装Archlinux？ | Thouen's Blog</title>
   
 
 
@@ -162,7 +167,7 @@
     
   
 
-  <div class="container sidebar-position-right ">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -232,7 +237,7 @@
         
         
           
-          <li class="menu-item menu-item-tags menu-item-active">
+          <li class="menu-item menu-item-tags">
 
     
     
@@ -301,83 +306,194 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Hexo<small>Tag</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://thouen.github.io/2019/07/15/Installing-Archlinux-on-a-USB-key/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Thouen">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Thouen's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2019/07/10/hello-world/" itemprop="url">
-            
-              <span itemprop="name">Hello World</span>
-            
-          </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">如何在U盘设备上安装Archlinux？
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-10T20:59:30+08:00" content="2019-07-10">
-          07-10
-        </time>
-      </div>
+              
+            
+          </h1>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-07-15 07:55:24 / Modified: 08:56:44" itemprop="dateCreated datePublished" datetime="2019-07-15T07:55:24+08:00">2019-07-15</time>
+            </span>
+          
+
+          
+            
+
+            
+          
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="在已有的Archlinux上安装"><a href="#在已有的Archlinux上安装" class="headerlink" title="在已有的Archlinux上安装"></a>在已有的Archlinux上安装</h1><p>启动你的Archlinux，并安装软件包arch-install-scripts</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pacman -S arch-install-scripts</span></span><br></pre></td></tr></table></figure>
 
 
       
     </div>
 
+    
+
+    
+      
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/Linux/" rel="tag"># Linux</a>
+          
+            <a href="/tags/Archlinux/" rel="tag"># Archlinux</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/12/My-packages-installed-in-ArchLinux/" rel="next" title="Archlinux常用软件">
+                <i class="fa fa-chevron-left"></i> Archlinux常用软件
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -397,8 +513,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -483,6 +608,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#在已有的Archlinux上安装"><span class="nav-number">1.</span> <span class="nav-text">在已有的Archlinux上安装</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -611,6 +753,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
 
   <script src="/js/next-boot.js?v=7.2.0"></script>
 
@@ -624,6 +770,8 @@
 
   
 
+
+  
 
 
   
