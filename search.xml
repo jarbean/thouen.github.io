@@ -3,7 +3,14 @@
   <entry>
     <title><![CDATA[阶段式英语读物]]></title>
     <url>%2F2019%2F07%2F20%2FEnglish-reading%2F</url>
-    <content type="text"><![CDATA[i+1理论美国应用语言学家Stephen D.Krashen在总结前人理论的基础上提出第二语言习得的重要理论，“i+1”理论。 阶段式读物 《Fantastic Mr. Fox》《The Little Prince》《Harry Potter》《Treasure Island》《Tales from Shakespeare》《The Catcher in the Rye》《The Notebook》《Pride and Prejudice》《41 stories by O.Herry》《A Clue to the Exit》《生活的艺术》《京华烟云》]]></content>
+    <content type="text"><![CDATA[i+1理论美国应用语言学家Stephen D.Krashen在总结前人理论的基础上提出第二语言习得的重要理论，“i+1”理论。 阶段式读物 来自“学堂在线”《主题英语》Micky老师的推荐。 《Fantastic Mr. Fox》《The Little Prince》《Harry Potter》《Treasure Island》《Tales from Shakespeare》《The Catcher in the Rye》《The Notebook》《Pride and Prejudice》《41 stories by O.Herry》《A Clue to the Exit》《生活的艺术》《京华烟云》]]></content>
+      <categories>
+        <category>英语学习</category>
+      </categories>
+      <tags>
+        <tag>英语学习</tag>
+        <tag>读书</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[算法分析]]></title>
@@ -31,18 +38,25 @@
     <title><![CDATA[加速github的clone下载速度]]></title>
     <url>%2F2019%2F07%2F17%2Fspeed-up-cloning-project-from-github%2F</url>
     <content type="text"><![CDATA[由于众所周知的原因，github在国内下载速度很慢。你可以采取很多方式来进行提速，这里采用修改hosts文件的方式。首先，使用IPAdress查询github以下网址的ip地址： github.com github.global.ssl.fastly.net codeload.github.com 而后，将查询到的ip地址使用类似如下格式添加到hosts文件中(2019 年7月17日更新) 123140.82.113.4 github.com151.101.185.194 github.global.ssl.fastly.net140.82.114.9 codeload.github.com 注：Windows系统的hosts目录为“C:\windows\system32\drivers\etc\hosts”；Linux系统的hosts目录一般为“/etc/hosts”。修改hosts文件需要管理员权限或Root权限。最后，Linux系统修改hosts文件一般会即时生效，而Windows系统在cmd窗口输入一下命令刷新DNS使其生效 1ipconfig /flushdns]]></content>
+      <categories>
+        <category>github</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+        <tag>github</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[我的Archlinux常用软件包]]></title>
     <url>%2F2019%2F07%2F12%2Fmy-most-commonly-used-packages-on-ArchLinux%2F</url>
     <content type="text"><![CDATA[Archlinux官方仓库CMake一个跨平台的安装（编译工具）。 1# pacman -S cmake Celestia开源3D天文软件。 1# pacman -S celestia Chemtool一款在Linux上绘制化学结构的软件。 1# pacman -S chemtool Code-OSSVScode，微软出品的轻量级文本编辑器。开源、免费、易扩展。 1# pacman -S code Code::Blocks IDE知名开源跨平台的C/C++轻量级IDE。 1# pacman codeblocks Dconf Editorgnome高级配置。 1# pacman -S dconf-editor Devhelp查看开发文档。 1# pacman -S devhelp Fcitxfcitx输入法。 1# pacman -S fcitx-im Firefox火狐浏览器。一个跨平台、开源的著名网页浏览器。 1# pacman -S firefox GnomeGnome桌面环境。Gnome是一款开源、易扩展的Linux桌面环境。 1# pacman -S gnome gnome-extra Gnome TweaksGnome美化、优化工具。 1# pacman -S gnome-tweaks GimpGimp全名GNU Image Manipulation Program，是一款跨平台、自由的图像处理程序，功能丰富，号称“Linux下的PhotoShop”。 1# pacman -S gimp GPartedLinux磁盘分区工具 1# pacman -S gparted VimLinux上的著名文本编辑器vi的加强版。 1# pacman -S vim gVim是Vim的图形前端，有图形界面需求的可以安装gVim。 1# pacman -S gvim HexChat支持多语言的跨平台、开源IRC客户端，用来聊天。 1# pacman -S hexchat LibreOffice开源、自由、跨平台的免费办公套件。稳定版： 1# pacman -S libreoffice-still 尝鲜版： 1# pacman -S libreoffice-fresh Oracle VM VirtualBox开源、跨平台、免费的虚拟机软件。 1# pacman -S virtualbox Seahorse用于管理GnuPG密钥。 1# pacman -S seahorse StellariumStellarium 是一款虚拟星象仪的计算机软件。它可以根据观测者所处的时间和地点，计算天空中太阳、月球、行星和恒星的位置，并将其显示出来。它还可以绘制星座、虚拟天文现象（如流星雨、日食和月食等)。 1# pacman -S stellarium Terminator终端终结者。 1# pacman -S terminator ThunderbirdMozilla开发的开源邮件客户端。 1# pacman -S thunderbird VMPK弹钢琴软件。 1# pacman -S vmpk uGet跨平台、开源的多线程下载软件。 1# pacman -S uget GCCGCC编译器，C/C++开发必备。 1# pacman -S gcc OpenJDK开源和自由的JDK，由社区维护，稳定性不及Oracle JDK。 1# pacman -S jdk-openjdk MariaDB著名数据库MySQL的分支，由开源社区维护。自从MySQL被Oracle收购后，很多知名企业转向了MariaDB。 1# pacman -S mariadb MavenJava项目管理工具。 1# pacman -S maven Node.jsNode.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。 1# pacman -S nodejs npmnpm 是 JavaScript 世界的包管理工具,并且是 Node.js 平台的默认包管理工具。 1# pacman -S npm p7zip”7-zip“的Linux版本，一款压缩解压工具。 1# pacman -S p7zip sudosudo是linux系统管理指令，是允许系统管理员让普通用户执行一些或者全部的root命令的一个工具。 1# pacman -S sudo TomcatTomcat 服务器是一个免费的开放源代码的Web 应用服务器，属于轻量级应用服务器，在中小型系统和并发访问用户不是很多的场合下被普遍使用，是开发和调试JSP 程序的首选。 1# pacman -S tomcat8 tomcat-native VirtualBoxVirtualBox号称是最强的免费虚拟机软件。 1# pacman -S virtualbox w3mw3m是个开放源代码的文字式网页浏览器。 1# pacman -S w3m AUR仓库安装AUR（ArchLinux User-community Repository）的软件，首先要安装yaourt、yay或者pikaur。这里推荐pikaur。 1# pacman -S pikaur BaiduNetdisk百度云盘。 1$ pikaur -S baidunetdisk Intellij IdeaIDEA 全称 IntelliJ IDEA，是java编程语言开发的集成环境。IntelliJ在业界被公认为最好的java开发工具之一，尤其在智能代码助手、代码自动提示、重构、J2EE支持、各类版本工具(git、svn等)、JUnit、CVS整合、代码分析、 创新的GUI设计等方面的功能可以说是超常的。社区版： 1# pacman -S intellij-idea-community-edition 旗舰版： 1$ pikaur -S intellij-idea-ultimate-edition` Mojava-GTK-ThemeMac OSX风格的桌面主题。 1$ pikaur -S mojava-gtk-theme-git` Netease Cloud Music网易云音乐。 1$ pikaur -S netease-cloud-music` Rarcrack暴力破解压缩文件的密码。 1$ pikaur -S rarcrack]]></content>
       <categories>
-        <category>Software</category>
+        <category>Archlinux</category>
       </categories>
       <tags>
         <tag>Linux</tag>
         <tag>Archlinux</tag>
-        <tag>Software</tag>
+        <tag>软件</tag>
       </tags>
   </entry>
   <entry>
@@ -50,12 +64,12 @@
     <url>%2F2019%2F07%2F11%2FArchlinux-desktop-installation-tutorial%2F</url>
     <content type="text"><![CDATA[Archlinux是最简洁、最优雅的Linux系统，不接受反驳。点击这里查看Archlinux官方安装教程。 注意事项 安装过程中需要保持网络畅通。 谨慎操作。 遇到问题直接找官方Wiki。 制作启动盘下载系统镜像你可以从清华大学开源镜像站、中科大开源镜像站或者选择其他镜像源下载最新的ArchLinux系统镜像。 制作启动盘（U盘）Linux平台 首先，确定U盘挂载成功。 1$ lsblk 使用dd命令制作启动盘。用你的Archlinux系统镜像文件路径替换“archlinux.iso”；U盘位置替换“/dev/sdx”，一般情况下U盘位置为/dev/sdb。注意等到sync完成，所有数据写入之后再拔掉u盘。 1# dd bs=4M if=archlinux.iso of=/dev/sdx status=progress &amp;&amp; sync Windows平台建议使用Rufus或USBwriter制作启动盘。 安装系统配置BIOS开机或重启 -&gt; 打开BIOS -&gt; 允许从U盘启动。 进入安装环境BIOS正常配置后，可以看到Archlinux安装菜单。通过键盘上下方向键选择“Arch Linux archiso x86_64 UEFI USB”，点击Enter进入安装环境。 联网查看网卡1$ ip link 屏幕输出结果大致如下： 12341: enp1s0: &lt;NO-CARRIER,BROADCAST,MULTICAST,UP&gt; mtu 1500 qdisc fq_codel state DOWN mode DEFAULT group default qlen 1000 link/ether xx:xx:xx:xx:xx:xx brd ff:ff:ff:ff:ff:ff2: wlp2s0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue state UP mode DORMANT group default qlen 1000 link/ether xx:xx:xx:xx:xx:xx brd ff:ff:ff:ff:ff:ff 我们从中看到两个网卡。其中，名称以“enp”开始的是有线网卡，这里对应是“enp1s0”。名称以“wl”开始的是无线网卡，这里对应是“wlp2s0”。 连接到有线网络使用如下命令连接到有线网络： 12$ systemctl enable dhcpcd@enp1s0.service$ systemctl start dhcpcd@enp1s0.service 连接到无线网络解锁无线网卡查看无线网卡是否被锁定 1$ rfkill list 查询结果如下所示： 1234567891011120: ideapad_wlan: Wireless LAN Soft blocked: yes Hard blocked: no1: ideapad_bluetooth: Bluetooth Soft blocked: yes Hard blocked: no2: phy0: Wireless LAN Soft blocked: yes Hard blocked: no3: hci0: Bluetooth Soft blocked: yes Hard blocked: no 输入如下命令解锁Wifi： 1$ rfkill unblock 2 或者解锁所有设备： 1$ rfkill unblock all 连接到wifi使用如下命令连接到wifi： 1# wifi-menu -o wlp2s0 命令执行完将弹出wifi选择图形界面，你可以通过键盘上下方向键配合Enter键进行选择。 测试网络连接连接到网络后，使用ping测试连接是否成功。 1$ ping -c 4 www.baidu.com 更新系统时间 开启时间同步 1$ timedatectl set-ntp true 设置时区输入如下命令 1# ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime 设置硬件使用UTC世界标准时间 1# hwclock --systohc 建立硬盘分区查看硬盘1$ fdisk -l 建立分区表分区表如下，其中引导分区和根分区是必须的。 挂载点 大小 说明 /mnt/efi 512MiB 引导分区 /mnt 500MiB~50GiB 根目录 [swap] 内存条1～2倍大小 Linux交换空间 /home 剩余空间 家目录 格式化分区使用parted或者cfdisk进行分区，推荐有图形界面的cfdisk。 1234# mkfs.ext4 /dev/sda1# mkfs.ext4 /dev/sda2# mkswap /dev/sda3# mkfs.ext4 /dev/sda4 挂载分区注意：根据上一部操作分区的情况进行挂载。 123456# mount /dev/sda2 /mnt# mkdir /mnt/efi# mkdir /mnt/home# mount /dev/sda1 /mnt/efi# mount /dev/sda4 /mnt/home# swapon /dev/sda3 选择本地Archlinux镜像源修改“/etc/pacman.d/mirrorlist”文件，把国内的镜像地址移动到文件头部位置。 安装基本系统安装base组和base-devel组（开发用的一些组件） 1# pacstrap /mnt base base-devel 退出chroot环境 1# exit 安装引导程序安装grub和efibootmgr软件包 1# pacman -S grub efibootmgr os-prober 安装GRUB并生成主配置文件，谨慎操作 12# grub-install --target=x86_64-efi --efi-directory=/mnt/efi --bootloader-id=GRUB# grub-mkconfig -o /boot/grub/grub.cfg 其他重要配置设置root用户的密码1# passwd 更新系统1# pacman -Syu 安装联网模块重启后联网需要用到。 1# pacman -S networkmanager wireless_tools wpa_supplicant dialog 安装图形界面Gnome12# pacman -S gnome gnome-extra gnome-tweaks gdm# systemctl enable gdm Deepin12# pacman -S deepin deepin-extra lightdm# systemctl enable lightdm KDE12# pacman -S plasma sddm# systemctl enable sddm XFCE12# pacman -S xfce4 lightdm# systemctl enable lightdm 中文输入法安装fcitx安装fcitx 12# pacman -S fcitx-im fcitx-configtool# pacaur -S fcitx-sogoupinyin 启用fcitx:在～/.bashrc文件中添加如下内容 123export GTK_IM_MODULE=fcitxexport QT_IM_MODULE=fcitxexport XMODIFIERS="@im=fcitx" Gnome桌面使用还应执行下面的代码 1$ gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "&#123;'Gtk/IMModule':&lt;'fcitx'&gt;&#125;" ibus安装ibus 1# pacman -S ibus ibus-pinyin 启用fcitx:在～/.bashrc文件中添加如下内容 123export GTK_IM_MODULE=ibusexport QT_IM_MODULE=ibusexport XMODIFIERS="@im=ibus" 重启系统12# exit# reboot 个性化配置安装必备软件包12# pacman -S vim# pacman -S sudo 本地化文本修改/etc/locale.gen文件 1# vim /etc/locale.gen 移除你需要语言对应行前面的#,如： 12en_US.UTF-8 UTF-8zh_CN.UTF-8 UTF-8 执行locale-gen 1# locale-gen 中文字体安装wqy-microhei和wqy-zenhei字体 1# pacman -S wqy-microhei wqy-zenhei Archlinux 建议点击这里查看官方建议。]]></content>
       <categories>
-        <category>Linux</category>
+        <category>Archlinux</category>
       </categories>
       <tags>
         <tag>Linux</tag>
         <tag>Archlinux</tag>
-        <tag>Tutorial</tag>
+        <tag>教程</tag>
       </tags>
   </entry>
   <entry>
@@ -66,8 +80,8 @@
         <category>Hexo</category>
       </categories>
       <tags>
-        <tag>Tutorial</tag>
         <tag>Hexo</tag>
+        <tag>教程</tag>
       </tags>
   </entry>
 </search>
