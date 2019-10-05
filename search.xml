@@ -1,9 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title></title>
+    <url>%2F2019%2F10%2F05%2FDecode-URL%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[净化百度网盘链接(0.1)]]></title>
+    <url>%2F2019%2F10%2F04%2FExtract-Baidu-Netdisk-link%2F</url>
+    <content type="text"><![CDATA[净化百度网盘链接: 提取文字中包含的百度网盘链接 输入 提取链接 提取并跳转 结果 var srcElem = document.getElementById('src'); var destElem = document.getElementById('dest'); function getLink() { var text = srcElem.value.replace(/\\\*\//g, '').replace(/[^a-zA-Z0-9_-]/g,''); var link = 'https://pan.baidu.com/s/'; link += text; destElem.innerHTML = ''+link+''; return link; } function gotoLink() { window.open(getLink()); }]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Common mathematical formula]]></title>
+    <url>%2F2019%2F09%2F09%2FCommon-mathematical-formula%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[相面]]></title>
+    <url>%2F2019%2F08%2F08%2FAnalysis-man-according-to-the-face%2F</url>
+    <content type="text"><![CDATA[性格写在唇边，幸福露在眼角。站姿看出才华气度，步态可见自我认知。表情里有近来心境，眉宇间是过往岁月。衣着显审美，发型表个性。职业看手，修养看脚。 一系列的观点看起来有些绝对化，却也颇有道理。 到了一定年纪，你的形象里就带着你走过的路，读过的书，爱过的人，历过的事，哭过的泪和洒下的汗。 这世上，总有人好看，总有人越来越好看，为什么不能是你？ 好看，不止是肤浅的漂亮，更是举止端庄，待人谦卑、谈吐优雅……所有的惊艳，都来自长久的准备。 很久以前，有一个手艺人，手艺娴熟，很多人上门买雕塑。但他又和其他人不一样，喜好雕塑妖魔鬼怪。 有一天，他照镜子的时候发现自己的相貌变得很丑：不是五官发生了改变，而是整个面相凶恶、丑陋、古怪。 后来，他到一个寺庙里，找方丈求助，方丈说：我可以给你治疗，但你必须先帮我雕刻100尊观音像。 于是，手艺人就开始不断研究观音的神情，德性和表情，有时甚至到了忘我而代入的境界。 半年之后，当他把富有善良、慈悲、宽容形像的观音雕塑出来后，他急忙去寺庙找方丈，对方丈说：请您务必帮我治病。 方丈没说话，从背后拿出镜子，笑了笑说：你的病已经好了。这时候他才发现，自己的相貌也已经变得正气、端庄了。 一个人若是热情洋溢，总是面带微笑，到老了，脸上的纹路也都是慈眉善目的。如果一个人长期不笑，面目表情僵化，越老显得越可怕，越没有亲和力。 这就是所谓的，“相由心生”。 到了40岁，你就必须具备与你的年龄、身份、社会地位相适应的言谈举止和精神面貌。 日本文学家大宅壮一说：“一个人的脸就是一张履历表。” 你内在的素质、内在的修养决定了你外在的形象和风貌，这句话一点也不假。 你前半生说过的话、做过的事，学到的知识懂得的经历，无形中都在改变你后半生的长相。 善良的人，根本不会吃亏 《六祖坛经》上说：一切福田，都离不开心地。心田上播下善良的种子，总有一天，会开花结果。 曾子曾说：人而好善，福虽未至，祸其远矣。 这是一个边远的山村学校，食堂的伙食糟透了，不是白菜萝卜就是萝卜白菜，而女老师的身体很弱，于是，她经常到学校旁边的一个小山村去买鸡蛋。 卖主是个年过花甲的老太太，她叫说个价，女老师便定了5毛钱一个，其实，女老师暗中提高了5分钱，女老师家乡的鸡蛋4角5分要多少有多少。 女老师看老人可怜，没儿没女，只靠几只鸡养活自己，于是每个蛋多给5分钱，这老太太可怜，女老师就做一个小施主吧！ 奇怪的是老太太既不讨价，也不还价，这桩买卖就这么定了。 买过一段时间，女老师觉得老太太实在可怜，便单方面又提高了5分钱，一个鸡蛋5角5分。 这回老太太作声了，坚持不肯提价，但女老师坚持要单方面提价，僵持了很久，老太太终于接受了。 那天，女老师照旧去老太太那儿买蛋。正碰上一个蛋贩子跟老太太讲价。蛋贩子出6角一个的价要把蛋全收走，老太太不肯。 蛋贩子说，这个价够高了。山里都是这个价。 老太太说，不是因为这个价，而是这些蛋要卖给那位瘦老师，人家那么远到我们这里来教书，又那么瘦，我希望她胖起来，在这个小学里长期待下去，孩子们需要她。 女老师顿时呆了，原以为自己是个施主，想不到真正的施主倒是老太太…… 凡你对别人所做的，就是对自己所做的。所以，凡事你希望自己得到的，你必须先让别人得到。 生命是一种回声，你把善良给了别人，终会从别人那收获善意。无论你对谁好，从长远来看，都是对自己好。 一直善良下去，只问自心，不问得失，一路芬芳，已在你的身后跟随。 知世故而不世故，历圆滑而留天真 《菜根谭》中有句话：“势利纷华，不近者为洁，近之而不染者尤洁。” 在这个纷杂的社会，我们要生存，就必须要和人、和事打交道，这个过程中，把握好尺度的同时也要保留真实的自我，也就是所谓的知世故，而不世故。 这不是轻而易举做到的，而是走过千山万水去感悟和修炼的结果。 苏轼在63岁穷困潦倒之时，还写下这样的诗句： 寂寂东坡一病翁，白须萧散满霜风。 小儿误喜朱颜在，一笑哪知是酒红。 先说自己衰老，又借小孩子之口调侃，酒后的潮红被误认为脸色红润，用自嘲来排解晚景凄凉的失意。 一个人未经世故，容易在逆境中沉沦，也容易苛以待人，而饱经世故而不世故的人，见过生活凌厉，依然内心向暖。 周国平在《灵魂只能独行》里说： 许多人所谓的成熟，不过是被习俗磨去了棱角，变得世故而实际了。那不是成熟，而是精神的早衰和个性的消亡。 真正的成熟，应当是独特个性的形成，真实自我的发现，精神上的结果和丰收。 让人舒服，是一种顶级的魅力 《菜根谭》：“处世让一步为高，退步即进步的张本；待人宽一分是福，利人实利己的根基。” 为人处事，以遇事都要让一步的态度，才是高明的人，因为让一步就等于是为日后进一步留下了余地； 待人接物，以抱宽厚态度对人，才是有福的人，因为给人家方便就是日后给自己留下方便的基础。 古希腊哲学家苏格拉底才华横溢，智慧过人，可当人们赞叹他的学识渊博时，他却谦虚的说：”我唯一知道的是自己的无知。“ 著名文学家马克·吐温有一次去一个小城，临行前别人告诉他，那里的蚊子特别厉害。 到了之后，正当他在旅店登记房间时，一只蚊子在马克·吐温眼前盘旋，这使得职员尴尬万分。 马克·吐温却满不在乎地说：“贵地蚊子比传说中的不知聪明多少倍，它竟会预先看好我的房间号码，以便夜晚光顾、饱餐一顿。” 一句话逗得服务员不禁哈哈大笑。 结果，这一夜马克·吐温睡得十分香甜。原来，当天晚上旅馆全体职员一齐出动，驱赶蚊子，免得这位受人欢迎的大作家遭受蚊虫叮咬。 你身边有没有这样的人，他们也许貌不惊人、也许才不出众，却在无形中有着一股别样的魅力，让你想要与之接近、放下心防，与之倾诉心中的秘密？ 君子如玉，让人舒服的人就好像一块温润的美玉。 和这样的人在一起，就像听一曲舒缓的音乐、品一杯醇厚的热茶、看一朵花静静的开放、让时光如流水般恬淡素净。 奥黛丽·赫本被誉为女神，不仅仅因其貌美，貌美的很多，并不能被全世界的人记住，也不是因为学历，比她学历高的比比皆是。 但她用她的一生诠释了“精神长相”这个词，她在遗言里这样说： 若要优美的嘴唇，就要讲亲切的话； 若要可爱的眼睛，就要看到别人的好处； 若要苗条的身材，就要把你的食物分享给饥饿的人； 若要美丽的秀发，在于每天有孩子的手指穿过它； 若要优雅的姿态，走路时要记住行人不只你一个。 这就是对“精神长相”最好的解读。 一个人真正的资本，不是美貌，也不是金钱，更不是学问，而是自带的，不会随着岁月变迁而消失的“精神长相”。 引用文章转自查看原文]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>生活</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Computer Science reading]]></title>
     <url>%2F2019%2F08%2F04%2FComputer-Science-reading%2F</url>
-    <content type="text"><![CDATA[鸟哥的Linux私房菜作者: 鸟哥出版社: 人民邮电出版社推荐指数: ★★★★★ 算法竞赛入门经典作者: 刘汝佳出版社: 清华大学出版社推荐指数: ★★★★ 自己动手写操作系统作者: 于渊出版社: 电子工业出版社推荐指数: ★★★★ Algorithms作者: Sanjoy Dasgupta / Christos H. Papadimitriou / Umesh Vazirani出版社: McGraw-Hill Education推荐指数: ★★★★★ Code Complete中文名: 代码大全作者: [美] 史蒂夫·迈克康奈尔出版社: 电子工业出版社推荐指数: ★★★★★ Computer Systems: A Programmer’s Perspective中文名: 深入理解计算机系统作者: Randal E.Bryant / David O’Hallaron出版社: 中国电力出版社推荐指数: ★★★★★ Concrete Mathematics中文名: 具体数学作者: [美] Ronald L. Graham / Donald E. Knuth / Oren Patashnik出版社: 机械工业出版社推荐指数: ★★★★★ Design Patterns: Elements of Reusable Object-Oriented Software中文名: 设计模式：可复用面向对象软件的基础作者: [美] Erich Gamma / Richard Helm / Ralph Johnson / John Vlissides出版社: 机械工业出版社推荐指数: ★★★★★ Effective C++作者: [美] Scott Meyers出版社: 华中科技大学出版社推荐指数: ★★★★★ Hackers and Painters: Big Ideas from the Computer Age中文名: 黑客与画家作者: [美] 保罗·格雷厄姆出版社: 人民邮电出版社推荐指数: ★★★★ Introduction to Algorithms中文名: 算法导论作者: [美] Thomas H. Cormen / Charles E. Leiserson / Ronald L. Rivest / Clifford Stein出版社: 高等教育出版社推荐指数: ★★★★★ Mysterious MATHS中文名: 数学的奥妙作者: 伊库纳契夫出版社: 北京燕山出版社推荐指数: ★★★★ Programming Pearls中文名: 编程珠玑作者: [美] Jon Bentley出版社: 人民邮电出版社推荐指数: ★★★★★ Pragmatic Programmer中文名: 程序员修炼之道作者: Andrew Hunt / David Thomas出版社: 电子工业出版社推荐指数: ★★★★★ The Art Of Computer Programmin中文名: 计算机程序设计艺术作者: [美] Donald Knuth出版社: 人民邮电出版社推荐指数: ★★★★★★ The Art of UNIX Programming中文名: UNIX编程艺术作者: [美] Eric S·Raymond出版社: 电子工业出版社推荐指数: ★★★★★ The Mythical Man-Month中文名: 人月神话作者: [美] 弗雷德里克·布鲁克斯出版社: 清华大学出版社推荐指数: ★★★★★ What is Mathematics中文名: 什么是数学作者: [美] R·柯朗 H·罗宾 著 / I·斯图尔特 修订出版社: 复旦大学出版社推荐指数: ★★★★★ Working Effectively with Legacy Code中文名: 修改代码的艺术作者: Michael Feathers出版社: 人民邮电出版社推荐指数: ★★★★★]]></content>
+    <content type="text"><![CDATA[鸟哥的Linux私房菜作者: 鸟哥出版社: 人民邮电出版社推荐指数: ★★★★★ 算法竞赛入门经典作者: 刘汝佳出版社: 清华大学出版社推荐指数: ★★★★ 自己动手写操作系统作者: 于渊出版社: 电子工业出版社推荐指数: ★★★★ Algorithms作者: Sanjoy Dasgupta / Christos H. Papadimitriou / Umesh Vazirani出版社: McGraw-Hill Education推荐指数: ★★★★★ Code Complete中文名: 代码大全作者: [美] 史蒂夫·迈克康奈尔出版社: 电子工业出版社推荐指数: ★★★★★ Computer Systems: A Programmer’s Perspective中文名: 深入理解计算机系统作者: Randal E.Bryant / David O’Hallaron出版社: 中国电力出版社推荐指数: ★★★★★ Concrete Mathematics中文名: 具体数学作者: [美] Ronald L. Graham / Donald E. Knuth / Oren Patashnik出版社: 机械工业出版社推荐指数: ★★★★★ Cracking the Coding Interview副标题: 150 Programming Questions and Solutions作者: Gayle Laakmann McDowell出版社: CareerCup推荐指数: ★★★★★ Design Patterns: Elements of Reusable Object-Oriented Software中文名: 设计模式：可复用面向对象软件的基础作者: [美] Erich Gamma / Richard Helm / Ralph Johnson / John Vlissides出版社: 机械工业出版社推荐指数: ★★★★★ Effective C++作者: [美] Scott Meyers出版社: 华中科技大学出版社推荐指数: ★★★★★ Hackers and Painters: Big Ideas from the Computer Age中文名: 黑客与画家作者: [美] 保罗·格雷厄姆出版社: 人民邮电出版社推荐指数: ★★★★ Introduction to Algorithms中文名: 算法导论作者: [美] Thomas H. Cormen / Charles E. Leiserson / Ronald L. Rivest / Clifford Stein出版社: 高等教育出版社推荐指数: ★★★★★ Mysterious MATHS中文名: 数学的奥妙作者: 伊库纳契夫出版社: 北京燕山出版社推荐指数: ★★★★ Programming Pearls中文名: 编程珠玑作者: [美] Jon Bentley出版社: 人民邮电出版社推荐指数: ★★★★★ Pragmatic Programmer中文名: 程序员修炼之道作者: Andrew Hunt / David Thomas出版社: 电子工业出版社推荐指数: ★★★★★ The Art Of Computer Programmin中文名: 计算机程序设计艺术作者: [美] Donald Knuth出版社: 人民邮电出版社推荐指数: ★★★★★★ The Art of UNIX Programming中文名: UNIX编程艺术作者: [美] Eric S·Raymond出版社: 电子工业出版社推荐指数: ★★★★★ The Mythical Man-Month中文名: 人月神话作者: [美] 弗雷德里克·布鲁克斯出版社: 清华大学出版社推荐指数: ★★★★★ What is Mathematics中文名: 什么是数学作者: [美] R·柯朗 H·罗宾 著 / I·斯图尔特 修订出版社: 复旦大学出版社推荐指数: ★★★★★ Working Effectively with Legacy Code中文名: 修改代码的艺术作者: Michael Feathers出版社: 人民邮电出版社推荐指数: ★★★★★]]></content>
       <categories>
         <category>读书</category>
       </categories>
@@ -15,6 +47,9 @@
     <title><![CDATA[鸟类英文单词]]></title>
     <url>%2F2019%2F08%2F02%2FBird-English-words%2F</url>
     <content type="text"><![CDATA[Aalbatross 信天翁英[ˈælbətrɒs] 美[ˈælbətrɔs] Bblackbird 乌鸫，黑鹂英[ˈblækbɜ:d] 美[ˈblækbɜrd] bustard 鸨英 [ˈbʌstəd] 美 [ˈbʌstərd] butcherbird 伯劳鸟英 [‘bʊtʃəbɜ:d] 美 [‘bʊtʃəbɜd] Ccanary 金丝雀英 [kəˈneəri] 美 [kəˈneri] chaffinch 苍头燕雀英 [ˈtʃæfɪntʃ] 美 [ˈtʃæfɪntʃ] condor 秃鹫英 [ˈkɒndɔ:(r)] 美 [ˈkɑndɔ(r)] cormorant 鸬鹚英 [ˈkɔ:mərənt] 美 [ˈkɔrmərənt] crow 乌鸦英 [krəʊ] 美 [kroʊ] cuckoo 杜鹃，布谷鸟英 [ˈkʊku:] 美 [ˈkuku, ˈkʊku] Ddaw 穴鸟英 [dɔ:] 美 [dɔ] dove 鸽英 [dʌv] 美 [dʌv] Eeagle 鹰英 [ˈi:gl] 美 [ˈiɡəl] Ffalcon 猎鹰，隼英 [ˈfɔ:lkən] 美 [ˈfælkən] Ggoldfinch 金翅雀英 [ˈgəʊldfɪntʃ] 美 [ˈgoʊldfɪntʃ] grouse 松鸡英 [graʊs] 美 [ɡraʊs] Hhawk 鹰英 [hɔ:k] 美 [hɔk] heron 鹭，苍鹭英 [ˈherən] 美 [ˈhɛrən] hummingbird 蜂鸟英 [ˈhʌmɪŋbɜ:d] 美 [ˈhʌmɪŋbɜrd] Kkingfisher 翠鸟英 [ˈkɪŋfɪʃə(r)] 美 [ˈkɪŋˌfɪʃɚ] kite 鸢英 [kaɪt] 美 [kaɪt] Llapwing 田凫英 [ˈlæpwɪŋ] 美 [ˈlæpˌwɪŋ] lark 云雀，百灵鸟英 [lɑ:k] 美 [lɑrk] Mmacaw 金刚鹦鹉英 [məˈkɔ:] 美 [mə’kɔ] magpie 喜鹊英 [ˈmægpaɪ] 美 [ˈmæɡˌpaɪ] mallard 野鸭，凫英 [ˈmælɑ:d] 美 [ˈmælərd] manucode 辉风鸟，极乐鸟英 [‘mænjʊkəʊd] 美 [‘mænjʊkoʊd] Nnightingale 夜莺英 [ˈnaɪtɪŋgeɪl] 美 [ˈnaɪtnˌɡel, ˈnaɪtɪŋ-] Oostrich 鸵鸟英 [ˈɒstrɪtʃ] 美 [ˈɑstrɪtʃ] owl 枭，猫头鹰英 [aʊl] 美 [aʊl] Pparrot 鹦鹉英 [ˈparət] 美 [ˈpɛrət] pelican 鹈鹕英 [ˈpelɪkən] 美 [ˈpɛlɪkən] penguin 企鹅英 [ˈpeŋgwɪn] 美 [ˈpɛŋɡwɪn, ˈpɛn-] pheasant 雉，野鸡英 [ˈfeznt] 美 [ˈfɛzənt] phoenix 凤凰英 [ˈfi:nɪks] 美 [ˈfinɪks] pigeon 野鸽英 [ˈpɪdʒɪn] 美 [ˈpɪdʒən] plover 千鸟英 [ˈplʌvə(r)] 美 [ˈplʌvɚ, ˈplovɚ] Qquail 鹌鹑英 [kweɪl] 美 [kwel] Rrobin 知更鸟英 [ˈrɒbɪn] 美 [ˈrɑbɪn] Sseagull 海鸥英 [ˈsiːɡʌl] 美 [ˈsiˌɡəl] sparrow 麻雀英 [ˈspærəʊ] 美 [ˈspæroʊ] starling 八哥英 [ˈstɑ:lɪŋ] 美 [ˈstɑrlɪŋ] stork 鹳英 [stɔ:k] 美 [stɔrk] swallow 燕子英 [ˈswɒləʊ] 美 [ˈswɑloʊ] swan 天鹅英 [swɒn] 美 [swɑn] Tthrostle 画眉鸟英 [‘θrɒsl] 美 [‘θrɒsl] thrush 鸫英 [θrʌʃ] 美 [θrʌʃ] Vvulture 秃鹫，秃鹰英 [ˈvʌltʃə(r)] 美 [ˈvʌltʃɚ] Wweavebird 织布鸟英 [‘wiːvəbɜːd] 美 [‘wiːvəˌbəd] wild goose 雁，野鹅英 [waild ɡu:s] 美 [waɪld ɡus] woodpecker 啄木鸟英 [ˈwʊdpekə(r)] 美 [ˈwʊdˌpɛkɚ]]]></content>
+      <categories>
+        <category>English</category>
+      </categories>
       <tags>
         <tag>Bird</tag>
         <tag>English</tag>
@@ -28,8 +63,8 @@
         <category>读书</category>
       </categories>
       <tags>
-        <tag>英语学习</tag>
         <tag>读书</tag>
+        <tag>英语学习</tag>
       </tags>
   </entry>
   <entry>

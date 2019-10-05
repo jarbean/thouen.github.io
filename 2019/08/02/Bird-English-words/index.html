@@ -4,91 +4,56 @@
 
 
 
-
-
-
-
-
-
-
-  
-
-
-<html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.9.0">
+<html lang="zh-CN">
+<head>
   <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.1">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.4.1" color="#222">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<link rel="stylesheet" href="/css/main.css?v=7.4.1">
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
 
-<link rel="stylesheet" href="/css/main.css?v=7.2.0">
 
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.2.0">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.2.0">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
-
-
-
-
-
-
-
-<script id="hexo.configurations">
+<script id="hexo-configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
     scheme: 'Gemini',
-    version: '7.2.0',
+    version: '7.4.1',
+    exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    back2top: true,
-    back2top_sidebar: false,
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
     fancybox: false,
-    fastclick: false,
+    mediumzoom: false,
     lazyload: false,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    pangu: false,
     algolia: {
-      applicationID: '',
+      appID: '',
       apiKey: '',
       indexName: '',
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
   };
 </script>
-
-
 
   <meta name="description" content="Aalbatross 信天翁英[ˈælbətrɒs] 美[ˈælbətrɔs] Bblackbird 乌鸫，黑鹂英[ˈblækbɜ:d] 美[ˈblækbɜrd]">
 <meta name="keywords" content="Bird,English">
@@ -98,24 +63,21 @@
 <meta property="og:site_name" content="Thouen&#39;s Blog">
 <meta property="og:description" content="Aalbatross 信天翁英[ˈælbətrɒs] 美[ˈælbətrɔs] Bblackbird 乌鸫，黑鹂英[ˈblækbɜ:d] 美[ˈblækbɜrd]">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-04T10:08:48.530Z">
+<meta property="og:updated_time" content="2019-10-04T08:43:04.575Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="鸟类英文单词">
 <meta name="twitter:description" content="Aalbatross 信天翁英[ˈælbətrɒs] 美[ˈælbətrɔs] Bblackbird 乌鸫，黑鹂英[ˈblækbɜ:d] 美[ˈblækbɜrd]">
-
-
-
-
-
-  
-  
   <link rel="canonical" href="https://thouen.github.io/2019/08/02/Bird-English-words/">
 
 
-
-<script id="page.configurations">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
   };
 </script>
 
@@ -129,13 +91,8 @@
 
 
 
-
-
-
-
   <noscript>
   <style>
-  .use-motion .motion-element,
   .use-motion .brand,
   .use-motion .menu-item,
   .sidebar-inner,
@@ -144,7 +101,7 @@
   .use-motion .comments,
   .use-motion .post-header,
   .use-motion .post-body,
-  .use-motion .collection-title { opacity: initial; }
+  .use-motion .collection-header { opacity: initial; }
 
   .use-motion .logo,
   .use-motion .site-title,
@@ -160,210 +117,140 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left page-post-detail">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
+      <div class="header-inner"><div class="site-brand-container">
   <div class="site-meta">
-    
 
-    <div class="custom-logo-site-title">
+    <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">Thouen's Blog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-    
-    
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
   </div>
 </div>
-
 
 
 <nav class="site-nav">
   
-    <ul id="menu" class="menu">
+  <ul id="menu" class="menu">
+      
+      
       
         
-        
-        
-          
-          <li class="menu-item menu-item-home">
-
-    
-    
+        <li class="menu-item menu-item-home">
       
     
 
-    
-
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
 
   </li>
+      
+      
+      
         
-        
-        
-          
-          <li class="menu-item menu-item-archives">
-
-    
-    
+        <li class="menu-item menu-item-about">
       
     
 
-    
-
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>文章</a>
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
 
   </li>
+      
+      
+      
         
-        
-        
-          
-          <li class="menu-item menu-item-categories">
-
-    
-    
+        <li class="menu-item menu-item-tags">
       
     
 
-    
-
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
 
   </li>
+      
+      
+      
         
-        
-        
-          
-          <li class="menu-item menu-item-tags">
-
-    
-    
+        <li class="menu-item menu-item-categories">
       
     
 
-    
-
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
 
   </li>
+      
+      
+      
         
-        
-        
-          
-          <li class="menu-item menu-item-about">
-
-    
-    
+        <li class="menu-item menu-item-archives">
       
     
 
-    
-
-    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
 
   </li>
+  </ul>
 
-      
-      
-    </ul>
-  
-
-  
-
-  
 </nav>
-
-
-
 </div>
     </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          
             
 
-          
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
-
-  
-
+  <div class="posts-expand">
+      
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://thouen.github.io/2019/08/02/Bird-English-words/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Thouen">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Thouen's Blog">
     </span>
-
-    
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">鸟类英文单词
 
-        
-        
-          <h1 class="post-title" itemprop="name headline">鸟类英文单词
-
-              
-            
-          </h1>
-        
+          
+        </h1>
 
         <div class="post-meta">
-
-          
-          
-          
-
-          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
@@ -372,8 +259,6 @@
               <time title="创建时间：2019-08-02 10:50:39" itemprop="dateCreated datePublished" datetime="2019-08-02T10:50:39+08:00">2019-08-02</time>
             </span>
           
-
-          
             
 
             
@@ -381,46 +266,34 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-08-04 18:08:48" itemprop="dateModified" datetime="2019-08-04T18:08:48+08:00">2019-08-04</time>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-04 16:43:04" itemprop="dateModified" datetime="2019-10-04T16:43:04+08:00">2019-10-04</time>
               </span>
             
           
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/English/" itemprop="url" rel="index"><span itemprop="name">English</span></a></span>
 
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          <br>
-          
-
+                
+                
+              
+            </span>
           
 
           
 
         </div>
       </header>
-    
 
     
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
-      
 
       
         <h1 id="A"><a href="#A" class="headerlink" title="A"></a>A</h1><h2 id="albatross-信天翁"><a href="#albatross-信天翁" class="headerlink" title="albatross 信天翁"></a>albatross 信天翁</h2><p>英[ˈælbətrɒs] 美[ˈælbətrɔs]</p>
@@ -477,271 +350,149 @@
 <h2 id="wild-goose-雁，野鹅"><a href="#wild-goose-雁，野鹅" class="headerlink" title="wild goose 雁，野鹅"></a>wild goose 雁，野鹅</h2><p>英 [waild ɡu:s] 美 [waɪld ɡus]</p>
 <h2 id="woodpecker-啄木鸟"><a href="#woodpecker-啄木鸟" class="headerlink" title="woodpecker 啄木鸟"></a>woodpecker 啄木鸟</h2><p>英 [ˈwʊdpekə(r)] 美 [ˈwʊdˌpɛkɚ]</p>
 
-      
     </div>
 
     
-
-    
-      
-    
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
         
+      
+
+      <footer class="post-footer">
           
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/Bird/" rel="tag"># Bird</a>
+            
+              <a href="/tags/English/" rel="tag"># English</a>
+            
+          </div>
         
-        <div class="post-tags">
-          
-            <a href="/tags/Bird/" rel="tag"># Bird</a>
-          
-            <a href="/tags/English/" rel="tag"># English</a>
-          
-        </div>
-      
 
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2019/07/20/English-reading/" rel="next" title="阶段式英语读物">
-                <i class="fa fa-chevron-left"></i> 阶段式英语读物
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/04/Computer-Science-reading/" rel="prev" title="Computer Science reading">
-                Computer Science reading <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-  </div>
-
-
-          </div>
-          
-
-  
-
-
-
-        </div>
         
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
 
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
-
-      
-
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="Thouen">
-            
-              <p class="site-author-name" itemprop="name">Thouen</p>
-              <div class="site-description motion-element" itemprop="description"></div>
-          </div>
-
-          
-            <nav class="site-state motion-element">
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
               
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/archives/">
-                
-                    <span class="site-state-item-count">9</span>
-                    <span class="site-state-item-name">日志</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-categories">
-                  
-                    
-                      <a href="/categories/">
-                    
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">5</span>
-                    <span class="site-state-item-name">分类</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-tags">
-                  
-                    
-                      <a href="/tags/">
-                    
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">11</span>
-                    <span class="site-state-item-name">标签</span>
-                  </a>
-                </div>
-              
-            </nav>
-          
-
-          
-
-          
-
-          
-            <div class="links-of-author motion-element">
-              
-                <span class="links-of-author-item">
-                  
-                  
-                  
-                    
-                  
-                  <a href="https://github.com/thouen" title="GitHub &rarr; https://github.com/thouen" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  
-                  
-                  
-                    
-                  
-                  <a href="mailto:thouen@163.com" title="E-Mail &rarr; mailto:thouen@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i></a>
-                </span>
+                <a href="/2019/07/20/English-reading/" rel="next" title="阶段式英语读物">
+                  <i class="fa fa-chevron-left"></i> 阶段式英语读物
+                </a>
               
             </div>
-          
 
-          
+            <span class="post-nav-divider"></span>
 
-          
-          
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2019/08/04/Computer-Science-reading/" rel="prev" title="Computer Science reading">
+                  Computer Science reading <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </article>
+  
+  
+  
 
-          
-        </div>
-      </div>
+  </div>
 
-      
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#A"><span class="nav-number">1.</span> <span class="nav-text">A</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#albatross-信天翁"><span class="nav-number">1.1.</span> <span class="nav-text">albatross 信天翁</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#B"><span class="nav-number">2.</span> <span class="nav-text">B</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#blackbird-乌鸫，黑鹂"><span class="nav-number">2.1.</span> <span class="nav-text">blackbird 乌鸫，黑鹂</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bustard-鸨"><span class="nav-number">2.2.</span> <span class="nav-text">bustard 鸨</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#butcherbird-伯劳鸟"><span class="nav-number">2.3.</span> <span class="nav-text">butcherbird 伯劳鸟</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C"><span class="nav-number">3.</span> <span class="nav-text">C</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#canary-金丝雀"><span class="nav-number">3.1.</span> <span class="nav-text">canary 金丝雀</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#chaffinch-苍头燕雀"><span class="nav-number">3.2.</span> <span class="nav-text">chaffinch 苍头燕雀</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#condor-秃鹫"><span class="nav-number">3.3.</span> <span class="nav-text">condor 秃鹫</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cormorant-鸬鹚"><span class="nav-number">3.4.</span> <span class="nav-text">cormorant  鸬鹚</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#crow-乌鸦"><span class="nav-number">3.5.</span> <span class="nav-text">crow 乌鸦</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cuckoo-杜鹃，布谷鸟"><span class="nav-number">3.6.</span> <span class="nav-text">cuckoo 杜鹃，布谷鸟</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#D"><span class="nav-number">4.</span> <span class="nav-text">D</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#daw-穴鸟"><span class="nav-number">4.1.</span> <span class="nav-text">daw 穴鸟</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dove-鸽"><span class="nav-number">4.2.</span> <span class="nav-text">dove 鸽</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#E"><span class="nav-number">5.</span> <span class="nav-text">E</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#eagle-鹰"><span class="nav-number">5.1.</span> <span class="nav-text">eagle 鹰</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#F"><span class="nav-number">6.</span> <span class="nav-text">F</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#falcon-猎鹰，隼"><span class="nav-number">6.1.</span> <span class="nav-text">falcon 猎鹰，隼</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#G"><span class="nav-number">7.</span> <span class="nav-text">G</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#goldfinch-金翅雀"><span class="nav-number">7.1.</span> <span class="nav-text">goldfinch 金翅雀</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#grouse-松鸡"><span class="nav-number">7.2.</span> <span class="nav-text">grouse 松鸡</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#H"><span class="nav-number">8.</span> <span class="nav-text">H</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#hawk-鹰"><span class="nav-number">8.1.</span> <span class="nav-text">hawk 鹰</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#heron-鹭，苍鹭"><span class="nav-number">8.2.</span> <span class="nav-text">heron 鹭，苍鹭</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hummingbird-蜂鸟"><span class="nav-number">8.3.</span> <span class="nav-text">hummingbird 蜂鸟</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#K"><span class="nav-number">9.</span> <span class="nav-text">K</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#kingfisher-翠鸟"><span class="nav-number">9.1.</span> <span class="nav-text">kingfisher 翠鸟</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#kite-鸢"><span class="nav-number">9.2.</span> <span class="nav-text">kite 鸢</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#L"><span class="nav-number">10.</span> <span class="nav-text">L</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#lapwing-田凫"><span class="nav-number">10.1.</span> <span class="nav-text">lapwing 田凫</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lark-云雀，百灵鸟"><span class="nav-number">10.2.</span> <span class="nav-text">lark 云雀，百灵鸟</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#M"><span class="nav-number">11.</span> <span class="nav-text">M</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#macaw-金刚鹦鹉"><span class="nav-number">11.1.</span> <span class="nav-text">macaw 金刚鹦鹉</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#magpie-喜鹊"><span class="nav-number">11.2.</span> <span class="nav-text">magpie 喜鹊</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mallard-野鸭，凫"><span class="nav-number">11.3.</span> <span class="nav-text">mallard 野鸭，凫</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#manucode-辉风鸟，极乐鸟"><span class="nav-number">11.4.</span> <span class="nav-text">manucode 辉风鸟，极乐鸟</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#N"><span class="nav-number">12.</span> <span class="nav-text">N</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#nightingale-夜莺"><span class="nav-number">12.1.</span> <span class="nav-text">nightingale 夜莺</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#O"><span class="nav-number">13.</span> <span class="nav-text">O</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ostrich-鸵鸟"><span class="nav-number">13.1.</span> <span class="nav-text">ostrich 鸵鸟</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#owl-枭，猫头鹰"><span class="nav-number">13.2.</span> <span class="nav-text">owl 枭，猫头鹰</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#P"><span class="nav-number">14.</span> <span class="nav-text">P</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#parrot-鹦鹉"><span class="nav-number">14.1.</span> <span class="nav-text">parrot 鹦鹉</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pelican-鹈鹕"><span class="nav-number">14.2.</span> <span class="nav-text">pelican 鹈鹕</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#penguin-企鹅"><span class="nav-number">14.3.</span> <span class="nav-text">penguin 企鹅</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pheasant-雉，野鸡"><span class="nav-number">14.4.</span> <span class="nav-text">pheasant 雉，野鸡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#phoenix-凤凰"><span class="nav-number">14.5.</span> <span class="nav-text">phoenix 凤凰</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pigeon-野鸽"><span class="nav-number">14.6.</span> <span class="nav-text">pigeon 野鸽</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#plover-千鸟"><span class="nav-number">14.7.</span> <span class="nav-text">plover 千鸟</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Q"><span class="nav-number">15.</span> <span class="nav-text">Q</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#quail-鹌鹑"><span class="nav-number">15.1.</span> <span class="nav-text">quail 鹌鹑</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#R"><span class="nav-number">16.</span> <span class="nav-text">R</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#robin-知更鸟"><span class="nav-number">16.1.</span> <span class="nav-text">robin 知更鸟</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#S"><span class="nav-number">17.</span> <span class="nav-text">S</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#seagull-海鸥"><span class="nav-number">17.1.</span> <span class="nav-text">seagull 海鸥</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sparrow-麻雀"><span class="nav-number">17.2.</span> <span class="nav-text">sparrow 麻雀</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#starling-八哥"><span class="nav-number">17.3.</span> <span class="nav-text">starling 八哥</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#stork-鹳"><span class="nav-number">17.4.</span> <span class="nav-text">stork 鹳</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#swallow-燕子"><span class="nav-number">17.5.</span> <span class="nav-text">swallow 燕子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#swan-天鹅"><span class="nav-number">17.6.</span> <span class="nav-text">swan 天鹅</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#T"><span class="nav-number">18.</span> <span class="nav-text">T</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#throstle-画眉鸟"><span class="nav-number">18.1.</span> <span class="nav-text">throstle 画眉鸟</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#thrush-鸫"><span class="nav-number">18.2.</span> <span class="nav-text">thrush 鸫</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#V"><span class="nav-number">19.</span> <span class="nav-text">V</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#vulture-秃鹫，秃鹰"><span class="nav-number">19.1.</span> <span class="nav-text">vulture 秃鹫，秃鹰</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#W"><span class="nav-number">20.</span> <span class="nav-text">W</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#weavebird-织布鸟"><span class="nav-number">20.1.</span> <span class="nav-text">weavebird 织布鸟</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wild-goose-雁，野鹅"><span class="nav-number">20.2.</span> <span class="nav-text">wild goose 雁，野鹅</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#woodpecker-啄木鸟"><span class="nav-number">20.3.</span> <span class="nav-text">woodpecker 啄木鸟</span></a></li></ol></li></ol></div>
-            
 
           </div>
+          
+
         </div>
-      <!--/noindex-->
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
       
 
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#A"><span class="nav-number">1.</span> <span class="nav-text">A</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#albatross-信天翁"><span class="nav-number">1.1.</span> <span class="nav-text">albatross 信天翁</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#B"><span class="nav-number">2.</span> <span class="nav-text">B</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#blackbird-乌鸫，黑鹂"><span class="nav-number">2.1.</span> <span class="nav-text">blackbird 乌鸫，黑鹂</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bustard-鸨"><span class="nav-number">2.2.</span> <span class="nav-text">bustard 鸨</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#butcherbird-伯劳鸟"><span class="nav-number">2.3.</span> <span class="nav-text">butcherbird 伯劳鸟</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C"><span class="nav-number">3.</span> <span class="nav-text">C</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#canary-金丝雀"><span class="nav-number">3.1.</span> <span class="nav-text">canary 金丝雀</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#chaffinch-苍头燕雀"><span class="nav-number">3.2.</span> <span class="nav-text">chaffinch 苍头燕雀</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#condor-秃鹫"><span class="nav-number">3.3.</span> <span class="nav-text">condor 秃鹫</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cormorant-鸬鹚"><span class="nav-number">3.4.</span> <span class="nav-text">cormorant  鸬鹚</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#crow-乌鸦"><span class="nav-number">3.5.</span> <span class="nav-text">crow 乌鸦</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cuckoo-杜鹃，布谷鸟"><span class="nav-number">3.6.</span> <span class="nav-text">cuckoo 杜鹃，布谷鸟</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#D"><span class="nav-number">4.</span> <span class="nav-text">D</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#daw-穴鸟"><span class="nav-number">4.1.</span> <span class="nav-text">daw 穴鸟</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dove-鸽"><span class="nav-number">4.2.</span> <span class="nav-text">dove 鸽</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#E"><span class="nav-number">5.</span> <span class="nav-text">E</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#eagle-鹰"><span class="nav-number">5.1.</span> <span class="nav-text">eagle 鹰</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#F"><span class="nav-number">6.</span> <span class="nav-text">F</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#falcon-猎鹰，隼"><span class="nav-number">6.1.</span> <span class="nav-text">falcon 猎鹰，隼</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#G"><span class="nav-number">7.</span> <span class="nav-text">G</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#goldfinch-金翅雀"><span class="nav-number">7.1.</span> <span class="nav-text">goldfinch 金翅雀</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#grouse-松鸡"><span class="nav-number">7.2.</span> <span class="nav-text">grouse 松鸡</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#H"><span class="nav-number">8.</span> <span class="nav-text">H</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#hawk-鹰"><span class="nav-number">8.1.</span> <span class="nav-text">hawk 鹰</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#heron-鹭，苍鹭"><span class="nav-number">8.2.</span> <span class="nav-text">heron 鹭，苍鹭</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hummingbird-蜂鸟"><span class="nav-number">8.3.</span> <span class="nav-text">hummingbird 蜂鸟</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#K"><span class="nav-number">9.</span> <span class="nav-text">K</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#kingfisher-翠鸟"><span class="nav-number">9.1.</span> <span class="nav-text">kingfisher 翠鸟</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#kite-鸢"><span class="nav-number">9.2.</span> <span class="nav-text">kite 鸢</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#L"><span class="nav-number">10.</span> <span class="nav-text">L</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#lapwing-田凫"><span class="nav-number">10.1.</span> <span class="nav-text">lapwing 田凫</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lark-云雀，百灵鸟"><span class="nav-number">10.2.</span> <span class="nav-text">lark 云雀，百灵鸟</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#M"><span class="nav-number">11.</span> <span class="nav-text">M</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#macaw-金刚鹦鹉"><span class="nav-number">11.1.</span> <span class="nav-text">macaw 金刚鹦鹉</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#magpie-喜鹊"><span class="nav-number">11.2.</span> <span class="nav-text">magpie 喜鹊</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mallard-野鸭，凫"><span class="nav-number">11.3.</span> <span class="nav-text">mallard 野鸭，凫</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#manucode-辉风鸟，极乐鸟"><span class="nav-number">11.4.</span> <span class="nav-text">manucode 辉风鸟，极乐鸟</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#N"><span class="nav-number">12.</span> <span class="nav-text">N</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#nightingale-夜莺"><span class="nav-number">12.1.</span> <span class="nav-text">nightingale 夜莺</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#O"><span class="nav-number">13.</span> <span class="nav-text">O</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ostrich-鸵鸟"><span class="nav-number">13.1.</span> <span class="nav-text">ostrich 鸵鸟</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#owl-枭，猫头鹰"><span class="nav-number">13.2.</span> <span class="nav-text">owl 枭，猫头鹰</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#P"><span class="nav-number">14.</span> <span class="nav-text">P</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#parrot-鹦鹉"><span class="nav-number">14.1.</span> <span class="nav-text">parrot 鹦鹉</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pelican-鹈鹕"><span class="nav-number">14.2.</span> <span class="nav-text">pelican 鹈鹕</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#penguin-企鹅"><span class="nav-number">14.3.</span> <span class="nav-text">penguin 企鹅</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pheasant-雉，野鸡"><span class="nav-number">14.4.</span> <span class="nav-text">pheasant 雉，野鸡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#phoenix-凤凰"><span class="nav-number">14.5.</span> <span class="nav-text">phoenix 凤凰</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pigeon-野鸽"><span class="nav-number">14.6.</span> <span class="nav-text">pigeon 野鸽</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#plover-千鸟"><span class="nav-number">14.7.</span> <span class="nav-text">plover 千鸟</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Q"><span class="nav-number">15.</span> <span class="nav-text">Q</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#quail-鹌鹑"><span class="nav-number">15.1.</span> <span class="nav-text">quail 鹌鹑</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#R"><span class="nav-number">16.</span> <span class="nav-text">R</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#robin-知更鸟"><span class="nav-number">16.1.</span> <span class="nav-text">robin 知更鸟</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#S"><span class="nav-number">17.</span> <span class="nav-text">S</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#seagull-海鸥"><span class="nav-number">17.1.</span> <span class="nav-text">seagull 海鸥</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sparrow-麻雀"><span class="nav-number">17.2.</span> <span class="nav-text">sparrow 麻雀</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#starling-八哥"><span class="nav-number">17.3.</span> <span class="nav-text">starling 八哥</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#stork-鹳"><span class="nav-number">17.4.</span> <span class="nav-text">stork 鹳</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#swallow-燕子"><span class="nav-number">17.5.</span> <span class="nav-text">swallow 燕子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#swan-天鹅"><span class="nav-number">17.6.</span> <span class="nav-text">swan 天鹅</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#T"><span class="nav-number">18.</span> <span class="nav-text">T</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#throstle-画眉鸟"><span class="nav-number">18.1.</span> <span class="nav-text">throstle 画眉鸟</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#thrush-鸫"><span class="nav-number">18.2.</span> <span class="nav-text">thrush 鸫</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#V"><span class="nav-number">19.</span> <span class="nav-text">V</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#vulture-秃鹫，秃鹰"><span class="nav-number">19.1.</span> <span class="nav-text">vulture 秃鹫，秃鹰</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#W"><span class="nav-number">20.</span> <span class="nav-text">W</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#weavebird-织布鸟"><span class="nav-number">20.1.</span> <span class="nav-text">weavebird 织布鸟</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wild-goose-雁，野鹅"><span class="nav-number">20.2.</span> <span class="nav-text">wild goose 雁，野鹅</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#woodpecker-啄木鸟"><span class="nav-number">20.3.</span> <span class="nav-text">woodpecker 啄木鸟</span></a></li></ol></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Thouen</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
       
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+</div>
+
+
+
+      </div>
 
     </div>
   </aside>
   <div id="sidebar-dimmer"></div>
 
 
-        
       </div>
     </main>
 
@@ -752,27 +503,16 @@
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Thouen</span>
-
-  
-
-  
 </div>
-
-
   <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
-
-
-
   <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.2.0</div>
-
-
-
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.4.1</div>
 
         
+
+
+
+
 
 
 
@@ -784,105 +524,37 @@
         
       </div>
     </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
-    
-
-    
   </div>
 
   
-
-<script>
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
-
-
-
-
-
-
-
-
-
-
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  <script src="/lib/jquery/index.js?v=3.4.1"></script>
-
-  
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.4.1"></script><script src="/js/motion.js?v=7.4.1"></script>
+<script src="/js/schemes/pisces.js?v=7.4.1"></script>
 
-
-
-
-  <script src="/js/utils.js?v=7.2.0"></script>
-
-  <script src="/js/motion.js?v=7.2.0"></script>
-
-
-
-  
-  
-
-
-  <script src="/js/affix.js?v=7.2.0"></script>
-
-  <script src="/js/schemes/pisces.js?v=7.2.0"></script>
-
+<script src="/js/next-boot.js?v=7.4.1"></script>
 
 
 
   
-  <script src="/js/scrollspy.js?v=7.2.0"></script>
-<script src="/js/post-details.js?v=7.2.0"></script>
 
 
 
-  <script src="/js/next-boot.js?v=7.2.0"></script>
-
-  
-
-  
-
-  
-
-  
-
-  
 
 
-  
 
 
-  
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -890,76 +562,6 @@
   
 
   
-
-  
-  
-
-  
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-<script>
-  $('.highlight').not('.gist .highlight').each(function(i, e) {
-    var $wrap = $('<div>').addClass('highlight-wrap');
-    $(e).after($wrap);
-    $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
-      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
-        return $(e).text();
-      }).toArray().join('\n');
-      var ta = document.createElement('textarea');
-      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
-      ta.style.top = yPosition + 'px'; // Prevent page scroll
-      ta.style.position = 'absolute';
-      ta.style.opacity = '0';
-      ta.readOnly = true;
-      ta.value = code;
-      document.body.appendChild(ta);
-      const selection = document.getSelection();
-      const selected = selection.rangeCount > 0 ? selection.getRangeAt(0) : false;
-      ta.select();
-      ta.setSelectionRange(0, code.length);
-      ta.readOnly = false;
-      var result = document.execCommand('copy');
-      
-      ta.blur(); // For iOS
-      $(this).blur();
-      if (selected) {
-        selection.removeAllRanges();
-        selection.addRange(selected);
-      }
-    })).on('mouseleave', function(e) {
-      var $b = $(this).find('.copy-btn');
-      setTimeout(function() {
-        $b.text('复制');
-      }, 300);
-    }).append(e);
-  })
-</script>
-
-
-  
-
-  
-
 
   
 
