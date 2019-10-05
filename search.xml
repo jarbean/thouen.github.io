@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[URL编码与解码[工具](0.1)]]></title>
+    <title><![CDATA[URL编码与解码[工具](0.2)]]></title>
     <url>%2F2019%2F10%2F04%2FDecode-URL%2F</url>
-    <content type="text"><![CDATA[url编码解码,又叫百分号编码，是统一资源定位(URL)编码方式。URL地址（常说网址）规定了常用地数字，字母可以直接使用，另外一批作为特殊用户字符也可以直接用（/,:@等），剩下的其它所有字符必须通过%xx编码处理。 输入 使用URLComponent 编码 解码 结果 var srcElem = document.getElementById('src'); var destElem = document.getElementById('dest'); function getEncodedURL() { var text = srcElem.value; var url; var useComponent = document.getElementById('componentCBox').checked; if (useComponent) { url = window.encodeURLComponent(text); } else { url = window.encodeURL(text); } destElem.innerText = url; return url; } function getDecodedURL() { var text = srcElem.value; var url; var useComponent = document.getElementById('componentCBox').checked; if (useComponent) { url = window.decodeURLComponent(text); } else { url = window.decodeURL(text); } destElem.innerHTML = ''+url+''; return url; } function gotoDecodedURL() { window.open(getDecodedURL()); }]]></content>
+    <content type="text"><![CDATA[url编码解码,又叫百分号编码，是统一资源定位(URL)编码方式。URL地址（常说网址）规定了常用地数字，字母可以直接使用，另外一批作为特殊用户字符也可以直接用（/,:@等），剩下的其它所有字符必须通过%xx编码处理。 输入 使用URLComponent 编码 解码 结果 var inputElem = document.getElementById('input'); var outputElem = document.getElementById('output'); function getEncodedURL() { var text = inputElem.value; var url; var useComponent = document.getElementById('componentCBox').checked; if (useComponent) { url = window.encodeURLComponent(text); } else { url = window.encodeURL(text); } outputElem.innerText = url; return url; } function getDecodedURL() { var text = inputElem.value; var url; var useComponent = document.getElementById('componentCBox').checked; if (useComponent) { url = window.decodeURLComponent(text); } else { url = window.decodeURL(text); } outputElem.innerHTML = ''+url+''; return url; } function gotoDecodedURL() { window.open(getDecodedURL()); }]]></content>
       <categories>
         <category>工具</category>
       </categories>
@@ -12,9 +12,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[净化百度网盘链接[工具](0.1)]]></title>
+    <title><![CDATA[净化百度网盘链接[工具](0.2)]]></title>
     <url>%2F2019%2F10%2F04%2FExtract-Baidu-Netdisk-link%2F</url>
-    <content type="text"><![CDATA[净化百度网盘链接: 提取文字中包含的百度网盘链接 输入 提取链接 提取并跳转 结果 var srcElem = document.getElementById('src'); var destElem = document.getElementById('dest'); function getLink() { var text = srcElem.value.replace(/\\\*\//g, '').replace(/[^a-zA-Z0-9_-]/g,''); var link = 'https://pan.baidu.com/s/'; link += text; destElem.innerHTML = ''+link+''; return link; } function gotoLink() { window.open(getLink()); }]]></content>
+    <content type="text"><![CDATA[净化百度网盘链接: 提取文字中包含的百度网盘链接 输入 清空 提取链接 提取并跳转 输出 var inputElem = document.getElementById('input'); var outputElem = document.getElementById('output'); function clearInput() { inputElem.value = ''; } function getLink() { var linkPrefix = 'https://pan.baidu.com/s/'; var linkSuffix = inputElem.value.replace(/.*\//g, '').replace(/[^a-zA-Z0-9_-]/g,''); var link = linkPrefix + linkSuffix; outputElem.innerHTML = ''+link+''; return link; } function gotoLink() { window.open(getLink()); }]]></content>
       <categories>
         <category>工具</category>
       </categories>
@@ -23,9 +23,15 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Common mathematical formula]]></title>
+    <title><![CDATA[常用数学公式]]></title>
     <url>%2F2019%2F09%2F09%2FCommon-mathematical-formula%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[初等数学初等代数乘法和因式分解公式 $(a \pm b)^2 = a^2 \pm 2ab + b^2$ $(a+b+c)^2 = a^2 + b^2 + c^2 + 2ab + 2bc + 2ac$ $(a+b)^3 = a^3 + 3{a^2}b + 3a{b^2} + b^3$]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[相面]]></title>

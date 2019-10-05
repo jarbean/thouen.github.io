@@ -58,14 +58,14 @@
   <meta name="description" content="url编码解码,又叫百分号编码，是统一资源定位(URL)编码方式。URL地址（常说网址）规定了常用地数字，字母可以直接使用，另外一批作为特殊用户字符也可以直接用（/,:@等），剩下的其它所有字符必须通过%xx编码处理。">
 <meta name="keywords" content="工具">
 <meta property="og:type" content="article">
-<meta property="og:title" content="URL编码与解码[工具](0.1)">
+<meta property="og:title" content="URL编码与解码[工具](0.2)">
 <meta property="og:url" content="https://thouen.github.io/2019/10/04/Decode-URL/index.html">
 <meta property="og:site_name" content="Thouen&#39;s Blog">
 <meta property="og:description" content="url编码解码,又叫百分号编码，是统一资源定位(URL)编码方式。URL地址（常说网址）规定了常用地数字，字母可以直接使用，另外一批作为特殊用户字符也可以直接用（/,:@等），剩下的其它所有字符必须通过%xx编码处理。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-05T12:54:44.796Z">
+<meta property="og:updated_time" content="2019-10-05T14:53:45.865Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="URL编码与解码[工具](0.1)">
+<meta name="twitter:title" content="URL编码与解码[工具](0.2)">
 <meta name="twitter:description" content="url编码解码,又叫百分号编码，是统一资源定位(URL)编码方式。URL地址（常说网址）规定了常用地数字，字母可以直接使用，另外一批作为特殊用户字符也可以直接用（/,:@等），剩下的其它所有字符必须通过%xx编码处理。">
   <link rel="canonical" href="https://thouen.github.io/2019/10/04/Decode-URL/">
 
@@ -81,7 +81,7 @@
   };
 </script>
 
-  <title>URL编码与解码[工具](0.1) | Thouen's Blog</title>
+  <title>URL编码与解码[工具](0.2) | Thouen's Blog</title>
   
 
 
@@ -240,7 +240,7 @@
       <meta itemprop="name" content="Thouen's Blog">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">URL编码与解码[工具](0.1)
+        <h1 class="post-title" itemprop="name headline">URL编码与解码[工具](0.2)
 
           
         </h1>
@@ -267,7 +267,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-05 20:54:44" itemprop="dateModified" datetime="2019-10-05T20:54:44+08:00">2019-10-05</time>
+                <time title="修改时间：2019-10-05 22:53:45" itemprop="dateModified" datetime="2019-10-05T22:53:45+08:00">2019-10-05</time>
               </span>
             
           
@@ -298,25 +298,28 @@
       
         <p>url编码解码,又叫百分号编码，是统一资源定位(URL)编码方式。URL地址（常说网址）规定了常用地数字，字母可以直接使用，另外一批作为特殊用户字符也可以直接用（/,:@等），剩下的其它所有字符必须通过%xx编码处理。</p>
 <a id="more"></a>
+
 <h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2><div>
-    <textarea id="src" style="border: 1px solid #000;width:-moz-available;min-height:200px;max-height:300px"></textarea>
+    <textarea id="input" style="border:1px solid #000;width:-moz-available;height:120px;padding:5px;resize:none"></textarea>
 </div>
-<div style="clear: both">
-    <div style="float: right">
-        <span><input id="componentCBox" type="checkbox" value="UseComponent">使用URLComponent</span>
+<div style="clear:both">
+    <div style="float:right">
+        <span><input id="componentCBox" type="checkbox" value="UseComponent">
+            <span>使用URLComponent</span>
+        </span>
         <button onclick="getEncodedURL()">编码</button>
         <button onclick="getDecodedURL()">解码</button>
     </div>
 </div>
 
 <h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><div>
-    <div id="dest" style="height:60px;"></div>
+    <div id="output" style="padding:5px"></div>
 </div>
 <script>
-    var srcElem = document.getElementById('src');
-    var destElem = document.getElementById('dest');
+    var inputElem = document.getElementById('input');
+    var outputElem = document.getElementById('output');
     function getEncodedURL() {
-        var text = srcElem.value;
+        var text = inputElem.value;
         var url;
         var useComponent = document.getElementById('componentCBox').checked;
         if (useComponent) {
@@ -324,11 +327,11 @@
         } else {
             url = window.encodeURL(text);
         }
-        destElem.innerText = url;
+        outputElem.innerText = url;
         return url;
     }
     function getDecodedURL() {
-        var text = srcElem.value;
+        var text = inputElem.value;
         var url;
         var useComponent = document.getElementById('componentCBox').checked;
         if (useComponent) {
@@ -336,7 +339,7 @@
         } else {
             url = window.decodeURL(text);
         }
-        destElem.innerHTML = '<a href="'+url+'">'+url+'</a>';
+        outputElem.innerHTML = '<a href="'+url+'">'+url+'</a>';
         return url;
     }
     function gotoDecodedURL() {
@@ -367,8 +370,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/10/04/Extract-Baidu-Netdisk-link/" rel="next" title="净化百度网盘链接[工具](0.1)">
-                  <i class="fa fa-chevron-left"></i> 净化百度网盘链接[工具](0.1)
+                <a href="/2019/10/04/Extract-Baidu-Netdisk-link/" rel="next" title="净化百度网盘链接[工具](0.2)">
+                  <i class="fa fa-chevron-left"></i> 净化百度网盘链接[工具](0.2)
                 </a>
               
             </div>
@@ -450,7 +453,7 @@
             <a href="/categories/">
           
         
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
@@ -463,7 +466,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">14</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -545,6 +548,8 @@
 
 
 
+
+  
 
   
 
