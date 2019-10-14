@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="/css/main.css?v=7.4.1">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
 
 
 <script id="hexo-configurations">
@@ -29,8 +29,8 @@
     version: '7.4.1',
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":null},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    copycode: {"enable":true,"show_result":true,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
     fancybox: false,
     mediumzoom: false,
@@ -44,7 +44,7 @@
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     },
     localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: 'search.xml',
+    path: '',
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     translation: {
       copy_button: '复制',
@@ -209,6 +209,8 @@
     <span>0%</span>
   </div>
 
+  <a href="https://github.com/thouen" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
 
     <main id="main" class="main">
       <div class="main-inner">
@@ -222,13 +224,13 @@
         
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://thouen.github.io/2019/10/04/Decode-URL/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="cn">
+    <link itemprop="mainEntityOfPage" href="https://thouen.github.io/cn/tools/base64-encoding-and-decoding/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Thouen">
+      <meta itemprop="name" content="Kan Thouen">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -237,7 +239,207 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/2019/10/04/Decode-URL/" class="post-title-link" itemprop="url">URL编码与解码[工具](0.2)</a>
+            <a href="/cn/tools/base64-encoding-and-decoding/" class="post-title-link" itemprop="url">Base64编码与解码</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-10-07 09:23:26" itemprop="dateCreated datePublished" datetime="2019-10-07T09:23:26+08:00">2019-10-07</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-14 21:30:17" itemprop="dateModified" datetime="2019-10-14T21:30:17+08:00">2019-10-14</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/tools/" itemprop="url" rel="index"><span itemprop="name">tools</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/tools/developer-tool/" itemprop="url" rel="index"><span itemprop="name">developer tool</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>等待完善…</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="cn">
+    <link itemprop="mainEntityOfPage" href="https://thouen.github.io/cn/tools/get-baidu-netdisk-real-link-address/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kan Thouen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Thouen's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/cn/tools/get-baidu-netdisk-real-link-address/" class="post-title-link" itemprop="url">获取百度网盘真实下载地址</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-10-06 20:23:35" itemprop="dateCreated datePublished" datetime="2019-10-06T20:23:35+08:00">2019-10-06</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-14 21:31:16" itemprop="dateModified" datetime="2019-10-14T21:31:16+08:00">2019-10-14</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/tools/" itemprop="url" rel="index"><span itemprop="name">tools</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>获取百度网盘真实下载地址</p>
+<p>功能测试中，待完善。。。</p>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/cn/tools/get-baidu-netdisk-real-link-address/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="cn">
+    <link itemprop="mainEntityOfPage" href="https://thouen.github.io/cn/tools/decode-url/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kan Thouen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Thouen's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/cn/tools/decode-url/" class="post-title-link" itemprop="url">URL编码与解码[工具](0.2)</a>
           
         </h1>
 
@@ -263,7 +465,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-05 22:53:45" itemprop="dateModified" datetime="2019-10-05T22:53:45+08:00">2019-10-05</time>
+                <time title="修改时间：2019-10-14 21:30:46" itemprop="dateModified" datetime="2019-10-14T21:30:46+08:00">2019-10-14</time>
               </span>
             
           
@@ -273,7 +475,14 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/工具/" itemprop="url" rel="index"><span itemprop="name">工具</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/tools/" itemprop="url" rel="index"><span itemprop="name">tools</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/tools/developer-tool/" itemprop="url" rel="index"><span itemprop="name">developer tool</span></a></span>
 
                 
                 
@@ -296,7 +505,7 @@
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/2019/10/04/Decode-URL/#more" rel="contents">
+              <a class="btn" href="/cn/tools/decode-url/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -322,13 +531,13 @@
         
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://thouen.github.io/2019/10/04/Extract-Baidu-Netdisk-link/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="cn">
+    <link itemprop="mainEntityOfPage" href="https://thouen.github.io/cn/tools/extract-baidu-netdisk-link/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Thouen">
+      <meta itemprop="name" content="Kan Thouen">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -337,7 +546,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/2019/10/04/Extract-Baidu-Netdisk-link/" class="post-title-link" itemprop="url">净化百度网盘链接[工具](0.2)</a>
+            <a href="/cn/tools/extract-baidu-netdisk-link/" class="post-title-link" itemprop="url">提取百度云盘链接[工具](0.2)</a>
           
         </h1>
 
@@ -363,7 +572,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-05 22:53:50" itemprop="dateModified" datetime="2019-10-05T22:53:50+08:00">2019-10-05</time>
+                <time title="修改时间：2019-10-14 21:31:00" itemprop="dateModified" datetime="2019-10-14T21:31:00+08:00">2019-10-14</time>
               </span>
             
           
@@ -373,7 +582,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/工具/" itemprop="url" rel="index"><span itemprop="name">工具</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/tools/" itemprop="url" rel="index"><span itemprop="name">tools</span></a></span>
 
                 
                 
@@ -396,7 +605,7 @@
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/2019/10/04/Extract-Baidu-Netdisk-link/#more" rel="contents">
+              <a class="btn" href="/cn/tools/extract-baidu-netdisk-link/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -422,13 +631,13 @@
         
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://thouen.github.io/2019/09/09/Common-mathematical-formula/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="cn">
+    <link itemprop="mainEntityOfPage" href="https://thouen.github.io/cn/mathematics/common-mathematical-formula/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Thouen">
+      <meta itemprop="name" content="Kan Thouen">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -437,7 +646,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/2019/09/09/Common-mathematical-formula/" class="post-title-link" itemprop="url">常用数学公式</a>
+            <a href="/cn/mathematics/common-mathematical-formula/" class="post-title-link" itemprop="url">常用数学公式</a>
           
         </h1>
 
@@ -463,7 +672,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-05 21:25:35" itemprop="dateModified" datetime="2019-10-05T21:25:35+08:00">2019-10-05</time>
+                <time title="修改时间：2019-10-14 21:30:32" itemprop="dateModified" datetime="2019-10-14T21:30:32+08:00">2019-10-14</time>
               </span>
             
           
@@ -473,7 +682,14 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数学/" itemprop="url" rel="index"><span itemprop="name">数学</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/mathematics/" itemprop="url" rel="index"><span itemprop="name">mathematics</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/mathematics/mathematical-formula/" itemprop="url" rel="index"><span itemprop="name">mathematical formula</span></a></span>
 
                 
                 
@@ -497,7 +713,15 @@
 <li>$(a+b+c)^2 = a^2 + b^2 + c^2 + 2ab + 2bc + 2ac$</li>
 <li>$(a+b)^3 = a^3 + 3{a^2}b + 3a{b^2} + b^3$</li>
 </ol>
-
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/cn/mathematics/common-mathematical-formula/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -518,13 +742,13 @@
         
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://thouen.github.io/2019/08/08/Analysis-man-according-to-the-face/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="cn">
+    <link itemprop="mainEntityOfPage" href="https://thouen.github.io/cn/life-skill/face/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Thouen">
+      <meta itemprop="name" content="Kan Thouen">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -533,7 +757,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/2019/08/08/Analysis-man-according-to-the-face/" class="post-title-link" itemprop="url">相面</a>
+            <a href="/cn/life-skill/face/" class="post-title-link" itemprop="url">面相</a>
           
         </h1>
 
@@ -559,7 +783,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-05 20:38:15" itemprop="dateModified" datetime="2019-10-05T20:38:15+08:00">2019-10-05</time>
+                <time title="修改时间：2019-10-14 21:31:08" itemprop="dateModified" datetime="2019-10-14T21:31:08+08:00">2019-10-14</time>
               </span>
             
           
@@ -569,7 +793,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/生活/" itemprop="url" rel="index"><span itemprop="name">生活</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/life-skill/" itemprop="url" rel="index"><span itemprop="name">life skill</span></a></span>
 
                 
                 
@@ -595,7 +819,7 @@
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/2019/08/08/Analysis-man-according-to-the-face/#more" rel="contents">
+              <a class="btn" href="/cn/life-skill/face/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -621,13 +845,13 @@
         
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://thouen.github.io/2019/08/04/Computer-Science-reading/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="cn">
+    <link itemprop="mainEntityOfPage" href="https://thouen.github.io/cn/reading/computer-science-classic-books/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Thouen">
+      <meta itemprop="name" content="Kan Thouen">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -636,7 +860,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/2019/08/04/Computer-Science-reading/" class="post-title-link" itemprop="url">Computer Science reading</a>
+            <a href="/cn/reading/computer-science-classic-books/" class="post-title-link" itemprop="url">计算机科学经典图书</a>
           
         </h1>
 
@@ -662,7 +886,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-08-09 10:08:03" itemprop="dateModified" datetime="2019-08-09T10:08:03+08:00">2019-08-09</time>
+                <time title="修改时间：2019-10-14 21:30:39" itemprop="dateModified" datetime="2019-10-14T21:30:39+08:00">2019-10-14</time>
               </span>
             
           
@@ -672,7 +896,14 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/读书/" itemprop="url" rel="index"><span itemprop="name">读书</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/reading/" itemprop="url" rel="index"><span itemprop="name">reading</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/reading/computer-science-books/" itemprop="url" rel="index"><span itemprop="name">computer science books</span></a></span>
 
                 
                 
@@ -696,7 +927,7 @@
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/2019/08/04/Computer-Science-reading/#more" rel="contents">
+              <a class="btn" href="/cn/reading/computer-science-classic-books/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -722,13 +953,13 @@
         
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://thouen.github.io/2019/08/02/Bird-English-words/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="cn">
+    <link itemprop="mainEntityOfPage" href="https://thouen.github.io/cn/english-language/bird-english-words/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Thouen">
+      <meta itemprop="name" content="Kan Thouen">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -737,7 +968,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/2019/08/02/Bird-English-words/" class="post-title-link" itemprop="url">鸟类英文单词</a>
+            <a href="/cn/english-language/bird-english-words/" class="post-title-link" itemprop="url">鸟类英文单词</a>
           
         </h1>
 
@@ -763,7 +994,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-04 16:43:04" itemprop="dateModified" datetime="2019-10-04T16:43:04+08:00">2019-10-04</time>
+                <time title="修改时间：2019-10-14 21:30:25" itemprop="dateModified" datetime="2019-10-14T21:30:25+08:00">2019-10-14</time>
               </span>
             
           
@@ -773,7 +1004,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/English/" itemprop="url" rel="index"><span itemprop="name">English</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/english-language/" itemprop="url" rel="index"><span itemprop="name">english language</span></a></span>
 
                 
                 
@@ -797,7 +1028,7 @@
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/2019/08/02/Bird-English-words/#more" rel="contents">
+              <a class="btn" href="/cn/english-language/bird-english-words/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -823,13 +1054,13 @@
         
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://thouen.github.io/2019/07/20/English-reading/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="cn">
+    <link itemprop="mainEntityOfPage" href="https://thouen.github.io/cn/reading/english-learning-books/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Thouen">
+      <meta itemprop="name" content="Kan Thouen">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -838,7 +1069,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/2019/07/20/English-reading/" class="post-title-link" itemprop="url">阶段式英语读物</a>
+            <a href="/cn/reading/english-learning-books/" class="post-title-link" itemprop="url">阶段式英语读物</a>
           
         </h1>
 
@@ -864,7 +1095,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-08-04 16:19:35" itemprop="dateModified" datetime="2019-08-04T16:19:35+08:00">2019-08-04</time>
+                <time title="修改时间：2019-10-14 21:30:53" itemprop="dateModified" datetime="2019-10-14T21:30:53+08:00">2019-10-14</time>
               </span>
             
           
@@ -874,7 +1105,14 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/读书/" itemprop="url" rel="index"><span itemprop="name">读书</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/reading/" itemprop="url" rel="index"><span itemprop="name">reading</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/reading/english-books/" itemprop="url" rel="index"><span itemprop="name">english books</span></a></span>
 
                 
                 
@@ -894,10 +1132,11 @@
 
       
           <h1 id="i-1理论"><a href="#i-1理论" class="headerlink" title="i+1理论"></a>i+1理论</h1><p>美国应用语言学家Stephen D.Krashen在总结前人理论的基础上提出第二语言习得的重要理论，“i+1”理论。</p>
+<p>等待完善…</p>
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/2019/07/20/English-reading/#more" rel="contents">
+              <a class="btn" href="/cn/reading/english-learning-books/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -923,13 +1162,13 @@
         
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://thouen.github.io/2019/07/20/Algorithm-analysis/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="cn">
+    <link itemprop="mainEntityOfPage" href="https://thouen.github.io/cn/development/algorithm-analysis/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Thouen">
+      <meta itemprop="name" content="Kan Thouen">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -938,7 +1177,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/2019/07/20/Algorithm-analysis/" class="post-title-link" itemprop="url">算法分析</a>
+            <a href="/cn/development/algorithm-analysis/" class="post-title-link" itemprop="url">算法分析</a>
           
         </h1>
 
@@ -964,7 +1203,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-08-04 18:09:11" itemprop="dateModified" datetime="2019-08-04T18:09:11+08:00">2019-08-04</time>
+                <time title="修改时间：2019-10-14 21:29:57" itemprop="dateModified" datetime="2019-10-14T21:29:57+08:00">2019-10-14</time>
               </span>
             
           
@@ -974,7 +1213,14 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/算法/" itemprop="url" rel="index"><span itemprop="name">算法</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/development/" itemprop="url" rel="index"><span itemprop="name">development</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/development/algorithm-analysis/" itemprop="url" rel="index"><span itemprop="name">algorithm analysis</span></a></span>
 
                 
                 
@@ -1002,267 +1248,7 @@
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/2019/07/20/Algorithm-analysis/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </article>
-  
-  
-  
-
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://thouen.github.io/2019/07/19/Solting-algorithms/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Thouen">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Thouen's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/07/19/Solting-algorithms/" class="post-title-link" itemprop="url">排序算法</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-19 20:23:30" itemprop="dateCreated datePublished" datetime="2019-07-19T20:23:30+08:00">2019-07-19</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-08-04 18:09:36" itemprop="dateModified" datetime="2019-08-04T18:09:36+08:00">2019-08-04</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/算法/" itemprop="url" rel="index"><span itemprop="name">算法</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>数据结构常用的八大排序算法分别是：选择排序、冒泡排序、插入排序、快速排序、归并排序、基数排序、希尔排序和堆排序。以下对这八种排序算法的性能进行比较：</p>
-<table>
-<thead>
-<tr>
-<th>排序算法</th>
-<th>时间复杂度</th>
-<th>空间复杂度</th>
-<th>稳定性</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>选择排序</td>
-<td>$O(n^2)$</td>
-<td>$O(1)$</td>
-<td>不稳定</td>
-</tr>
-<tr>
-<td>冒泡排序</td>
-<td>$O(n^2)$</td>
-<td>$O(1)$</td>
-<td>稳定</td>
-</tr>
-<tr>
-<td>插入排序</td>
-<td>$O(n^2)$</td>
-<td>$O(1)$</td>
-<td>稳定</td>
-</tr>
-<tr>
-<td>快速排序</td>
-<td>$O(n\log_2{n})$</td>
-<td>$O(1)$</td>
-<td>不稳定</td>
-</tr>
-<tr>
-<td>归并排序</td>
-<td>$O(n\log_2{n})$</td>
-<td>$O(1)$</td>
-<td>稳定</td>
-</tr>
-<tr>
-<td>基数排序</td>
-<td>$O(d(r+n))$</td>
-<td>$O(rd+n)$</td>
-<td>稳定</td>
-</tr>
-<tr>
-<td>希尔排序</td>
-<td>$O(n^{1.3})$</td>
-<td>$O(1)$</td>
-<td>不稳定</td>
-</tr>
-<tr>
-<td>堆排序</td>
-<td>$O(n\log_2{n})$</td>
-<td>$O(1)$</td>
-<td>不稳定</td>
-</tr>
-</tbody></table>
-<blockquote>
-<p>基数排序的复杂度中，r代表关键字的基数，d代表长度，n代表关键字的个数。</p>
-</blockquote>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </article>
-  
-  
-  
-
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://thouen.github.io/2019/07/17/Speed-up-cloning-project-from-github/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Thouen">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Thouen's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/07/17/Speed-up-cloning-project-from-github/" class="post-title-link" itemprop="url">加速github的clone下载速度</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-17 21:04:33" itemprop="dateCreated datePublished" datetime="2019-07-17T21:04:33+08:00">2019-07-17</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-07-21 16:13:15" itemprop="dateModified" datetime="2019-07-21T16:13:15+08:00">2019-07-21</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/github/" itemprop="url" rel="index"><span itemprop="name">github</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>由于众所周知的原因，github在国内下载速度很慢。你可以采取很多方式来进行提速，这里采用修改hosts文件的方式。<br>首先，使用<a href="https://www.ipaddress.com" target="_blank" rel="noopener">IPAdress</a>查询github以下网址的ip地址：</p>
-<ul>
-<li><a href="github.com">github.com</a></li>
-<li><a href="github.global.ssl.fastly.net">github.global.ssl.fastly.net</a></li>
-<li><a href="codeload.github.com">codeload.github.com</a></li>
-</ul>
-<p>而后，将查询到的ip地址使用类似如下格式添加到<code>hosts</code>文件中(2019 年7月17日更新)</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">140<span class="selector-class">.82</span><span class="selector-class">.113</span><span class="selector-class">.4</span> <span class="selector-tag">github</span><span class="selector-class">.com</span></span><br><span class="line">151<span class="selector-class">.101</span><span class="selector-class">.185</span><span class="selector-class">.194</span> <span class="selector-tag">github</span><span class="selector-class">.global</span><span class="selector-class">.ssl</span><span class="selector-class">.fastly</span><span class="selector-class">.net</span></span><br><span class="line">140<span class="selector-class">.82</span><span class="selector-class">.114</span><span class="selector-class">.9</span> <span class="selector-tag">codeload</span><span class="selector-class">.github</span><span class="selector-class">.com</span></span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          
-            <div class="post-button">
-              <a class="btn" href="/2019/07/17/Speed-up-cloning-project-from-github/#more" rel="contents">
+              <a class="btn" href="/cn/development/algorithm-analysis/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1325,7 +1311,10 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">Thouen</p>
+    <img class="site-author-image" itemprop="image"
+      src="/images/avatar.jpg"
+      alt="Kan Thouen">
+  <p class="site-author-name" itemprop="name">Kan Thouen</p>
   <div class="site-description" itemprop="description"></div>
 </div>
 <div class="site-state-wrap motion-element">
@@ -1334,7 +1323,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">15</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1347,7 +1336,7 @@
             <a href="/categories/">
           
         
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">16</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
@@ -1360,13 +1349,37 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-count">25</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
     
   </nav>
 </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/thouen" title="GitHub &rarr; https://github.com/thouen" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="mailto:thouen@163.com" title="E-Mail &rarr; mailto:thouen@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+    
+  </div>
 
 
 
@@ -1384,13 +1397,10 @@
       <div class="footer-inner">
         <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
+    <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Thouen</span>
+  <span class="author" itemprop="copyrightHolder">Kan Thouen</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
-  <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.4.1</div>
 
         
 
@@ -1452,11 +1462,11 @@
       
     
       
+    
+      
+    
+      
         
-      
-    
-      
-    
       
     
       
@@ -1513,7 +1523,7 @@
   });
 </script>
 <script>
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML', () => {
+  NexT.utils.getScript('//cdn.bootcss.com/mathjax/2.7.6/MathJax.js', () => {
     MathJax.Hub.Typeset();
   }, window.MathJax);
 </script>
