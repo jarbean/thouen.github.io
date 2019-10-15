@@ -497,7 +497,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="cn">
-    <link itemprop="mainEntityOfPage" href="https://thouen.github.io/cn/program/my-archlinux-program/">
+    <link itemprop="mainEntityOfPage" href="https://thouen.github.io/cn/program/my-archlinux-programs/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Kan Thouen">
@@ -511,7 +511,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/cn/program/my-archlinux-program/" class="post-title-link" itemprop="url">我的Archlinux常用软件</a>
+            <a href="/cn/program/my-archlinux-programs/" class="post-title-link" itemprop="url">我的Archlinux常用软件</a>
           
         </h1>
 
@@ -537,7 +537,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-14 21:31:35" itemprop="dateModified" datetime="2019-10-14T21:31:35+08:00">2019-10-14</time>
+                <time title="修改时间：2019-10-15 17:41:52" itemprop="dateModified" datetime="2019-10-15T17:41:52+08:00">2019-10-15</time>
               </span>
             
           
@@ -573,19 +573,29 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="必装软件"><a href="#必装软件" class="headerlink" title="必装软件"></a>必装软件</h1><h2 id="sudo"><a href="#sudo" class="headerlink" title="sudo"></a>sudo</h2><p>用linux的人都知道，sudo必装。</p>
+          <h1 id="必装软件"><a href="#必装软件" class="headerlink" title="必装软件"></a>必装软件</h1><h2 id="sudo"><a href="#sudo" class="headerlink" title="sudo"></a>sudo</h2><p>sudo是linux系统管理指令，是允许系统管理员让普通用户执行一些或者全部的root命令的一个工具。必装。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S sudo</span><br></pre></td></tr></table></figure>
 
 <h2 id="AUR助手"><a href="#AUR助手" class="headerlink" title="AUR助手"></a>AUR助手</h2><p>AUR助手支持从安装AUR（ArchLinux User-community Repository）自动化安装软件，使用方式与pacman类似。常用的AUR助手有<code>yay</code>、<code>yaourt</code>、<code>pacaur</code>、<code>pikaur</code>、<code>aurman</code>。这里笔者安装的是<code>pikaur</code>。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S pikaur</span><br></pre></td></tr></table></figure>
 
 <blockquote>
-<p>安装AUR助手首先需要配置archlinuxcn源。</p>
+<p>安装AUR助手首先需要配置archlinuxcn中文社区仓库。</p>
+<ol>
+<li>编辑<code>/etc/pacman.conf/</code>，在文件末尾添加：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; [archlinuxcn]</span><br><span class="line">&gt; SigLevel = Optional TrustAll</span><br><span class="line">&gt; Server = http://repo.archlinuxcn.org/$arch</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li>添加GPG密钥<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; sudo pacman -S archlinuxcn-keyring</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 </blockquote>
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/cn/program/my-archlinux-program/#more" rel="contents">
+              <a class="btn" href="/cn/program/my-archlinux-programs/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -652,7 +662,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-14 21:30:04" itemprop="dateModified" datetime="2019-10-14T21:30:04+08:00">2019-10-14</time>
+                <time title="修改时间：2019-10-14 23:38:41" itemprop="dateModified" datetime="2019-10-14T23:38:41+08:00">2019-10-14</time>
               </span>
             
           
@@ -692,7 +702,6 @@
 <h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><ol>
 <li>安装过程中需要保持网络畅通。</li>
 <li>谨慎操作。</li>
-<li>遇到问题直接找<a href="https://wiki.archlinux.org" target="_blank" rel="noopener">官方Wiki</a>。</li>
 </ol>
           <!--noindex-->
           
