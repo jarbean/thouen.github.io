@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.1">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.4.1" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.4.1">
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.4.1',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="Archlinux是最简洁、最优雅的Linux系统，不接受反驳。点击这里查看Archlinux官方安装教程。 注意事项 安装过程中需要保持网络畅通。 谨慎操作。">
+<meta name="keywords" content="Linux,Archlinux,教程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Archlinux桌面版安装教程">
+<meta property="og:url" content="https://thouen.github.io/zh/blog/archlinux-desktop-installation-tutorial/index.html">
+<meta property="og:site_name" content="Thouen&#39;s Blog">
+<meta property="og:description" content="Archlinux是最简洁、最优雅的Linux系统，不接受反驳。点击这里查看Archlinux官方安装教程。 注意事项 安装过程中需要保持网络畅通。 谨慎操作。">
+<meta property="og:locale" content="zh">
+<meta property="og:image" content="https://thouen.github.io/images/archlinux-logo.png">
+<meta property="og:updated_time" content="2019-10-16T04:09:44.565Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Archlinux桌面版安装教程">
+<meta name="twitter:description" content="Archlinux是最简洁、最优雅的Linux系统，不接受反驳。点击这里查看Archlinux官方安装教程。 注意事项 安装过程中需要保持网络畅通。 谨慎操作。">
+<meta name="twitter:image" content="https://thouen.github.io/images/archlinux-logo.png">
+  <link rel="canonical" href="https://thouen.github.io/zh/blog/archlinux-desktop-installation-tutorial/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>Archlinux桌面版安装教程 | Thouen's Blog</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Thouen's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh">
+    <link itemprop="mainEntityOfPage" href="https://thouen.github.io/zh/blog/archlinux-desktop-installation-tutorial/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kan Thouen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Thouen's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Archlinux桌面版安装教程
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-07-11 14:05:04" itemprop="dateCreated datePublished" datetime="2019-07-11T14:05:04+08:00">2019-07-11</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-16 12:09:44" itemprop="dateModified" datetime="2019-10-16T12:09:44+08:00">2019-10-16</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/linux/tutorial/" itemprop="url" rel="index"><span itemprop="name">tutorial</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="/images/archlinux-logo.png" alt><br>Archlinux是最简洁、最优雅的Linux系统，不接受反驳。<a href="https://wiki.archlinux.org/index.php/Installation_guide_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)" target="_blank" rel="noopener">点击这里</a>查看Archlinux官方安装教程。</p>
+<h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><ol>
+<li>安装过程中需要保持网络畅通。</li>
+<li>谨慎操作。</li>
+</ol>
+<a id="more"></a>
+<h1 id="制作启动盘"><a href="#制作启动盘" class="headerlink" title="制作启动盘"></a>制作启动盘</h1><h2 id="下载系统镜像"><a href="#下载系统镜像" class="headerlink" title="下载系统镜像"></a>下载系统镜像</h2><p>你可以从<a href="https://mirrors.tuna.tsinghua.edu.cn/archlinux/iso/latest/" target="_blank" rel="noopener">清华大学开源镜像站</a>、<a href="https://mirrors.ustc.edu.cn/archlinux/iso/latest/" target="_blank" rel="noopener">中科大开源镜像站</a>或者选择<a href="https://www.archlinux.org/download/#download-mirrors" target="_blank" rel="noopener">其他镜像源</a>下载最新的ArchLinux系统镜像。</p>
+<h2 id="制作启动盘（U盘）"><a href="#制作启动盘（U盘）" class="headerlink" title="制作启动盘（U盘）"></a>制作启动盘（U盘）</h2><h3 id="Linux平台"><a href="#Linux平台" class="headerlink" title="Linux平台"></a>Linux平台</h3><ol>
+<li><p>首先，确定U盘挂载成功。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ lsblk</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用dd命令制作启动盘。用你的Archlinux系统镜像文件路径替换“archlinux.iso”；U盘位置替换“/dev/sdx”，一般情况下U盘位置为<code>/dev/sdb</code>。注意等到sync完成，所有数据写入之后再拔掉u盘。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># dd bs=4M if=archlinux.iso of=/dev/sdx status=progress &amp;&amp; sync</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h3 id="Windows平台"><a href="#Windows平台" class="headerlink" title="Windows平台"></a>Windows平台</h3><p>建议使用<a href="https://rufus.akeo.ie/?locale=zh_CN/" target="_blank" rel="noopener">Rufus</a>或<a href="http://sourceforge.net/p/usbwriter/wiki/Documentation/" target="_blank" rel="noopener">USBwriter</a>制作启动盘。</p>
+<h1 id="安装系统"><a href="#安装系统" class="headerlink" title="安装系统"></a>安装系统</h1><h2 id="配置BIOS"><a href="#配置BIOS" class="headerlink" title="配置BIOS"></a>配置BIOS</h2><p>开机或重启 -&gt; 打开BIOS -&gt; 允许从U盘启动。</p>
+<h2 id="进入安装环境"><a href="#进入安装环境" class="headerlink" title="进入安装环境"></a>进入安装环境</h2><p>BIOS正常配置后，可以看到Archlinux安装菜单。通过键盘上下方向键选择“Arch Linux archiso x86_64 UEFI USB”，点击<code>Enter</code>进入安装环境。</p>
+<h2 id="联网"><a href="#联网" class="headerlink" title="联网"></a>联网</h2><h3 id="查看网卡"><a href="#查看网卡" class="headerlink" title="查看网卡"></a>查看网卡</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ip link</span><br></pre></td></tr></table></figure>
+
+<p>屏幕输出结果大致如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1: enp1s0: &lt;NO-CARRIER,BROADCAST,MULTICAST,UP&gt; mtu 1500 qdisc fq_codel state DOWN mode DEFAULT group default qlen 1000</span><br><span class="line">    link/ether xx:xx:xx:xx:xx:xx brd ff:ff:ff:ff:ff:ff</span><br><span class="line">2: wlp2s0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue state UP mode DORMANT group default qlen 1000</span><br><span class="line">    link/ether xx:xx:xx:xx:xx:xx brd ff:ff:ff:ff:ff:ff</span><br></pre></td></tr></table></figure>
+
+<p>我们从中看到两个网卡。其中，名称以“enp”开始的是有线网卡，这里对应是“enp1s0”。名称以“wl”开始的是无线网卡，这里对应是“wlp2s0”。</p>
+<h3 id="连接到有线网络"><a href="#连接到有线网络" class="headerlink" title="连接到有线网络"></a>连接到有线网络</h3><p>使用如下命令连接到有线网络：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ systemctl <span class="built_in">enable</span> dhcpcd@enp1s0.service</span><br><span class="line">$ systemctl start dhcpcd@enp1s0.service</span><br></pre></td></tr></table></figure>
+
+<h3 id="连接到无线网络"><a href="#连接到无线网络" class="headerlink" title="连接到无线网络"></a>连接到无线网络</h3><h4 id="解锁无线网卡"><a href="#解锁无线网卡" class="headerlink" title="解锁无线网卡"></a>解锁无线网卡</h4><p>查看无线网卡是否被锁定</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ rfkill list</span><br></pre></td></tr></table></figure>
+
+<p>查询结果如下所示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">0: ideapad_wlan: Wireless LAN</span><br><span class="line">trueSoft blocked: yes</span><br><span class="line">trueHard blocked: no</span><br><span class="line">1: ideapad_bluetooth: Bluetooth</span><br><span class="line">trueSoft blocked: yes</span><br><span class="line">trueHard blocked: no</span><br><span class="line">2: phy0: Wireless LAN</span><br><span class="line">trueSoft blocked: yes</span><br><span class="line">trueHard blocked: no</span><br><span class="line">3: hci0: Bluetooth</span><br><span class="line">trueSoft blocked: yes</span><br><span class="line">trueHard blocked: no</span><br></pre></td></tr></table></figure>
+
+<p>输入如下命令解锁Wifi：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ rfkill unblock 2</span><br></pre></td></tr></table></figure>
+
+<p>或者解锁所有设备：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ rfkill unblock all</span><br></pre></td></tr></table></figure>
+
+<h4 id="连接到wifi"><a href="#连接到wifi" class="headerlink" title="连接到wifi"></a>连接到wifi</h4><p>使用如下命令连接到wifi：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># wifi-menu -o wlp2s0</span></span><br></pre></td></tr></table></figure>
+
+<p>命令执行完将弹出wifi选择图形界面，你可以通过键盘上下方向键配合<code>Enter</code>键进行选择。</p>
+<h3 id="测试网络连接"><a href="#测试网络连接" class="headerlink" title="测试网络连接"></a>测试网络连接</h3><p>连接到网络后，使用ping测试连接是否成功。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ping -c 4 www.baidu.com</span><br></pre></td></tr></table></figure>
+
+<h2 id="更新系统时间"><a href="#更新系统时间" class="headerlink" title="更新系统时间"></a>更新系统时间</h2><ol>
+<li><p>开启时间同步</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ timedatectl <span class="built_in">set</span>-ntp <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置时区<br>输入如下命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置硬件使用UTC世界标准时间</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># hwclock --systohc</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h2 id="建立硬盘分区"><a href="#建立硬盘分区" class="headerlink" title="建立硬盘分区"></a>建立硬盘分区</h2><h3 id="查看硬盘"><a href="#查看硬盘" class="headerlink" title="查看硬盘"></a>查看硬盘</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ fdisk -l</span><br></pre></td></tr></table></figure>
+
+<h3 id="建立分区表"><a href="#建立分区表" class="headerlink" title="建立分区表"></a>建立分区表</h3><p>分区表如下，其中引导分区和根分区是必须的。</p>
+<table>
+<thead>
+<tr>
+<th>挂载点</th>
+<th>大小</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>/mnt/efi</td>
+<td>512MiB</td>
+<td>引导分区</td>
+</tr>
+<tr>
+<td>/mnt</td>
+<td>500MiB~50GiB</td>
+<td>根目录</td>
+</tr>
+<tr>
+<td>[swap]</td>
+<td>内存条1～2倍大小</td>
+<td>Linux交换空间</td>
+</tr>
+<tr>
+<td>/home</td>
+<td>剩余空间</td>
+<td>家目录</td>
+</tr>
+</tbody></table>
+<h3 id="格式化分区"><a href="#格式化分区" class="headerlink" title="格式化分区"></a>格式化分区</h3><p>使用<code>parted</code>或者<code>cfdisk</code>进行分区，推荐有图形界面的<code>cfdisk</code>。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># mkfs.ext4 /dev/sda1</span></span><br><span class="line"><span class="comment"># mkfs.ext4 /dev/sda2</span></span><br><span class="line"><span class="comment"># mkswap /dev/sda3</span></span><br><span class="line"><span class="comment"># mkfs.ext4 /dev/sda4</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="挂载分区"><a href="#挂载分区" class="headerlink" title="挂载分区"></a>挂载分区</h3><p>注意：根据上一部操作分区的情况进行挂载。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># mount /dev/sda2 /mnt</span></span><br><span class="line"><span class="comment"># mkdir /mnt/efi</span></span><br><span class="line"><span class="comment"># mkdir /mnt/home</span></span><br><span class="line"><span class="comment"># mount /dev/sda1 /mnt/efi</span></span><br><span class="line"><span class="comment"># mount /dev/sda4 /mnt/home</span></span><br><span class="line"><span class="comment"># swapon /dev/sda3</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="选择本地Archlinux镜像源"><a href="#选择本地Archlinux镜像源" class="headerlink" title="选择本地Archlinux镜像源"></a>选择本地Archlinux镜像源</h2><p>修改“/etc/pacman.d/mirrorlist”文件，把国内的镜像地址移动到文件头部位置。</p>
+<h2 id="安装基本系统"><a href="#安装基本系统" class="headerlink" title="安装基本系统"></a>安装基本系统</h2><p>安装base组和base-devel组（开发用的一些组件）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pacstrap /mnt base base-devel</span></span><br></pre></td></tr></table></figure>
+
+<p>退出chroot环境</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># exit</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="安装引导程序"><a href="#安装引导程序" class="headerlink" title="安装引导程序"></a>安装引导程序</h2><p>安装<code>grub</code>和<code>efibootmgr</code>软件包</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pacman -S grub efibootmgr os-prober</span></span><br></pre></td></tr></table></figure>
+
+<p>安装GRUB并生成主配置文件，谨慎操作</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># grub-install --target=x86_64-efi --efi-directory=/mnt/efi --bootloader-id=GRUB</span></span><br><span class="line"><span class="comment"># grub-mkconfig -o /boot/grub/grub.cfg</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="其他重要配置"><a href="#其他重要配置" class="headerlink" title="其他重要配置"></a>其他重要配置</h2><h3 id="设置root用户的密码"><a href="#设置root用户的密码" class="headerlink" title="设置root用户的密码"></a>设置root用户的密码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># passwd</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="更新系统"><a href="#更新系统" class="headerlink" title="更新系统"></a>更新系统</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pacman -Syu</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="安装联网模块"><a href="#安装联网模块" class="headerlink" title="安装联网模块"></a>安装联网模块</h3><p>重启后联网需要用到。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pacman -S networkmanager wireless_tools wpa_supplicant dialog</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="安装图形界面"><a href="#安装图形界面" class="headerlink" title="安装图形界面"></a>安装图形界面</h3><h4 id="Gnome"><a href="#Gnome" class="headerlink" title="Gnome"></a>Gnome</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pacman -S gnome gnome-extra gnome-tweaks gdm</span></span><br><span class="line"><span class="comment"># systemctl enable gdm</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Deepin"><a href="#Deepin" class="headerlink" title="Deepin"></a>Deepin</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pacman -S deepin deepin-extra lightdm</span></span><br><span class="line"><span class="comment"># systemctl enable lightdm</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="KDE"><a href="#KDE" class="headerlink" title="KDE"></a>KDE</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pacman -S plasma sddm</span></span><br><span class="line"><span class="comment"># systemctl enable sddm</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="XFCE"><a href="#XFCE" class="headerlink" title="XFCE"></a>XFCE</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pacman -S xfce4 lightdm</span></span><br><span class="line"><span class="comment"># systemctl enable lightdm</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="中文输入法安装"><a href="#中文输入法安装" class="headerlink" title="中文输入法安装"></a>中文输入法安装</h3><h4 id="fcitx"><a href="#fcitx" class="headerlink" title="fcitx"></a>fcitx</h4><p>安装fcitx</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pacman -S fcitx-im fcitx-configtool</span></span><br><span class="line"><span class="comment"># pacaur -S fcitx-sogoupinyin</span></span><br></pre></td></tr></table></figure>
+
+<p>启用fcitx:在<code>～/.bashrc</code>文件中添加如下内容</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> GTK_IM_MODULE=fcitx</span><br><span class="line"><span class="built_in">export</span> QT_IM_MODULE=fcitx</span><br><span class="line"><span class="built_in">export</span> XMODIFIERS=<span class="string">"@im=fcitx"</span></span><br></pre></td></tr></table></figure>
+
+<p>Gnome桌面使用还应执行下面的代码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gsettings <span class="built_in">set</span> org.gnome.settings-daemon.plugins.xsettings overrides <span class="string">"&#123;'Gtk/IMModule':&lt;'fcitx'&gt;&#125;"</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="ibus"><a href="#ibus" class="headerlink" title="ibus"></a>ibus</h4><p>安装ibus</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pacman -S ibus ibus-pinyin</span></span><br></pre></td></tr></table></figure>
+
+<p>启用fcitx:在<code>～/.bashrc</code>文件中添加如下内容</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> GTK_IM_MODULE=ibus</span><br><span class="line"><span class="built_in">export</span> QT_IM_MODULE=ibus</span><br><span class="line"><span class="built_in">export</span> XMODIFIERS=<span class="string">"@im=ibus"</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="重启系统"><a href="#重启系统" class="headerlink" title="重启系统"></a>重启系统</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># exit</span></span><br><span class="line"><span class="comment"># reboot</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="个性化配置"><a href="#个性化配置" class="headerlink" title="个性化配置"></a>个性化配置</h1><h2 id="安装必备软件包"><a href="#安装必备软件包" class="headerlink" title="安装必备软件包"></a>安装必备软件包</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pacman -S vim</span></span><br><span class="line"><span class="comment"># pacman -S sudo</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="本地化文本"><a href="#本地化文本" class="headerlink" title="本地化文本"></a>本地化文本</h2><p>修改<code>/etc/locale.gen</code>文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># vim /etc/locale.gen</span></span><br></pre></td></tr></table></figure>
+
+<p>移除你需要语言对应行前面的<code>#</code>,如：</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">en_US.UTF<span class="number">-8</span> UTF<span class="number">-8</span></span><br><span class="line">zh_CN.UTF<span class="number">-8</span> UTF<span class="number">-8</span></span><br></pre></td></tr></table></figure>
+
+<p>执行<code>locale-gen</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># locale-gen</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="中文字体"><a href="#中文字体" class="headerlink" title="中文字体"></a>中文字体</h2><p>安装wqy-microhei和wqy-zenhei字体</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pacman -S wqy-microhei wqy-zenhei</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="Archlinux-建议"><a href="#Archlinux-建议" class="headerlink" title="Archlinux 建议"></a>Archlinux 建议</h1><p><a href="https://wiki.archlinux.org/index.php/General_recommendations_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)" target="_blank" rel="noopener">点击这里</a>查看官方建议。</p>
+
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/Linux/" rel="tag"># Linux</a>
+            
+              <a href="/tags/Archlinux/" rel="tag"># Archlinux</a>
+            
+              <a href="/tags/教程/" rel="tag"># 教程</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/en/blog/hello-world/" rel="next" title="Hello World">
+                  <i class="fa fa-chevron-left"></i> Hello World
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/zh/blog/my-archlinux-programs/" rel="prev" title="我的Archlinux常用软件">
+                  我的Archlinux常用软件 <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#注意事项"><span class="nav-number">1.</span> <span class="nav-text">注意事项</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#制作启动盘"><span class="nav-number">2.</span> <span class="nav-text">制作启动盘</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#下载系统镜像"><span class="nav-number">2.1.</span> <span class="nav-text">下载系统镜像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#制作启动盘（U盘）"><span class="nav-number">2.2.</span> <span class="nav-text">制作启动盘（U盘）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux平台"><span class="nav-number">2.2.1.</span> <span class="nav-text">Linux平台</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Windows平台"><span class="nav-number">2.2.2.</span> <span class="nav-text">Windows平台</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装系统"><span class="nav-number">3.</span> <span class="nav-text">安装系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#配置BIOS"><span class="nav-number">3.1.</span> <span class="nav-text">配置BIOS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进入安装环境"><span class="nav-number">3.2.</span> <span class="nav-text">进入安装环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#联网"><span class="nav-number">3.3.</span> <span class="nav-text">联网</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#查看网卡"><span class="nav-number">3.3.1.</span> <span class="nav-text">查看网卡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#连接到有线网络"><span class="nav-number">3.3.2.</span> <span class="nav-text">连接到有线网络</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#连接到无线网络"><span class="nav-number">3.3.3.</span> <span class="nav-text">连接到无线网络</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#解锁无线网卡"><span class="nav-number">3.3.3.1.</span> <span class="nav-text">解锁无线网卡</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#连接到wifi"><span class="nav-number">3.3.3.2.</span> <span class="nav-text">连接到wifi</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试网络连接"><span class="nav-number">3.3.4.</span> <span class="nav-text">测试网络连接</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更新系统时间"><span class="nav-number">3.4.</span> <span class="nav-text">更新系统时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#建立硬盘分区"><span class="nav-number">3.5.</span> <span class="nav-text">建立硬盘分区</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#查看硬盘"><span class="nav-number">3.5.1.</span> <span class="nav-text">查看硬盘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#建立分区表"><span class="nav-number">3.5.2.</span> <span class="nav-text">建立分区表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#格式化分区"><span class="nav-number">3.5.3.</span> <span class="nav-text">格式化分区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#挂载分区"><span class="nav-number">3.5.4.</span> <span class="nav-text">挂载分区</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择本地Archlinux镜像源"><span class="nav-number">3.6.</span> <span class="nav-text">选择本地Archlinux镜像源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装基本系统"><span class="nav-number">3.7.</span> <span class="nav-text">安装基本系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装引导程序"><span class="nav-number">3.8.</span> <span class="nav-text">安装引导程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他重要配置"><span class="nav-number">3.9.</span> <span class="nav-text">其他重要配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#设置root用户的密码"><span class="nav-number">3.9.1.</span> <span class="nav-text">设置root用户的密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更新系统"><span class="nav-number">3.9.2.</span> <span class="nav-text">更新系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装联网模块"><span class="nav-number">3.9.3.</span> <span class="nav-text">安装联网模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装图形界面"><span class="nav-number">3.9.4.</span> <span class="nav-text">安装图形界面</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Gnome"><span class="nav-number">3.9.4.1.</span> <span class="nav-text">Gnome</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Deepin"><span class="nav-number">3.9.4.2.</span> <span class="nav-text">Deepin</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#KDE"><span class="nav-number">3.9.4.3.</span> <span class="nav-text">KDE</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#XFCE"><span class="nav-number">3.9.4.4.</span> <span class="nav-text">XFCE</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#中文输入法安装"><span class="nav-number">3.9.5.</span> <span class="nav-text">中文输入法安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#fcitx"><span class="nav-number">3.9.5.1.</span> <span class="nav-text">fcitx</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ibus"><span class="nav-number">3.9.5.2.</span> <span class="nav-text">ibus</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重启系统"><span class="nav-number">3.10.</span> <span class="nav-text">重启系统</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#个性化配置"><span class="nav-number">4.</span> <span class="nav-text">个性化配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装必备软件包"><span class="nav-number">4.1.</span> <span class="nav-text">安装必备软件包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地化文本"><span class="nav-number">4.2.</span> <span class="nav-text">本地化文本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#中文字体"><span class="nav-number">4.3.</span> <span class="nav-text">中文字体</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Archlinux-建议"><span class="nav-number">5.</span> <span class="nav-text">Archlinux 建议</span></a></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/avatar.jpg"
+      alt="Kan Thouen">
+  <p class="site-author-name" itemprop="name">Kan Thouen</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        <span class="site-state-item-count">29</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/thouen" title="GitHub &rarr; https://github.com/thouen" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="mailto:thouen@163.com" title="E-Mail &rarr; mailto:thouen@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+    
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Kan Thouen</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.4.1"></script><script src="/js/motion.js?v=7.4.1"></script>
+<script src="/js/schemes/pisces.js?v=7.4.1"></script>
+
+<script src="/js/next-boot.js?v=7.4.1"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
