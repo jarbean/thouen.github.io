@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.1">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.4.1" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.4.1">
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.4.1',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="囚徒困境故事讲的是，两个嫌疑犯作案后被警察抓住，分别关在不同的屋子里接受审讯。警察知道两人有罪，但缺乏足够的证据。警察告诉每个人：如果两人都抵赖，各判刑一年；如果两人都坦白，各判八年；如果两人中一个坦白而另一个抵赖，坦白的放出去，抵赖的判十年。于是，每个囚徒都面临两种选择：坦白或抵赖。然而，不管同伙选择什么，每个囚徒的最优选择是坦白：如果同伙抵赖、自己坦白的话放出去，不坦白的话判一年，坦白比不坦白">
+<meta name="keywords" content="Game Theory,博弈论">
+<meta property="og:type" content="article">
+<meta property="og:title" content="博弈论经典例子">
+<meta property="og:url" content="https://thouen.github.io/zh/blog/classic-examples-of-game-theory/index.html">
+<meta property="og:site_name" content="Thouen&#39;s Blog">
+<meta property="og:description" content="囚徒困境故事讲的是，两个嫌疑犯作案后被警察抓住，分别关在不同的屋子里接受审讯。警察知道两人有罪，但缺乏足够的证据。警察告诉每个人：如果两人都抵赖，各判刑一年；如果两人都坦白，各判八年；如果两人中一个坦白而另一个抵赖，坦白的放出去，抵赖的判十年。于是，每个囚徒都面临两种选择：坦白或抵赖。然而，不管同伙选择什么，每个囚徒的最优选择是坦白：如果同伙抵赖、自己坦白的话放出去，不坦白的话判一年，坦白比不坦白">
+<meta property="og:locale" content="zh">
+<meta property="og:updated_time" content="2019-10-16T11:23:33.800Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="博弈论经典例子">
+<meta name="twitter:description" content="囚徒困境故事讲的是，两个嫌疑犯作案后被警察抓住，分别关在不同的屋子里接受审讯。警察知道两人有罪，但缺乏足够的证据。警察告诉每个人：如果两人都抵赖，各判刑一年；如果两人都坦白，各判八年；如果两人中一个坦白而另一个抵赖，坦白的放出去，抵赖的判十年。于是，每个囚徒都面临两种选择：坦白或抵赖。然而，不管同伙选择什么，每个囚徒的最优选择是坦白：如果同伙抵赖、自己坦白的话放出去，不坦白的话判一年，坦白比不坦白">
+  <link rel="canonical" href="https://thouen.github.io/zh/blog/classic-examples-of-game-theory/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>博弈论经典例子 | Thouen's Blog</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Thouen's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh">
+    <link itemprop="mainEntityOfPage" href="https://thouen.github.io/zh/blog/classic-examples-of-game-theory/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kan Thouen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Thouen's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">博弈论经典例子
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-10-16 19:11:26 / 修改时间：19:23:33" itemprop="dateCreated datePublished" datetime="2019-10-16T19:11:26+08:00">2019-10-16</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/mathematics/" itemprop="url" rel="index"><span itemprop="name">mathematics</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="囚徒困境"><a href="#囚徒困境" class="headerlink" title="囚徒困境"></a>囚徒困境</h1><p>故事讲的是，两个嫌疑犯作案后被警察抓住，分别关在不同的屋子里接受审讯。警察知道两人有罪，但缺乏足够的证据。警察告诉每个人：如果两人都抵赖，各判刑一年；如果两人都坦白，各判八年；如果两人中一个坦白而另一个抵赖，坦白的放出去，抵赖的判十年。于是，每个囚徒都面临两种选择：坦白或抵赖。然而，不管同伙选择什么，每个囚徒的最优选择是坦白：如果同伙抵赖、自己坦白的话放出去，不坦白的话判一年，坦白比不坦白好；如果同伙坦白、自己坦白的话判八年，不坦白的话判十年，坦白还是比不坦白好。结果，两个嫌疑犯都选择坦白，各判刑八年。如果两人都抵赖，各判一年，显然这个结果好。但这个帕累托改进办不到，因为它不能满足人类的理性要求。囚徒困境所反映出的深刻问题是，人类的个人理性有时能导致集体的非理性——聪明的人类会因自己的聪明而作茧自缚。</p>
+<h1 id="旅行者困境"><a href="#旅行者困境" class="headerlink" title="旅行者困境"></a>旅行者困境</h1><p>两个旅行者从一个以出产细瓷花瓶著称的地方旅行回来，他们都买了花瓶。提取行李的时候，发现花瓶被摔坏了，于是他们向航空公司索赔。航空公司知道花瓶的价格大概在八九十元的价位浮动，但是不知道两位旅客买的时候的确切价格是多少。于是，航空公司请两位旅客在100元以内自己写下花瓶的价格。如果两人写的一样，航空公司将认为他们讲真话，就按照他们写的数额赔偿；如果两人写的不一样，航空公司就认定写得低的旅客讲的是真话，并且原则上按这个低的价格赔偿，同时，航空公司对讲真话的旅客奖励2元，对讲假话的旅客罚款2元。 </p>
+<p>为了获取最大赔偿而言，本来甲乙双方最好的策略，就是都写100元，这样两人都能够获赔100元。可是不，甲很聪明，他想：如果我少写1元变成99元，而乙会写100元，这样我将得到101元。何乐而不为？所以他准备写99元。可是乙更聪明，他算计到甲要算计他写99元，于是他准备写98元。想不到甲还要更聪明一个层次，估计到乙要写98元来坑他，于是他准备写97元……大家知道，下象棋的时候，不是说要多“看”几步吗，“看”得越远，胜算越大。 你多看两步，我比你更强多看三步，你多看四步，我比你更老谋深算多看五步。在花瓶索赔的例子中，如果两个人都“彻底理性”，都能看透十几步甚至几十步上百步，那么上面那样“精明比赛”的结果，最后落到每个人都只写一两元的地步。事实上，在彻底理性的假设之下，这个博弈唯一的纳什均衡，是两人都写0.</p>
+<h1 id="是竞争也是劫持"><a href="#是竞争也是劫持" class="headerlink" title="是竞争也是劫持"></a>是竞争也是劫持</h1><p>费城西区有两个互为敌手的商店——纽约廉价品商店和美国廉价品商店。他們正好紧挨着， 两店的老板是死敌，他們一直进行着没完没了的价格战。出售爱尔兰亚麻床单， 甚至连有鹰一般眼睛的贝蒂·瑞珀女士都不能找出任何疵点，不信请问她；而這床单的价格又低得可笑，只需６美元５０美分＂。当一个店的橱窗里出现這样的手写告示时每位顾客都会习惯地等另一家廉价品商店的回音。果然， 大约过了两小时，另一家商店的橱窗里出现了這样的告示: ＂瑞珀女士该配副近视眼镜了， 我的床单质量一流，只需５美元９５美分＂。价格大战的一天就這样开始了。除了贴告示以外， 两店的老板还经常站在店外尖声对骂， 经常发展到拳脚相加，最后总有一方的老板在這场价格战中停止争斗， 价格不再下降。骂那个人是疯子， 這就意味着那方胜利了。這时，围观的、路过的、还有附近每一个人都会拥入获胜的廉价品商店，將床单和其他物品抢购一空。在這个地区， 這两个店的争吵是最激烈的，也是持续时间最长的， 因此竟很有名声， 住在附近的每个人都从他們的争斗中获益不少， 买到了各式各样的＂精美＂商品。突然有一天，一个店的老板死了， 几天以后， 另一个店的老板声称去外地办货，這两家商店都停业了。过了几个星期，两个商店分别來了新老板。他們各自对两个商店前任老板的财产进行了详细的调查。一天检查时， 他們发现两店之间有条秘密通道，并且在两商店的楼上两老板住过的套房里发现了一扇连接两套房子的门。新老板很奇怪， 后來一了解才知道， 這两个死对头竟是兄弟俩。原來，所有的诅咒、谩骂、威胁以及一切相互间的人身攻击全是在演戏，每场价格战都是装出來的， 不管谁战胜谁，最后还是把另一位的一切库存商品与自己的一起卖给顾客。真是绝妙的骗局。</p>
+<h1 id="酒吧博弈问题"><a href="#酒吧博弈问题" class="headerlink" title="酒吧博弈问题"></a>酒吧博弈问题</h1><p>酒吧博弈问题是美国人W.B.Arthur1994年在《美国经济评论》发表的题为《归纳论证和有界理性》一问中提出的，然后他又从1999年的《科学》杂志上发表的《复杂性和经济学》一文中阐述了这个博弈。””该博弈是说：有一群人，例如n＝100，每个周末，均要决定是去一酒吧活动还是呆在家里。酒吧的容量是有限的，假定是60人。如果某人预测去酒吧的人超过60人，那么他决定去还是不去？</p>
+<p>每个参与者或决策者面临的信息只是以前去酒吧的人数，只能根据以前的人数的信息来归纳出策略来。这是一个典型的动态博弈问题。</p>
+<p>通过计算机的模型实验，阿瑟得出了一个有意思的结果：不同的行动者是根据自己的归纳来行动的，并且，去酒吧的人数没有一个固定的规律，然而，经过一段时间以后，去的平均人数总是趋于60。阿瑟说，预测者自组织到一个均衡系统中去和不去的人群，或形成一个生态稳定系统。</p>
+<p>这就是酒吧问题。酒吧问题所反映的是这样一个社会现象，正象阿瑟教授说的那样，我们在许多行动中，要猜测别人的行动，然而我们没有更多关于他人的信息，我们只有通过分析过去的历史来预测未来。</p>
+<h1 id="枪手博弈"><a href="#枪手博弈" class="headerlink" title="枪手博弈"></a>枪手博弈</h1><p>今天，我讲一个有关博弈论的经典故事。</p>
+<p>彼此痛恨的甲、乙、丙三个枪手准备决斗。甲枪法最好，十发八中；乙枪法次之，十发六中；丙枪法最差，十发四中。</p>
+<p>先提第一个问题：如果三人同时开枪，并且每人只发一枪；第一轮枪战后，谁活下来的机会大一些？</p>
+<p>一般人认为甲的枪法好，活下来的可能性大一些。但合乎推理的结论是，枪法最糟糕的丙活下来的几率最大。</p>
+<p>我们来分析一下各个枪手的策略。</p>
+<p>枪手甲一定要对枪手乙先开枪。因为乙对甲的威胁要比丙对甲的威胁更大，甲应该首先干掉乙，这是甲的最佳策略。</p>
+<p>同样的道理，枪手乙的最佳策略是第一枪瞄准甲。乙一旦将甲干掉，乙和丙进行对决，乙胜算的概率自然大很多。</p>
+<p>枪手丙的最佳策略也是先对甲开枪。乙的枪法毕竟比甲差一些，丙先把甲干掉再与乙进行对决，丙的存活概率还是要高一些。</p>
+<p>我们计算一下三个枪手在上述情况下的存活几率：</p>
+<p>甲：24%（被乙丙合射40% X 60% =24%）</p>
+<p>乙：20%（被甲射100% - 80% =20%）</p>
+<p>丙：100%（无人射丙）</p>
+<p>通过概率分析，我们发现枪法最差的丙存活的几率最大，枪法好于丙的甲和乙的存活几率远低于丙的存活几率。</p>
+<p>但是，上面的例子隐含一个假定，那就是甲乙丙三人都清楚地了解对手打枪的命中率。但现实生活中，因为信息不对称，比如枪手甲伪装自己，让枪手乙和丙认为甲的枪法最差，在这种情况下，最终的幸存者一定是甲。所以，无论是历史，还是现实，那些城府很深的奸雄往往能成为最后的胜利者。这样的例子，对你的职场生涯或者官场生涯是否很有启发呢？</p>
+<p>我们继续假定，甲乙丙三人互相不了解对手的枪法水平。在这种情况下，甲被乙射、甲被丙射、甲被乙丙射及甲不被乙丙射的机率各为25%，按贝氏(Bayes)定理计算甲的存活率：<br>甲活率：31%（[被乙射：25% X 40% = 10%] + [被丙射：25% X 60% = 15%] + [被乙丙射：25% X40% X 60% = 6%]）。</p>
+<p>乙活率：23%（[被甲射：25% X 20% = 5%] +[被丙射：25% X 60% = 15%] + [被甲丙射：25%X20%X60% = 3%]）。</p>
+<p>丙活率：17%（[被甲射：25% X 20% = 5%] +[被乙射：25% X 40% = 10%] + [被甲乙射：25% X 20% X 40% = 2%]）。</p>
+<p>在枪手互相不知道对手命中率的信息的情况下，这时命中率最高的枪手甲存活的几率最大，枪法最差的丙存活的可能性最小。</p>
+<p>我们现在回到甲乙丙都知道对手命中率的情形，进行第二轮枪战的分析。</p>
+<p>在第一轮枪战后，丙有可能面对甲，也可能面对乙，甚至同时面对甲与乙，除非第一轮中甲乙皆死。尽管第一轮结束后，丙极有可能获胜（即甲乙双亡），但是第二轮开始，丙就一定处于劣势，因为不论甲或乙，他们的命中率都比丙的命中率为高。</p>
+<p>这就是枪手丙的悲哀。能力不行的丙玩些花样虽然能在第一轮枪战中暂时获胜。但是，如果甲乙在第一轮枪战中没有双亡的话，在第二轮枪战结束后，丙的存活的几率就一定比甲或乙为低。</p>
+<p>第二轮枪战中甲乙丙存活的几率粗算如下：<br>(1) 假设甲丙对决：甲的存活率为60%，丙的存活率为20%。<br>(2) 假设乙丙对决：乙的存活率为60%，丙的存活率为40%。</p>
+<p>这似乎说明，能力差的人在竞争中耍弄手腕能赢一时，但最终往往不能成事。我们现在用严格的概率方法计算一下两轮枪战后，甲乙丙各自的存活的几率。</p>
+<p>(1) 第一轮：</p>
+<p>甲射乙，乙射甲，丙射甲。</p>
+<p>甲的活率为24%（40% X 60%），乙的活率为20%(100%- 80%)，丙的活率为100%（无人射丙）。</p>
+<p>(2) 第二轮：</p>
+<p>情况1：甲活乙死（24% X 80% = 19.2%）<br>     甲射丙，丙射甲──甲的活率为60%，丙的活率为20%。<br>情况2：乙活甲死（20% X 76% = 15.2%）<br>     乙射丙，丙射乙──乙的活率为60%，丙的活率为40%。<br>情况3：甲乙皆活（24% X 20% = 4.8%）<br>     重复第一轮。<br>情况4：甲乙皆死（76% X 80% = 60.8%）<br>     枪战结束。</p>
+<p>甲的活率为12.672%<br>(19.2% X 60%) + (4.8% X 24%) = 12.672%<br>乙的活率为10.08%<br>(15.2% X 60%) + (4.8% X 20%) = 10.08%<br>丙的活率为75.52%<br>(19.2% X 20%) + (15.2% X 40%) + (4.8% X 100%) + (60.8% X 100%) =75.52%</p>
+<p>通过对两轮枪战的详细概率计算，我们仍然发现枪法最差的丙存活的几率最大，枪法较好的甲和乙的存活几率仍远低于丙的存活几率。</p>
+<p>对于这样的例子，有人会发出“英雄创造历史，庸人繁衍子孙”的感叹。</p>
+<p>我们现在改变游戏规则，假定甲乙丙不是同时开枪，而是他们轮流开一枪。在这个例子中，我们发现丙的机会好于他的实力，丙不会被第一枪干掉，并且他可能极有机会在下一轮中先开枪。</p>
+<p>先假定开枪的顺序是甲、乙、丙，甲一枪将乙干掉后（80%的几率），就轮到丙开枪，丙有40%的几率一枪将甲干掉。即使乙躲过甲的第一枪，轮到乙开枪，乙还是会瞄准枪法最好的甲开枪，即使乙这一枪干掉了甲，下一轮仍然是轮到丙开枪。无论是甲或者乙先开枪，乙都有在下一轮先开枪的优势。</p>
+<p>如果是丙先开枪，情况又如何呢？</p>
+<p>丙可以向甲先开枪，即使丙打不中甲，甲的最佳策略仍然是向乙开枪。但是，如果丙打中了甲，下一轮可就是乙开枪打丙了。因此，丙的最佳策略是胡乱开一枪，只要丙不打中甲或者乙，在下一轮射击中他就处于有利的形势。</p>
+<p>我们通过这个例子，可以理解人们在博弈中能否获胜，不单纯取决于他们的实力，更重要的是取决于博弈方实力对比所形成的关系。</p>
+<p>在上面的例子中，乙和丙实际上是一种联盟关系，先把甲干掉，他们的生存几率都上升了。我们现在来判断一下，乙和丙之中，谁更有可能背叛，谁更可能忠诚？</p>
+<p>任何一个联盟的成员都会时刻权衡利弊，一旦背叛的好处大于忠诚的好处，联盟就会破裂。在乙和丙的联盟中，乙是最忠诚的。这不是因为乙本身具有更加忠诚的品质，而是利益关系使然。只要甲不死，乙的枪口就一定会瞄准甲。但丙就不是这样了，丙不瞄准甲而胡乱开一枪显然违背了联盟关系，丙这样做的结果，将使乙处于更危险的境地。</p>
+<p>合作才能对抗强敌。只有乙丙合作，才能把甲先干掉。如果，乙丙不和，乙或丙单独对甲都不占优，必然被甲先后解决。</p>
+<h1 id="智猪博弈"><a href="#智猪博弈" class="headerlink" title="智猪博弈"></a>智猪博弈</h1><p>猪圈里有两头猪，一头大猪，一头小猪。猪圈的一边有个踏板，每踩一下踏板，在远离踏板的猪圈的另一边的投食口就会落下少量的食物。如果有一只猪去踩踏板，另一只猪就有机会抢先吃到另一边落下的食物。当小猪踩动踏板时，大猪会在小猪跑到食槽之前刚好吃光所有的食物；若是大猪踩动了踏板，则还有机会在小猪吃完落下的食物之前跑到食槽，争吃到另一半残羹。</p>
+<p>那么，两只猪各会采取什么策略？答案是：小猪将选择“搭便车”策略，也就是舒舒服服地等在食槽边；而大猪则为一点残羹不知疲倦地奔忙于踏板和食槽之间。</p>
+<p>原因何在？因为，小猪踩踏板将一无所获，不踩踏板反而能吃上食物。对小猪而言，无论大猪是否踩动踏板，不踩踏板总是好的选择。反观大猪，已明知小猪是不会去踩动踏板的，自己亲自去踩踏板总比不踩强吧，所以只好亲历亲为了。</p>
+<p>改变方案一：减量方案。投食仅原来的一半分量。结果是小猪大猪都不去踩踏板了。小猪去踩，大猪将会把食物吃完；大猪去踩，小猪将也会把食物吃完。谁去踩踏板，就意味着为对方贡献食物，所以谁也不会有踩踏板的动力了。</p>
+<p>如果目的是想让猪们去多踩踏板，这个游戏规则的设计显然是失败的。</p>
+<p>改变方案二：增量方案。投食为原来的一倍分量。结果是小猪、大猪都会去踩踏板。谁想吃，谁就会去踩踏板。反正对方不会一次把食物吃完。小猪和大猪相当于生活在物质相对丰富的“共产主义”社会，所以竞争意识却不会很强。</p>
+<p>对于游戏规则的设计者来说，这个规则的成本相当高（每次提供双份的食物）；而且因为竞争不强烈，想让猪们去多踩踏板的效果并不好。</p>
+<p>改变方案三：减量加移位方案。投食仅原来的一半分量，但同时将投食口移到踏板附近。结果呢，小猪和大猪都在拼命地抢着踩踏板。等待者不得食，而多劳者多得。每次的收获刚好消费完。</p>
+<p>对于游戏设计者，这是一个最好的方案。成本不高，但收获最大。</p>
+<p>许多人并未读过“智猪博弈”的故事，但是却在自觉地使用小猪的策略。股市上等待庄家抬轿的散户；等待产业市场中出现具有赢利能力新产品、继而大举仿制牟取暴利的游资；公司里不创造效益但分享成果的人，等等。比如，公司的激励制度设计，奖励力度太大，又是持股，又是期权，公司职员个个都成了百万富翁，成本高不说，员工的积极性并不一定很高。这相当于“智猪博弈”增量方案所描述的情形。但是如果奖励力度不大，而且见者有份（不劳动的“小猪”也有），一度十分努力的大猪也不会有动力了—-就象“智猪博弈”减量方案一所描述的情形。最好的激励机制设计就象改变方案三—-减量加移位的办法，奖励并非人人有份，而是直接针对个人（如业务按比例提成），既节约了成本（对公司而言），又消除了“搭便车”现象，能实现有效的激励。</p>
+<p>而从整个社会来讲，自身需求大的群体往往才是社会生产力推动的主力。换句话说，要迅速提高整个社会的生产力水平，就需要有一个自身具有很大消费需求的群体，并且需要给他们一定程度的奖励。第三种改变方案反映的就是这种情况，方案中降低了取食的成本，在现实中，也可以等同于增加了对取食者的奖励。</p>
+
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/Game-Theory/" rel="tag"># Game Theory</a>
+            
+              <a href="/tags/博弈论/" rel="tag"># 博弈论</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/zh/blog/locale-codes/" rel="next" title="国际语言代码">
+                  <i class="fa fa-chevron-left"></i> 国际语言代码
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/zh/blog/authentic-english-expression-collection/" rel="prev" title="">
+                   <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#囚徒困境"><span class="nav-number">1.</span> <span class="nav-text">囚徒困境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#旅行者困境"><span class="nav-number">2.</span> <span class="nav-text">旅行者困境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#是竞争也是劫持"><span class="nav-number">3.</span> <span class="nav-text">是竞争也是劫持</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#酒吧博弈问题"><span class="nav-number">4.</span> <span class="nav-text">酒吧博弈问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#枪手博弈"><span class="nav-number">5.</span> <span class="nav-text">枪手博弈</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#智猪博弈"><span class="nav-number">6.</span> <span class="nav-text">智猪博弈</span></a></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/avatar.jpg"
+      alt="Kan Thouen">
+  <p class="site-author-name" itemprop="name">Kan Thouen</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        <span class="site-state-item-count">32</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/thouen" title="GitHub &rarr; https://github.com/thouen" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="mailto:thouen@163.com" title="E-Mail &rarr; mailto:thouen@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+    
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Kan Thouen</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.4.1"></script><script src="/js/motion.js?v=7.4.1"></script>
+<script src="/js/schemes/pisces.js?v=7.4.1"></script>
+
+<script src="/js/next-boot.js?v=7.4.1"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
