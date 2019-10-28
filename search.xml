@@ -4,9 +4,9 @@
     <title>Reading Source Collecting</title>
     <url>/zh/blog/reading-source-collecting/</url>
     <content><![CDATA[<ol>
-<li><p><a href="./json/masterpiece.json">经典名著</a></p>
+<li><p><a href="./json/masterpiece.txt">经典名著</a></p>
 </li>
-<li><p><a href="./json/foreign-works.json">外文书籍</a></p>
+<li><p><a href="./json/foreign-works.txt">外文书籍</a></p>
 </li>
 </ol>
 ]]></content>
@@ -728,8 +728,8 @@
         <tag>哲学</tag>
         <tag>道教</tag>
         <tag>中国哲学</tag>
-        <tag>道德经</tag>
         <tag>经典古籍</tag>
+        <tag>道德经</tag>
       </tags>
   </entry>
   <entry>
@@ -908,8 +908,8 @@
       <tags>
         <tag>哲学</tag>
         <tag>中国哲学</tag>
-        <tag>道德经</tag>
         <tag>经典古籍</tag>
+        <tag>道德经</tag>
         <tag>道家</tag>
       </tags>
   </entry>
@@ -3488,13 +3488,16 @@
 <h2 id="文本编辑器"><a href="#文本编辑器" class="headerlink" title="文本编辑器"></a>文本编辑器</h2><h3 id="Vim"><a href="#Vim" class="headerlink" title="Vim"></a>Vim</h3><p>Linux上的著名文本编辑器vi的加强版。系统内置的好像不完整，需要自己更新。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S vim</span><br></pre></td></tr></table></figure>
 
-<h3 id="VSCode"><a href="#VSCode" class="headerlink" title="VSCode"></a>VSCode</h3><p>VScode，微软出品的轻量级文本编辑器。开源、免费、跨平台、易扩展、功能强大、性能优良。爱死这破软件了，自从装了这软件后再也没用过其他的图形文本编辑器。这不是在打广告！</p>
+<h3 id="VSCode"><a href="#VSCode" class="headerlink" title="VSCode"></a>VSCode</h3><p><strong>VScode</strong>，微软出品的轻量级文本编辑器。开源、免费、跨平台、易扩展、功能强大、性能优良。爱死这破软件了，自从装了这软件后再也没用过其他的图形文本编辑器。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S code</span><br></pre></td></tr></table></figure>
 
 <h3 id="Joe-Editor"><a href="#Joe-Editor" class="headerlink" title="Joe Editor"></a>Joe Editor</h3><p>一个很强大的编辑器。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S joe</span><br></pre></td></tr></table></figure>
 
-<h3 id="Emacs"><a href="#Emacs" class="headerlink" title="Emacs"></a>Emacs</h3><h2 id="IDE"><a href="#IDE" class="headerlink" title="IDE"></a>IDE</h2><h3 id="Intellij-Idea"><a href="#Intellij-Idea" class="headerlink" title="Intellij Idea"></a>Intellij Idea</h3><p>IDEA 全称 IntelliJ IDEA，是java编程语言开发的集成环境。IntelliJ在业界被公认为最好的java开发工具之一，尤其在智能代码助手、代码自动提示、重构、J2EE支持、各类版本工具(git、svn等)、JUnit、CVS整合、代码分析、 创新的GUI设计等方面的功能可以说是超常的。旗舰版是要收费的，要是有教育邮箱的话可以免费订阅一年。</p>
+<h3 id="Emacs"><a href="#Emacs" class="headerlink" title="Emacs"></a>Emacs</h3><p><strong>Emacs</strong> 和 <strong>Vim</strong> 分别被称为“神之编辑器”和“编辑器之神”。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S emacs</span><br></pre></td></tr></table></figure>
+
+<h2 id="IDE"><a href="#IDE" class="headerlink" title="IDE"></a>IDE</h2><h3 id="Intellij-Idea"><a href="#Intellij-Idea" class="headerlink" title="Intellij Idea"></a>Intellij Idea</h3><p>IDEA 全称 IntelliJ IDEA，是java编程语言开发的集成环境。IntelliJ在业界被公认为最好的java开发工具之一，尤其在智能代码助手、代码自动提示、重构、J2EE支持、各类版本工具(git、svn等)、JUnit、CVS整合、代码分析、 创新的GUI设计等方面的功能可以说是超常的。旗舰版是要收费的，要是有教育邮箱的话可以免费订阅一年。</p>
 <ul>
 <li><p>社区版：</p>
   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S intellij-idea-community-edition</span><br></pre></td></tr></table></figure>
@@ -3587,7 +3590,7 @@
   <entry>
     <title>Archlinux桌面版安装教程</title>
     <url>/zh/blog/archlinux-desktop-installation-tutorial/</url>
-    <content><![CDATA[<p><img src="./archlinux-logo.png" alt></p>
+    <content><![CDATA[<p><img src="./image/archlinux-logo.png" alt></p>
 <blockquote>
 <p>个人经验总结，转载请注明出处</p>
 </blockquote>

@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://thouen.github.io/zh/blog/archlinux-desktop-installation-tutorial/</loc>
+    
+    <lastmod>2019-10-28T12:31:13.450Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://thouen.github.io/zh/blog/reading-source-collecting/</loc>
     
-    <lastmod>2019-10-28T12:16:05.078Z</lastmod>
+    <lastmod>2019-10-28T12:29:24.633Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://thouen.github.io/zh/blog/archlinux-common-programs/</loc>
     
-    <lastmod>2019-10-28T12:00:32.603Z</lastmod>
+    <lastmod>2019-10-28T12:27:41.722Z</lastmod>
     
   </url>
   
@@ -61,13 +68,6 @@
     <loc>https://thouen.github.io/zh/blog/authentic-english-expression-collection/</loc>
     
     <lastmod>2019-10-28T09:06:26.489Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://thouen.github.io/zh/blog/archlinux-desktop-installation-tutorial/</loc>
-    
-    <lastmod>2019-10-28T09:05:56.756Z</lastmod>
     
   </url>
   
