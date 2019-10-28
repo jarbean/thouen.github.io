@@ -4,7 +4,7 @@
 
 
 
-<html lang="zh-CN">
+<html lang="zh,en,default">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -44,7 +44,7 @@
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     },
     localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: '',
+    path: 'search.xml',
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     translation: {
       copy_button: '复制',
@@ -60,10 +60,10 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="加速Github的clone下载速度">
 <meta property="og:url" content="https://thouen.github.io/zh/blog/speed-up-cloning-project-from-github/index.html">
-<meta property="og:site_name" content="Thouen&#39;s Blog">
+<meta property="og:site_name" content="Thouen&#39;s 博客">
 <meta property="og:description" content="由于众所周知的原因，github在国内下载速度很慢。你可以采取很多方式来进行提速，这里采用修改hosts文件的方式。首先，使用IPAdress查询github以下网址的ip地址：  github.com github.global.ssl.fastly.net codeload.github.com  而后，将查询到的ip地址使用类似如下格式添加到hosts文件中(2019 年7月17日更新) 1">
 <meta property="og:locale" content="zh">
-<meta property="og:updated_time" content="2019-10-16T04:10:29.309Z">
+<meta property="og:updated_time" content="2019-10-28T07:47:43.599Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="加速Github的clone下载速度">
 <meta name="twitter:description" content="由于众所周知的原因，github在国内下载速度很慢。你可以采取很多方式来进行提速，这里采用修改hosts文件的方式。首先，使用IPAdress查询github以下网址的ip地址：  github.com github.global.ssl.fastly.net codeload.github.com  而后，将查询到的ip地址使用类似如下格式添加到hosts文件中(2019 年7月17日更新) 1">
@@ -81,7 +81,7 @@
   };
 </script>
 
-  <title>加速Github的clone下载速度 | Thouen's Blog</title>
+  <title>加速Github的clone下载速度 | Thouen's 博客</title>
   
 
 
@@ -128,10 +128,12 @@
     <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Thouen's Blog</span>
+        <span class="site-title">Thouen's 博客</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+        <p class="site-subtitle">哲学 | 科技 | 读书 | IT | 文史 | 社科 | 生活 | 休闲 | 猎奇 | 其他</p>
+      
   </div>
 
   <div class="site-nav-toggle">
@@ -232,12 +234,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Kan Thouen">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="很多文章内容都不完善，先占个坑，等我考完研之后再整理……">
       <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Thouen's Blog">
+      <meta itemprop="name" content="Thouen's 博客">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">加速Github的clone下载速度
@@ -267,7 +269,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-16 12:10:29" itemprop="dateModified" datetime="2019-10-16T12:10:29+08:00">2019-10-16</time>
+                <time title="修改时间：2019-10-28 15:47:43" itemprop="dateModified" datetime="2019-10-28T15:47:43+08:00">2019-10-28</time>
               </span>
             
           
@@ -277,14 +279,14 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/development/" itemprop="url" rel="index"><span itemprop="name">development</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/it/" itemprop="url" rel="index"><span itemprop="name">IT</span></a></span>
 
                 
                 
                   ，
                 
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/development/tutorial/" itemprop="url" rel="index"><span itemprop="name">tutorial</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/it/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a></span>
 
                 
                 
@@ -333,7 +335,7 @@
             
               <a href="/tags/教程/" rel="tag"># 教程</a>
             
-              <a href="/tags/Github/" rel="tag"># Github</a>
+              <a href="/tags/github/" rel="tag"># Github</a>
             
           </div>
         
@@ -343,8 +345,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/zh/blog/my-archlinux-programs/" rel="next" title="我的Archlinux常用软件">
-                  <i class="fa fa-chevron-left"></i> 我的Archlinux常用软件
+                <a href="/zh/blog/archlinux-common-programs/" rel="next" title="Archlinux常用软件">
+                  <i class="fa fa-chevron-left"></i> Archlinux常用软件
                 </a>
               
             </div>
@@ -410,7 +412,7 @@
       src="/images/avatar.jpg"
       alt="Kan Thouen">
   <p class="site-author-name" itemprop="name">Kan Thouen</p>
-  <div class="site-description" itemprop="description"></div>
+  <div class="site-description" itemprop="description">很多文章内容都不完善，先占个坑，等我考完研之后再整理……</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
@@ -418,7 +420,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">22</span>
+          <span class="site-state-item-count">32</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -431,7 +433,7 @@
             <a href="/categories/">
           
         
-        <span class="site-state-item-count">28</span>
+        <span class="site-state-item-count">47</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
@@ -444,7 +446,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">43</span>
+        <span class="site-state-item-count">55</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -496,6 +498,9 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Kan Thouen</span>
 </div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a></div>
 
         
 

@@ -4,7 +4,7 @@
 
 
 
-<html lang="zh-CN">
+<html lang="zh,en,default">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -44,7 +44,7 @@
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     },
     localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: '',
+    path: 'search.xml',
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     translation: {
       copy_button: '复制',
@@ -55,20 +55,20 @@
   };
 </script>
 
-  <meta name="description" content="Archlinux是最简洁、最优雅的Linux系统，不接受反驳。点击这里查看Archlinux官方安装教程。 注意事项 安装过程中需要保持网络畅通。 谨慎操作。">
-<meta name="keywords" content="Linux,Archlinux,教程">
+  <meta name="description" content="个人经验总结，转载请注明出处  Archlinux是最热门的Linux的发行版之一。点击这里查看Archlinux官方安装教程。 注意事项 安装过程中需要保持网络畅通。 谨慎操作。">
+<meta name="keywords" content="Linux,Archlinux,系统">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Archlinux桌面版安装教程">
 <meta property="og:url" content="https://thouen.github.io/zh/blog/archlinux-desktop-installation-tutorial/index.html">
-<meta property="og:site_name" content="Thouen&#39;s Blog">
-<meta property="og:description" content="Archlinux是最简洁、最优雅的Linux系统，不接受反驳。点击这里查看Archlinux官方安装教程。 注意事项 安装过程中需要保持网络畅通。 谨慎操作。">
+<meta property="og:site_name" content="Thouen&#39;s 博客">
+<meta property="og:description" content="个人经验总结，转载请注明出处  Archlinux是最热门的Linux的发行版之一。点击这里查看Archlinux官方安装教程。 注意事项 安装过程中需要保持网络畅通。 谨慎操作。">
 <meta property="og:locale" content="zh">
-<meta property="og:image" content="https://thouen.github.io/images/archlinux-logo.png">
-<meta property="og:updated_time" content="2019-10-16T04:09:44.565Z">
+<meta property="og:image" content="https://thouen.github.io/zh/blog/archlinux-desktop-installation-tutorial/archlinux-logo.png">
+<meta property="og:updated_time" content="2019-10-28T09:05:56.756Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Archlinux桌面版安装教程">
-<meta name="twitter:description" content="Archlinux是最简洁、最优雅的Linux系统，不接受反驳。点击这里查看Archlinux官方安装教程。 注意事项 安装过程中需要保持网络畅通。 谨慎操作。">
-<meta name="twitter:image" content="https://thouen.github.io/images/archlinux-logo.png">
+<meta name="twitter:description" content="个人经验总结，转载请注明出处  Archlinux是最热门的Linux的发行版之一。点击这里查看Archlinux官方安装教程。 注意事项 安装过程中需要保持网络畅通。 谨慎操作。">
+<meta name="twitter:image" content="https://thouen.github.io/zh/blog/archlinux-desktop-installation-tutorial/archlinux-logo.png">
   <link rel="canonical" href="https://thouen.github.io/zh/blog/archlinux-desktop-installation-tutorial/">
 
 
@@ -83,7 +83,7 @@
   };
 </script>
 
-  <title>Archlinux桌面版安装教程 | Thouen's Blog</title>
+  <title>Archlinux桌面版安装教程 | Thouen's 博客</title>
   
 
 
@@ -130,10 +130,12 @@
     <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Thouen's Blog</span>
+        <span class="site-title">Thouen's 博客</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+        <p class="site-subtitle">哲学 | 科技 | 读书 | IT | 文史 | 社科 | 生活 | 休闲 | 猎奇 | 其他</p>
+      
   </div>
 
   <div class="site-nav-toggle">
@@ -234,12 +236,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Kan Thouen">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="很多文章内容都不完善，先占个坑，等我考完研之后再整理……">
       <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Thouen's Blog">
+      <meta itemprop="name" content="Thouen's 博客">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">Archlinux桌面版安装教程
@@ -269,7 +271,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-16 12:09:44" itemprop="dateModified" datetime="2019-10-16T12:09:44+08:00">2019-10-16</time>
+                <time title="修改时间：2019-10-28 17:05:56" itemprop="dateModified" datetime="2019-10-28T17:05:56+08:00">2019-10-28</time>
               </span>
             
           
@@ -279,14 +281,21 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/it/" itemprop="url" rel="index"><span itemprop="name">IT</span></a></span>
 
                 
                 
                   ，
                 
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/linux/tutorial/" itemprop="url" rel="index"><span itemprop="name">tutorial</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/it/linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/it/linux/系统/" itemprop="url" rel="index"><span itemprop="name">系统</span></a></span>
 
                 
                 
@@ -305,12 +314,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><img src="/images/archlinux-logo.png" alt><br>Archlinux是最简洁、最优雅的Linux系统，不接受反驳。<a href="https://wiki.archlinux.org/index.php/Installation_guide_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)" target="_blank" rel="noopener">点击这里</a>查看Archlinux官方安装教程。</p>
+        <p><img src="./archlinux-logo.png" alt></p>
+<blockquote>
+<p>个人经验总结，转载请注明出处</p>
+</blockquote>
+<p>Archlinux是最热门的Linux的发行版之一。<a href="https://wiki.archlinux.org/index.php/Installation_guide_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)" target="_blank" rel="noopener">点击这里</a>查看Archlinux官方安装教程。</p>
 <h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><ol>
 <li>安装过程中需要保持网络畅通。</li>
 <li>谨慎操作。</li>
 </ol>
 <a id="more"></a>
+
+
 <h1 id="制作启动盘"><a href="#制作启动盘" class="headerlink" title="制作启动盘"></a>制作启动盘</h1><h2 id="下载系统镜像"><a href="#下载系统镜像" class="headerlink" title="下载系统镜像"></a>下载系统镜像</h2><p>你可以从<a href="https://mirrors.tuna.tsinghua.edu.cn/archlinux/iso/latest/" target="_blank" rel="noopener">清华大学开源镜像站</a>、<a href="https://mirrors.ustc.edu.cn/archlinux/iso/latest/" target="_blank" rel="noopener">中科大开源镜像站</a>或者选择<a href="https://www.archlinux.org/download/#download-mirrors" target="_blank" rel="noopener">其他镜像源</a>下载最新的ArchLinux系统镜像。</p>
 <h2 id="制作启动盘（U盘）"><a href="#制作启动盘（U盘）" class="headerlink" title="制作启动盘（U盘）"></a>制作启动盘（U盘）</h2><h3 id="Linux平台"><a href="#Linux平台" class="headerlink" title="Linux平台"></a>Linux平台</h3><ol>
 <li><p>首先，确定U盘挂载成功。</p>
@@ -402,7 +417,7 @@
 <h3 id="挂载分区"><a href="#挂载分区" class="headerlink" title="挂载分区"></a>挂载分区</h3><p>注意：根据上一部操作分区的情况进行挂载。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># mount /dev/sda2 /mnt</span></span><br><span class="line"><span class="comment"># mkdir /mnt/efi</span></span><br><span class="line"><span class="comment"># mkdir /mnt/home</span></span><br><span class="line"><span class="comment"># mount /dev/sda1 /mnt/efi</span></span><br><span class="line"><span class="comment"># mount /dev/sda4 /mnt/home</span></span><br><span class="line"><span class="comment"># swapon /dev/sda3</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="选择本地Archlinux镜像源"><a href="#选择本地Archlinux镜像源" class="headerlink" title="选择本地Archlinux镜像源"></a>选择本地Archlinux镜像源</h2><p>修改“/etc/pacman.d/mirrorlist”文件，把国内的镜像地址移动到文件头部位置。</p>
+<h2 id="选择Archlinux本地高速镜像源"><a href="#选择Archlinux本地高速镜像源" class="headerlink" title="选择Archlinux本地高速镜像源"></a>选择Archlinux本地高速镜像源</h2><p>修改“/etc/pacman.d/mirrorlist”文件，把国内的镜像地址移动到文件头部位置。</p>
 <h2 id="安装基本系统"><a href="#安装基本系统" class="headerlink" title="安装基本系统"></a>安装基本系统</h2><p>安装base组和base-devel组（开发用的一些组件）</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pacstrap /mnt base base-devel</span></span><br></pre></td></tr></table></figure>
 
@@ -477,11 +492,11 @@
           
           <div class="post-tags">
             
-              <a href="/tags/Linux/" rel="tag"># Linux</a>
+              <a href="/tags/linux/" rel="tag"># Linux</a>
             
-              <a href="/tags/Archlinux/" rel="tag"># Archlinux</a>
+              <a href="/tags/archlinux/" rel="tag"># Archlinux</a>
             
-              <a href="/tags/教程/" rel="tag"># 教程</a>
+              <a href="/tags/系统/" rel="tag"># 系统</a>
             
           </div>
         
@@ -501,8 +516,8 @@
 
             <div class="post-nav-prev post-nav-item">
               
-                <a href="/zh/blog/my-archlinux-programs/" rel="prev" title="我的Archlinux常用软件">
-                  我的Archlinux常用软件 <i class="fa fa-chevron-right"></i>
+                <a href="/zh/blog/archlinux-common-programs/" rel="prev" title="Archlinux常用软件">
+                  Archlinux常用软件 <i class="fa fa-chevron-right"></i>
                 </a>
               
             </div>
@@ -549,7 +564,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#注意事项"><span class="nav-number">1.</span> <span class="nav-text">注意事项</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#制作启动盘"><span class="nav-number">2.</span> <span class="nav-text">制作启动盘</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#下载系统镜像"><span class="nav-number">2.1.</span> <span class="nav-text">下载系统镜像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#制作启动盘（U盘）"><span class="nav-number">2.2.</span> <span class="nav-text">制作启动盘（U盘）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux平台"><span class="nav-number">2.2.1.</span> <span class="nav-text">Linux平台</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Windows平台"><span class="nav-number">2.2.2.</span> <span class="nav-text">Windows平台</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装系统"><span class="nav-number">3.</span> <span class="nav-text">安装系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#配置BIOS"><span class="nav-number">3.1.</span> <span class="nav-text">配置BIOS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进入安装环境"><span class="nav-number">3.2.</span> <span class="nav-text">进入安装环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#联网"><span class="nav-number">3.3.</span> <span class="nav-text">联网</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#查看网卡"><span class="nav-number">3.3.1.</span> <span class="nav-text">查看网卡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#连接到有线网络"><span class="nav-number">3.3.2.</span> <span class="nav-text">连接到有线网络</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#连接到无线网络"><span class="nav-number">3.3.3.</span> <span class="nav-text">连接到无线网络</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#解锁无线网卡"><span class="nav-number">3.3.3.1.</span> <span class="nav-text">解锁无线网卡</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#连接到wifi"><span class="nav-number">3.3.3.2.</span> <span class="nav-text">连接到wifi</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试网络连接"><span class="nav-number">3.3.4.</span> <span class="nav-text">测试网络连接</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更新系统时间"><span class="nav-number">3.4.</span> <span class="nav-text">更新系统时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#建立硬盘分区"><span class="nav-number">3.5.</span> <span class="nav-text">建立硬盘分区</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#查看硬盘"><span class="nav-number">3.5.1.</span> <span class="nav-text">查看硬盘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#建立分区表"><span class="nav-number">3.5.2.</span> <span class="nav-text">建立分区表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#格式化分区"><span class="nav-number">3.5.3.</span> <span class="nav-text">格式化分区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#挂载分区"><span class="nav-number">3.5.4.</span> <span class="nav-text">挂载分区</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择本地Archlinux镜像源"><span class="nav-number">3.6.</span> <span class="nav-text">选择本地Archlinux镜像源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装基本系统"><span class="nav-number">3.7.</span> <span class="nav-text">安装基本系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装引导程序"><span class="nav-number">3.8.</span> <span class="nav-text">安装引导程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他重要配置"><span class="nav-number">3.9.</span> <span class="nav-text">其他重要配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#设置root用户的密码"><span class="nav-number">3.9.1.</span> <span class="nav-text">设置root用户的密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更新系统"><span class="nav-number">3.9.2.</span> <span class="nav-text">更新系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装联网模块"><span class="nav-number">3.9.3.</span> <span class="nav-text">安装联网模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装图形界面"><span class="nav-number">3.9.4.</span> <span class="nav-text">安装图形界面</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Gnome"><span class="nav-number">3.9.4.1.</span> <span class="nav-text">Gnome</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Deepin"><span class="nav-number">3.9.4.2.</span> <span class="nav-text">Deepin</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#KDE"><span class="nav-number">3.9.4.3.</span> <span class="nav-text">KDE</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#XFCE"><span class="nav-number">3.9.4.4.</span> <span class="nav-text">XFCE</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#中文输入法安装"><span class="nav-number">3.9.5.</span> <span class="nav-text">中文输入法安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#fcitx"><span class="nav-number">3.9.5.1.</span> <span class="nav-text">fcitx</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ibus"><span class="nav-number">3.9.5.2.</span> <span class="nav-text">ibus</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重启系统"><span class="nav-number">3.10.</span> <span class="nav-text">重启系统</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#个性化配置"><span class="nav-number">4.</span> <span class="nav-text">个性化配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装必备软件包"><span class="nav-number">4.1.</span> <span class="nav-text">安装必备软件包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地化文本"><span class="nav-number">4.2.</span> <span class="nav-text">本地化文本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#中文字体"><span class="nav-number">4.3.</span> <span class="nav-text">中文字体</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Archlinux-建议"><span class="nav-number">5.</span> <span class="nav-text">Archlinux 建议</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#注意事项"><span class="nav-number">1.</span> <span class="nav-text">注意事项</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#制作启动盘"><span class="nav-number">2.</span> <span class="nav-text">制作启动盘</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#下载系统镜像"><span class="nav-number">2.1.</span> <span class="nav-text">下载系统镜像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#制作启动盘（U盘）"><span class="nav-number">2.2.</span> <span class="nav-text">制作启动盘（U盘）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux平台"><span class="nav-number">2.2.1.</span> <span class="nav-text">Linux平台</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Windows平台"><span class="nav-number">2.2.2.</span> <span class="nav-text">Windows平台</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装系统"><span class="nav-number">3.</span> <span class="nav-text">安装系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#配置BIOS"><span class="nav-number">3.1.</span> <span class="nav-text">配置BIOS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进入安装环境"><span class="nav-number">3.2.</span> <span class="nav-text">进入安装环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#联网"><span class="nav-number">3.3.</span> <span class="nav-text">联网</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#查看网卡"><span class="nav-number">3.3.1.</span> <span class="nav-text">查看网卡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#连接到有线网络"><span class="nav-number">3.3.2.</span> <span class="nav-text">连接到有线网络</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#连接到无线网络"><span class="nav-number">3.3.3.</span> <span class="nav-text">连接到无线网络</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#解锁无线网卡"><span class="nav-number">3.3.3.1.</span> <span class="nav-text">解锁无线网卡</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#连接到wifi"><span class="nav-number">3.3.3.2.</span> <span class="nav-text">连接到wifi</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试网络连接"><span class="nav-number">3.3.4.</span> <span class="nav-text">测试网络连接</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更新系统时间"><span class="nav-number">3.4.</span> <span class="nav-text">更新系统时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#建立硬盘分区"><span class="nav-number">3.5.</span> <span class="nav-text">建立硬盘分区</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#查看硬盘"><span class="nav-number">3.5.1.</span> <span class="nav-text">查看硬盘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#建立分区表"><span class="nav-number">3.5.2.</span> <span class="nav-text">建立分区表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#格式化分区"><span class="nav-number">3.5.3.</span> <span class="nav-text">格式化分区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#挂载分区"><span class="nav-number">3.5.4.</span> <span class="nav-text">挂载分区</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择Archlinux本地高速镜像源"><span class="nav-number">3.6.</span> <span class="nav-text">选择Archlinux本地高速镜像源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装基本系统"><span class="nav-number">3.7.</span> <span class="nav-text">安装基本系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装引导程序"><span class="nav-number">3.8.</span> <span class="nav-text">安装引导程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他重要配置"><span class="nav-number">3.9.</span> <span class="nav-text">其他重要配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#设置root用户的密码"><span class="nav-number">3.9.1.</span> <span class="nav-text">设置root用户的密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更新系统"><span class="nav-number">3.9.2.</span> <span class="nav-text">更新系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装联网模块"><span class="nav-number">3.9.3.</span> <span class="nav-text">安装联网模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装图形界面"><span class="nav-number">3.9.4.</span> <span class="nav-text">安装图形界面</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Gnome"><span class="nav-number">3.9.4.1.</span> <span class="nav-text">Gnome</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Deepin"><span class="nav-number">3.9.4.2.</span> <span class="nav-text">Deepin</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#KDE"><span class="nav-number">3.9.4.3.</span> <span class="nav-text">KDE</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#XFCE"><span class="nav-number">3.9.4.4.</span> <span class="nav-text">XFCE</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#中文输入法安装"><span class="nav-number">3.9.5.</span> <span class="nav-text">中文输入法安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#fcitx"><span class="nav-number">3.9.5.1.</span> <span class="nav-text">fcitx</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ibus"><span class="nav-number">3.9.5.2.</span> <span class="nav-text">ibus</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重启系统"><span class="nav-number">3.10.</span> <span class="nav-text">重启系统</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#个性化配置"><span class="nav-number">4.</span> <span class="nav-text">个性化配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装必备软件包"><span class="nav-number">4.1.</span> <span class="nav-text">安装必备软件包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地化文本"><span class="nav-number">4.2.</span> <span class="nav-text">本地化文本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#中文字体"><span class="nav-number">4.3.</span> <span class="nav-text">中文字体</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Archlinux-建议"><span class="nav-number">5.</span> <span class="nav-text">Archlinux 建议</span></a></li></ol></div>
         
       </div>
       <!--/noindex-->
@@ -560,7 +575,7 @@
       src="/images/avatar.jpg"
       alt="Kan Thouen">
   <p class="site-author-name" itemprop="name">Kan Thouen</p>
-  <div class="site-description" itemprop="description"></div>
+  <div class="site-description" itemprop="description">很多文章内容都不完善，先占个坑，等我考完研之后再整理……</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
@@ -568,7 +583,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">22</span>
+          <span class="site-state-item-count">32</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -581,7 +596,7 @@
             <a href="/categories/">
           
         
-        <span class="site-state-item-count">28</span>
+        <span class="site-state-item-count">47</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
@@ -594,7 +609,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">43</span>
+        <span class="site-state-item-count">55</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -646,6 +661,9 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Kan Thouen</span>
 </div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a></div>
 
         
 
