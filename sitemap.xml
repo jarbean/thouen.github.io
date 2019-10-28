@@ -2,16 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://thouen.github.io/zh/blog/bird-english-words/</loc>
+    <loc>https://thouen.github.io/zh/blog/reading-source-collecting/</loc>
     
-    <lastmod>2019-10-28T09:13:29.171Z</lastmod>
+    <lastmod>2019-10-28T12:16:05.078Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://thouen.github.io/zh/blog/archlinux-common-programs/</loc>
+    
+    <lastmod>2019-10-28T12:00:32.603Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://thouen.github.io/en/blog/emacs-brief-introduce/</loc>
+    
+    <lastmod>2019-10-28T11:12:02.566Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://thouen.github.io/zh/blog/ancient-wisdom-of-giving-name/</loc>
+    
+    <lastmod>2019-10-28T10:23:42.662Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://thouen.github.io/zh/blog/acg-club/</loc>
+    
+    <lastmod>2019-10-28T10:20:44.361Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://thouen.github.io/zh/blog/authentic-english-translation-collection/</loc>
     
-    <lastmod>2019-10-28T09:06:55.935Z</lastmod>
+    <lastmod>2019-10-28T10:09:22.171Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://thouen.github.io/zh/blog/shang-hai-pan-long-zhu/</loc>
+    
+    <lastmod>2019-10-28T09:39:35.497Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://thouen.github.io/zh/blog/bird-english-words/</loc>
+    
+    <lastmod>2019-10-28T09:13:29.171Z</lastmod>
     
   </url>
   
@@ -30,27 +72,6 @@
   </url>
   
   <url>
-    <loc>https://thouen.github.io/zh/blog/archlinux-common-programs/</loc>
-    
-    <lastmod>2019-10-28T09:05:05.993Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://thouen.github.io/zh/blog/ancient-wisdom-of-giving-name/</loc>
-    
-    <lastmod>2019-10-28T09:04:24.346Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://thouen.github.io/zh/blog/acg-club/</loc>
-    
-    <lastmod>2019-10-28T09:03:57.310Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://thouen.github.io/about/index.html</loc>
     
     <lastmod>2019-10-28T08:28:19.554Z</lastmod>
@@ -61,13 +82,6 @@
     <loc>https://thouen.github.io/categories/index.html</loc>
     
     <lastmod>2019-10-28T08:22:17.990Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://thouen.github.io/zh/blog/shang-hai-pan-long-zhu/</loc>
-    
-    <lastmod>2019-10-28T08:20:58.272Z</lastmod>
     
   </url>
   

@@ -1,12 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Reading Source Collecting</title>
+    <url>/zh/blog/reading-source-collecting/</url>
+    <content><![CDATA[<ol>
+<li><p><a href="./json/masterpiece.json">经典名著</a></p>
+</li>
+<li><p><a href="./json/foreign-works.json">外文书籍</a></p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>阅读</category>
+        <category>书源</category>
+      </categories>
+      <tags>
+        <tag>阅读</tag>
+        <tag>阅读APP</tag>
+        <tag>书源</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Emacs Brief Introduce</title>
+    <url>/en/blog/emacs-brief-introduce/</url>
+    <content><![CDATA[<ol>
+<li><p>E. M. A. C. S.</p>
+</li>
+<li><p>Emacs Makes A Computer Slow</p>
+</li>
+<li><p>Escape Meta Alt Control Shift</p>
+</li>
+<li><p>Emacs Makers Are Crazy Sickos</p>
+</li>
+<li><p>Emacs Makes All Computing Simple</p>
+</li>
+<li><p>Emacs Makefiles Annihilate C-Shells</p>
+</li>
+<li><p>Emacs Manuals Always Cause Senility</p>
+</li>
+<li><p>Emacs May Allow Customized Screwups</p>
+</li>
+<li><p>Emacs Manuals Are Cryptic and Surreal</p>
+</li>
+<li><p>Eventually Munches All Computer Storage</p>
+</li>
+<li><p>Eight Megabytes And Constantly Swapping</p>
+</li>
+<li><p>Elsewhere Maybe All Commands are Simple</p>
+</li>
+<li><p>Excellent Manuals Are Clearly Suppressed</p>
+</li>
+<li><p>Emacs May Alienate Clients and Supporters</p>
+</li>
+<li><p>Except by Middle Aged Computer Scientists</p>
+</li>
+<li><p>Extended Macros Are Considered Superfluous</p>
+</li>
+<li><p>Every Mode Accelerates Creation of Software</p>
+</li>
+<li><p>Each Manual’s Audience is Completely Stupefied</p>
+</li>
+<li><p>Exceptionally Mediocre Algorithm for Computer Scientists</p>
+</li>
+<li><p>Easily Maintained with the Assistance of Chemical Solutions</p>
+</li>
+<li><p>Eradication of Memory Accomplished with Complete Simplicity</p>
+</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
     <title>古人起名的智慧</title>
     <url>/zh/blog/ancient-wisdom-of-giving-name/</url>
     <content><![CDATA[<blockquote>
 <p>转载自<a href="https://www.sohu.com/a/217885930_99938475" target="_blank" rel="noopener">古人起名字的“名、字、号”的奥妙，不得不佩服古人的智慧！</a><br>有修改。转载请注明出处。</p>
 </blockquote>
 <p>现在的人，大多数有“名”，无“字”，所以当我们说到“名字”的时候，通常指的仅仅是人的名，或姓名。可是，在古代多数人，尤其是做官的和知识分子既有“名”又有“字”，有些人名、字之外还有“号”。</p>
+<a id="more"></a>
+
+
 <h1 id="（一）什么是“名”和“字”"><a href="#（一）什么是“名”和“字”" class="headerlink" title="（一）什么是“名”和“字”"></a>（一）什么是“名”和“字”</h1><p>所谓“名”，是社会上个人的特称，即个人在社会上所使用的符号。“字”往往是名的解释和补充，是与“名”相表里的，所以又称“表字”。《礼记·檀弓上》说：“幼名、冠字。”《疏》云：“始生三月而始加名，故云幼名，年二十有为父之道，朋友等类不可复呼其名，故冠而加字。”又《仪礼·士冠礼》：“冠而字之，敬其名也。君父之前称名，他人则称字也。”由此可见，名是幼时起的，供长辈呼唤。男子到了二十岁成人，要举行冠礼，这标志着本人要出仕，进入社会。女子长大后也要离开母家而许嫁，未许嫁的叫“未字”，亦可叫“待字”。十五岁许嫁时，举行笄礼，也要取字，供朋友呼唤。</p>
 <p>在上古，早期的人名一般都很朴实，如夏商两代留下的人名孔甲、履癸、外丙、雍己、盘庚、武丁、小辛等，都以干支人名，可能与当时人重视时辰的观念有关。后来随着社会的前进，语言文字的发展，意识观念的加强，人名越来越复杂，给人起名也成了一门学问。取名时，要对其所包容的内涵慎重考虑，反复斟酌。《左传·桓公六年》记载着春秋时代命名的五个原则：“名有五，有信、有义、有象、有假、有类。”这是鲁国大夫申儒在回答桓公问名时提出来的，意思是：或根据其出身特点，或从追慕祥瑞、托物喻志、褒扬德行、寄托父辈期望等几个方面比照取名。并且提出七不：“不以国、不以官、不以山川、不以隐疾、不以畜牲、不以器币”来取名。</p>
 <p>古人命名重取义、重内涵的做法，几千年来一直延续至今。对于所生男孩、女孩，因其生理。性格以及将要从事的职业不同，所以取名也就有了差别。对男的取名多用威武勇智、刚强猛毅之字，对女的多选贤淑、艳丽、优美动听之词。</p>
@@ -160,20 +232,67 @@
     <title>上海盘龙柱之谜</title>
     <url>/zh/blog/shang-hai-pan-long-zhu/</url>
     <content><![CDATA[<blockquote>
-<p>转载自<a href="http://bbs.tianya.cn/post-free-1603432-1.shtml" target="_blank" rel="noopener">今天我终于相信14年前上海延安高架神秘的龙柱事件了！</a></p>
+<p>转载自<a href="http://blog.sina.com.cn/s/blog_bef685e60102xogd.html" target="_blank" rel="noopener">今天我终于相信上海延安高架神秘的龙柱事件了！</a></p>
 </blockquote>
-<h1 id="原文"><a href="#原文" class="headerlink" title="原文"></a>原文</h1><p>首先我必须强调的是我并不是一个无神论者，我对一些灵异事件的看法可能与大家不太一样，我一直将这些科学无法解释的现象理解为是我们现在科学技术的局限，导致了无法说服大众，其实这样应该也是一种大自然的科学，只是超出了人类现有的认识范畴。</p>
-<p>言归正传，我们来谈延安路高架神秘龙柱事件，其实1995年发生的这件事，在上海已经传得很厉害了，各种版本都有，但是所有版本唯一的相同点都提到了当年这柱子怎么也打不到建筑单位预定的位置，我查了一下，这是所有版本中的唯一相同的地方。</p>
+<h1 id="原文"><a href="#原文" class="headerlink" title="原文"></a>原文</h1><p> 编者按：上海高架路有不下成百上千个支柱，几乎全都显露着水泥混凝土的本色，唯有南北和东西高架路相接处下一柱妆以龙纹，并且是银底金纹的龙纹。末学前几年去上海时就听开车的师傅说起过这个高架桥龙柱的传奇灵异故事，这个事情在上海几乎家喻户晓。尽管政府出来辟谣过，但龙柱的设计者赵志荣（代表政府出面辟谣，否认下面有龙）也承认当初的确出现了打桩打不下去的情况，但他说那是地质原因。当然，究竟真相如何，我想读者自会判断。</p>
+<h2 id="01"><a href="#01" class="headerlink" title="01"></a>01</h2><p>这是上海人家几乎家喻户晓的一个有关高架路的灵异故事，沸沸扬扬地传说了一阵子，至今未揭开谜底，打这件真实的事件后，自己也不由得开始对神灵有所膜拜，上海街头也多了句“闲话”—你可以不信神，但是绝对不要去亵渎神灵。</p>
+<p>在上海出门坐车似乎都要经过高架路，车开上高架路，总会经过上海高架路交融的中心——延安路、成都路高架，这是一条贯穿上海东西与南北的高架路要道。凡经过此地的无一不被东西高架路与南北高架路交*的主柱上装置的精美龙纹所吸引。一根高架石柱上，围上白钢，在银底上盘着九条金色的龙。</p>
+<p>在那东西南北高架下起码有几千个主柱，为何唯独这个主柱要盘金色的龙呢？上海人家人人知晓地流传着一个关于建造“上海延安路高架”时发生的至今未揭密的充满神奇的神秘故事。流传中版本多种，故事内容却大同小异。 </p>
+<p>故事就从这里开始。</p>
+<p>上世纪九十年代时，为彻底改变市区交通拥挤、堵塞，同时上海高架路建设规划也想跻身世界一流都市，贯穿于市区的成都路高架和延安路高架先后上马，使贯穿上海市东西南北的高架最终形成上出天、下出地的“申”字形的大格局。</p>
+<p>……工程飞速地进展，当工程进行到关键的东西高架路与南北高架路交*联接的接口时，作为高架路主柱的基础地桩怎么也打不下去。工程受阻，偏偏受阻在东西南北交汇点上，受阻在上海最高的高架主柱之下！翻阅上海地质资料和所有设计文件，均没有问题。上海市政和隧道等工程公司立即调集技术力量攻关，一而再，再而三，地桩就是打不下。谁能想到偏偏在这个关键的接口上打不下地桩，竖不成主柱！</p>
+<p>……汇集技术精英，高明绝技过招，各显神通之后，打不进的地桩依然打不进，就是勉强打进一部分，却远远不符合设计的标准和工程的，工程只得暂时停顿。</p>
+<p>不知道是谁出了主意，到著名的上海市中心静安寺“玉佛寺”去请教了一个高僧大德。高僧来到东西高架路与南北高架路交联接工地细细察看后，沉思良久，然后开口说，此地乃是“龙脉”之所，要想挖掘确实不易，但已找到问题的症结所在。解决的办法是要行一番法事，请动神明灵物让出打桩之地。高僧说完，慨然长叹，言明他道破天机，恐怕自身在世来日已不多。许身报德，愿为上海人民信众造福，也为久居的上海建设尽一份绵薄心力。</p>
+<p>按照高僧的作法，就是必须在七天内造一根盘九条银底金龙的主柱，由那高僧作法念七天（看雪客注：一说为三天）经。（据说请示了中央领导，中央也同意了这样做。）</p>
+<p>高僧默然择定吉日，众人循其嘱咐，一切准备停当。法师焚香祷念，一一行事，事毕叮嘱某时某刻后即可打桩，然后一去不返。工程技术人员虽然一头雾水，却也动心聚念，遵嘱照办。谁知如此这般之后，地桩竟然顺利打了下去，不偏不倚，完全符合设计标准，南北、东西高架严丝合缝。高僧回到寺庙，不多日无疾而圆寂。（他这也是属于为国捐躯了）</p>
+<p>至于高僧作法的布置，只传数位领导和工程负责人，并再三吩咐秘而不宣，所以外人无从获知详情，唯一能看到的痕迹，就是在接口处地桩上浇筑的巨大圆型支柱周身围上了白钢并装上了龙型纹饰，作为对佑助打桩成功的神明灵物的祈敬。</p>
+<p>这就是关于“上海延安路高架银底金纹龙柱”的故事，故事情节是真实的（或许版本不同，内容大同小异），但是至今没人能揭开这神秘的谜。</p>
+<h2 id="02"><a href="#02" class="headerlink" title="02"></a>02</h2><p>以下是一些知情人透漏的内容：</p>
+<ol>
+<li><p>那个法师是玉佛寺的真禅法师，他是我一个同学的师父，圆寂的时候，我同学哭傻了。</p>
+<p> 事情是这样的，当时政府在建造延安路高架的时候在下面打地基的时候遇到了流沙，很容易塌蹦，水泥灌下去一下子就没有了，真禅法师就透露说应该是有条龙。</p>
+<p> 后来柱子立起来了，那个柱子上造了一条很漂亮的龙柱子，因为泄露了天机，真禅法师没有多少天就圆寂了。</p>
+<p> 还有上海博物馆，就是人民广场上的那个房子，像痰盂似的那个建筑，也是因为这个原因，真禅法师就画了一个这样的建筑，要照着这样的样子建造，所以就是现在痰盂装了，真禅法师泄露了太多天机所以很早就圆寂了。</p>
+<p> 还有现在在建造的地铁4号线也遇到了流沙，房子都塌了一幢了，差点人民广场也受到影响，害我前段时间都不敢去那里。</p>
+<p> 现在没有真禅法师帮忙了，现在的玉佛寺主持很年轻，听说是个博士，估计还没有这个能力。所以地铁工程进度明显受影响。</p>
+</li>
+<li><p>我舅舅是803的，请那老法师来的时候他就在旁边。</p>
+<p> 嘿嘿，真有此事！</p>
+<p> 而且我家我舅舅家就住在那条龙附近哦。</p>
+<p> 关于龙嘛~</p>
+<p> 哈哈。。上海人早些年纪也应该知道</p>
+<p> 浦东出现过龙嘛~~ 报纸上都刊过</p>
+</li>
+<li><p>由于我老豆也是搞市政建设的，他有个同事也参与了那次龙柱的施工。我听老豆说桩子是确实打不下去，也死了很多人，后来是请了大法师之后才确定的在桩身纹龙的方案。</p>
+</li>
+<li><p>上次说给bf听这个弄柱高架的事情，他还将信将疑，有一次去接他一个朋友，在出租车上突然问起那个司机有这事儿没有，巧滴是，那个司机说当时建筑队某人就是他家邻居，所以他知道的比较真切，但是他好像不是很情愿提这个事，架不住bf一再追问，于是就说了说，情形基本上就是那么一回事，我bf这才彻底相信了我。</p>
+</li>
+<li><p>我是上海人，这事我听说过。当时做法事时放了将近一小时的炮仗，请了许多法师一起做的，声势浩大啊。那个圆寂的大法师为了上海而献身。另外上海二号线原先准备从静安寺下面穿过，但是在准备施工时突然从静安寺里涌出大量的水，当时轰动全市，自来水公司找了半天也没发现是哪出来水的，后来向法师请教后把工程向南移了50米，避免从寺庙下面穿，这神奇的水才停住。不信的网友可以去实地看，二号线故意避开了静安寺。我的叔叔就是当时地铁二号线静安区指挥部的，我就是听他说的。</p>
+</li>
+</ol>
+<h2 id="03"><a href="#03" class="headerlink" title="03"></a>03</h2><p>下文是一篇发表于2009年7月1日的文章：《今天我终于相信14年前上海延安高架神秘的龙柱事件了！》现摘录其中后段内容：</p>
+<p>其实1995年发生的这件事，在上海已经传得很厉害了，各种版本都有，但是所有版本唯一的相同点都提到了当年这柱子怎么也打不到建筑单位预定的位置，我查了一下，这是所有版本中的唯一相同的地方。</p>
 <p>长期以来，我一直对上海的这龙柱事件将信将疑，总感觉是不是地段的下方是一个流沙眼？导致打桩柱摇摆不准，很多版本都说是地桩打在了龙头上，地底下怎么会有龙呢？我一直将信将疑。</p>
 <p>但是今天，我的疑虑全部打消了，今天中午吃饭，一群同事正在东拉西扯，无意中有个老同事提起了当年在建筑队干活的艰辛岁月，说上海那些重大工程都有他流下的辛勤汗水，我说你就扯淡吧，别告诉我你是二十年前的王石。老同事似乎越说越来劲，仿佛回到了那段抢工期的光辉岁月。</p>
 <p>突然，他提到了延安高架桥就是他们抢下来的，说当年还见到了市长。我心中突然一下子就联想到那著名的延安高架龙柱事件。看着老同事还在津津有味地滔滔不绝讲着他的英雄史诗，我实在不忍打断他的雅兴，过了一会儿，我感觉火力稍微弱了些，我便插了他一句话：</p>
 <p>“你们当年抢延安高架时，据说将地桩插到龙的头上去了？你们胆子不小啊！”我故意说道。因为我看得出来，他好像根本对龙柱事件不屑一顾。</p>
-<p>让我惊诧的是老同事的回答，老同事若无其事地说着：“什么啊，别听外面的传言，当年这根地桩就是我们标段打的，我是亲眼看到这根柱子是怎么打下去的。当时根本就没有龙柱啊，就是普通的柱子，总共打了七根。一开始确实打不到预定位置，打了好多次，不知道什么原因，打进去的柱子老是莫名其妙又从地下冒出来，连续打了几天都没用，后来还让其它单位帮忙了，都没用，最后搞得市长都来现场了，第二天后来这地方就被封了，我们都进不去。也不知道里面在发生什么事，我们后来就被派去第8标去干活了，后来过了三天现场才解封的，那天早上我们进去时，现场已经摆了很多的祭祀用的猪头什么的，都用红纸盖着，一个老和尚带着几个小和尚坐在那里念经。后来柱子就很顺地下去了。再也没有从地下冒出来，后来的事就不知道了。”</p>
-<p>我倒吸一口凉气，老和尚？难道真的是玉佛寺的真禅法师？或者其它的方丈？老同事经历过这件事，而且就是当初标段的工人，后来难道是当时的市政府重新将龙裹上去的？</p>
+<p>让我惊诧的是老同事的回答，老同事若无其事地说着：“什么啊，别听外面的传言，当年这根地桩就是我们标段打的，我是亲眼看到这根柱子是怎么打下去的。当时根本就没有龙柱啊，就是普通的柱子，总共打了七根。一开始确实打不到预定位置，打了好多次，不知道什么原因，打进去的柱子老是莫名其妙又从地下冒出来，连续打了几天都没用，后来还让其它单位帮忙了，都没用，最后搞得市长都来现场了，第二天后来这地方就被封了，我们都进不去。也不知道里面在发生什么事，我们后来就被派去第8标去干活了，后来过了三天现场才解封的，那天早上我们进去时，现场已经摆了很多的祭祀用的猪头什么的（？？？），都用红纸盖着，一个老和尚带着几个小和尚坐在那里念经。后来柱子就很顺地下去了。再也没有从地下冒出来，后来的事就不知道了。”</p>
+<p>我倒吸一口凉气，老和尚？难道真的是玉佛寺的真禅法师？或者其它的方丈？老同事经历过这件事，而且就是当初标段的工人，后来难道是当时的市**重新将龙裹上去的？</p>
 <p>至此，我彻底相信了当年那诡异的龙柱事件！</p>
+<p>（博主看雪客注：一些网友抓住“现场已经摆了很多的祭祀用的猪头什么的”，以图否认这个事情的真实性，因为佛教祭祀不可能用猪头。博主认为，第一，供猪头可能是事实，但不是法师供的，而是工程方供的，因为做建筑工程的公司在工地习惯用此方式祭祀鬼神。第二，供猪头可能不是事实，该工人在这个细节上的确描述有误，很可能把他平时所见想象到此（后面还有“用红纸盖着”）。欲以此细节否认全部，显然太草率。本博主在MSN上与上海一居士聊天时，该居士明确表示这是真事，而且涉及上海2大寺庙的主持明扬法师和真禅法师。不知明杨法师是否健在，欲深究者可去采访)</p>
+<h2 id="04"><a href="#04" class="headerlink" title="04"></a>04</h2><p>再引一个帖子。标题：《我相信是真的，上海的人都知道的啊！》</p>
+<p>关于延安路高架龙柱的故事，这是我查到的。</p>
+<p>上海南北高架和延安高架交汇处有一根很粗的支柱，上面用铜雕刻着盘龙浮雕，这个就是上海的龙柱，被其他几件事件一起被称为上海最玄的事件之一。</p>
+<p>当时在造延安高架南北高架的时候，这根柱子的地方是必须打桩的位置，当时打了很多次，但桩打到几米深的地方就打不下去了，有些还断掉，上海的沙土堆积土质很松软，以前几乎没有碰到过这样情况，工程停滞了，市政府和工程单位请了几位高人来看，那些高人看后都没办法，也不肯说明情况。估计他们知道是什么原因，但都不肯出手。最后请出了上海玉佛寺的主持高僧，高僧看后知道要解这个事件他自己就功德圆满，要归天了。做法事前他就叫上了他的徒弟，给徒弟最后讲次话（我家隔壁的老奶奶就是这个高僧的俗家弟子，最后讲经的事情是从她那里听说的，外面流传的几种说法里大致相同，但没有讲经这段）。然后高僧就去做了法事，做法事的时候，工地上用工程布围着，外面听不到里面的一点动静（在那期间我也有经过该工地，不知道里面在做法事，当时我还和几个朋友骂街，说占着茅坑不拉屎，弄的马路上走路都不方便……）有传闻说是三天法事，也有说是七天的，我所知道的应该是七天，法事一完，随着打桩机的轰鸣，桩就顺利的打了下去，连打了七根大桩，现在阿拉看到的一根粗大的桥墩其实里面是七根桩，而不是一根，打好之后底下一股乌气就上来包围住了这七根柱子，可能是由于政策的关系，政府宣传要破除迷信，所以后来用装饰材料包住了里面盘着乌气的柱子，并在外面用铜浮雕雕了盘龙。</p>
+<p>做法事的时候高僧才说，这个地方是上海的龙脉，上海是一个可以做一国之都的地方，所以底下会有龙，延安高架南北高架交汇点正是上海的中心，龙头所在，高僧做了七天法事，让龙升天了。</p>
+<p>当时这件事保密工作做的非常好，几乎没人知道。后来大约半年后这个高僧就圆寂了，玉佛寺专门印了本小册子给香客，以纪念高僧一生的功绩，我奶奶当时也是没(每)月两次必去上香的，她也有这本册子，里面就记载着龙柱法事这段。</p>
+<p>我没记错的话，那位高僧应该叫真禅法师。</p>
+<p>看雪客注：此帖子提到真禅法师圆寂时，“玉佛寺专门印了本小册子给香客，以纪念高僧一生的功绩，我奶奶当时也是没月两次必去上香的，她也有这本册子，里面就记载着龙柱法事这段”。这本小册子是重要证据，若无此事，玉佛寺断不敢大造妄语。</p>
 <h1 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h1><ol>
-<li><a href="https://www.bilibili.com/video/av10667417" target="_blank" rel="noopener">上海盘龙柱，地下藏有龙脉？中国十大灵异传闻揭秘！</a></li>
-<li><a href="https://www.bilibili.com/video/av7136508/" target="_blank" rel="noopener">上海高架桥“盘龙柱”之谜！</a></li>
+<li><a href="http://bbs.tianya.cn/post-free-1603432-1.shtml" target="_blank" rel="noopener">今天我终于相信14年前上海延安高架神秘的龙柱事件了！</a></li>
+<li><a href="https://www.bilibili.com/video/av10667417" target="_blank" rel="noopener">【视频】上海盘龙柱，地下藏有龙脉？中国十大灵异传闻揭秘！</a></li>
+<li><a href="https://www.bilibili.com/video/av7136508/" target="_blank" rel="noopener">【视频】上海高架桥“盘龙柱”之谜！</a></li>
+<li><a href="https://www.bilibili.com/video/av16924804/" target="_blank" rel="noopener">【视频】魔都盘龙柱之谜早已辟谣，但上海人民竟都不信</a></li>
 </ol>
 ]]></content>
       <categories>
@@ -192,17 +311,46 @@
     <content><![CDATA[<blockquote>
 <p>个人总结，转载请注明出处。</p>
 </blockquote>
-<h1 id="生活常用表达"><a href="#生活常用表达" class="headerlink" title="生活常用表达"></a>生活常用表达</h1><ol>
-<li><p>打招呼。</p>
+<h1 id="日常英语"><a href="#日常英语" class="headerlink" title="日常英语"></a>日常英语</h1><ol>
+<li><p>打招呼</p>
 <ul>
 <li>Nice to meet you!</li>
+<li>Hey, what’s up?</li>
+<li>How’s everything?</li>
+<li>How’s life?</li>
+<li>How’s your family?</li>
+<li>How’s your job?</li>
+<li>How are your family?<blockquote>
+<p>family 是个集体名词，强调家庭则为单数，强调家人为复数。</p>
+</blockquote>
+</li>
+<li>How are your parents?</li>
 <li><del>How do you do?</del>（过时）</li>
 </ul>
 </li>
-<li><p>询问姓名。</p>
+<li><p>回应打招呼</p>
 <ul>
-<li>Hi, I don’t believe we’ve met!</li>
+<li>I’m doing great.</li>
+<li>They’re doing great.</li>
+<li>Pretty good.</li>
+</ul>
+</li>
+<li><p>询问姓名</p>
+<ul>
+<li>Hi, I don’t believe we’ve met.</li>
 <li><del>May I know your name?</del>（死板的课本预言）</li>
+</ul>
+</li>
+<li><p>询问年龄</p>
+<ul>
+<li>You look so young, what do you do to stay in shape?</li>
+<li><del>How old are you?</del>（不礼貌）</li>
+</ul>
+</li>
+<li><p>询问工作</p>
+<ul>
+<li>So, what do you do for living?</li>
+<li><del>What is your job?</del>（太直接，不够委婉）</li>
 </ul>
 </li>
 <li><p>如果我没记错的话……</p>
@@ -215,16 +363,8 @@
 <li>It never occurred to me that…  </li>
 </ul>
 </li>
-<li><p>即便一个人西装革履，也不见得他一定行为端正。</p>
-<ul>
-<li>Even if one is well suited, that doesn’t necessarily mean he is decent.</li>
-</ul>
-</li>
-<li><p>我想要一个汉堡包。</p>
-<ul>
-<li>Could I have a hamburger, please?</li>
-</ul>
-</li>
+</ol>
+<ol start="8">
 <li><p>拒绝午餐或者晚宴。</p>
 <ul>
 <li>That’s a good idea! I would like to join in but I have another appointment today.</li>
@@ -235,18 +375,46 @@
 <li>Does it ring a bell to you?  </li>
 </ul>
 </li>
+<li><p>我想要一个汉堡包。</p>
+<ul>
+<li>Could I have a hamburger, please?</li>
+</ul>
+</li>
+<li><p>询问座位</p>
+<ul>
+<li>Excuse me, is this seat taken?</li>
+<li>Excuse me, is anyone sitting here?</li>
+</ul>
+</li>
+<li><p>需要帮助吗？</p>
+<ul>
+<li>Do you need a hand?</li>
+</ul>
+</li>
 </ol>
-<h1 id="学术类表达"><a href="#学术类表达" class="headerlink" title="学术类表达"></a>学术类表达</h1><ol>
-<li>父母们之所以选择男女分校，很可能的原因之一是因为他们害怕自己的孩子早恋。  <ul>
+<h1 id="学术英语"><a href="#学术英语" class="headerlink" title="学术英语"></a>学术英语</h1><ol>
+<li><p>即便一个人西装革履，也不见得他一定行为端正。</p>
+<ul>
+<li>Even if one is well suited, that doesn’t necessarily mean he is decent.</li>
+</ul>
+</li>
+<li><p>父母们之所以选择男女分校，很可能的原因之一是因为他们害怕自己的孩子早恋。  </p>
+<ul>
 <li>One of the reasons why many parents want send their children to sparate school is that they are worried about possible underage sexual behaviors.</li>
 </ul>
 </li>
 </ol>
+<h1 id="商务英语"><a href="#商务英语" class="headerlink" title="商务英语"></a>商务英语</h1><ol>
+<li>自我介绍<ul>
+<li>Allow me to introduce myself, I’m xxx.</li>
+<li>This is my business card.</li>
+</ul>
+</li>
+</ol>
 <h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><ol>
-<li><p><a href="https://github.com/xiaolai/everyone-can-use-english" target="_blank" rel="noopener">人人都能用英语</a> By <a href="https://github.com/xiaolai" target="_blank" rel="noopener">李笑来</a></p>
-</li>
-<li><p><a href="https://www.sohu.com/a/239726363_479631" target="_blank" rel="noopener">用外国人的思维方式学英语，这3个技巧你值得拥有！</a></p>
-</li>
+<li><a href="https://github.com/xiaolai/everyone-can-use-english" target="_blank" rel="noopener">人人都能用英语</a> By <a href="https://github.com/xiaolai" target="_blank" rel="noopener">李笑来</a></li>
+<li><a href="https://www.sohu.com/a/239726363_479631" target="_blank" rel="noopener">用外国人的思维方式学英语，这3个技巧你值得拥有！</a> By <a href="https://mp.sohu.com/profile?xpt=bXloeGVuQHNvaHUuY29t" target="_blank" rel="noopener">恒星英语学习网</a></li>
+<li><a href="https://www.bilibili.com/video/av68975838/" target="_blank" rel="noopener">【视频】【英语】不背单词不学语法，英国外交部翻译教你飚出一口地道英语</a> By <a href="https://space.bilibili.com/382191717" target="_blank" rel="noopener">Goophear</a></li>
 </ol>
 ]]></content>
       <categories>
@@ -299,6 +467,9 @@
     <content><![CDATA[<blockquote>
 <p>内容可能引起不适，未满18岁请绕道……<br>持续更新……</p>
 </blockquote>
+<a id="more"></a>
+
+
 <h1 id="PC"><a href="#PC" class="headerlink" title="PC"></a>PC</h1><h2 id="人工学园2"><a href="#人工学园2" class="headerlink" title="人工学园2"></a>人工学园2</h2><p><a href="http://hmblacg.com/forum.php?mod=viewthread&tid=18355&page=1" target="_blank" rel="noopener">游戏介绍</a></p>
 <h2 id="3D定制女仆2"><a href="#3D定制女仆2" class="headerlink" title="3D定制女仆2"></a>3D定制女仆2</h2><p><a href="http://hmblacg.com/thread-17678-1-1.html" target="_blank" rel="noopener">游戏介绍</a></p>
 <h2 id="Play-Club-游戏俱乐部"><a href="#Play-Club-游戏俱乐部" class="headerlink" title="Play Club(游戏俱乐部)"></a>Play Club(游戏俱乐部)</h2><p><a href="http://hmblacg.com/thread-12424-1-1.html" target="_blank" rel="noopener">游戏介绍</a></p>
@@ -557,8 +728,8 @@
         <tag>哲学</tag>
         <tag>道教</tag>
         <tag>中国哲学</tag>
-        <tag>经典古籍</tag>
         <tag>道德经</tag>
+        <tag>经典古籍</tag>
       </tags>
   </entry>
   <entry>
@@ -737,8 +908,8 @@
       <tags>
         <tag>哲学</tag>
         <tag>中国哲学</tag>
-        <tag>经典古籍</tag>
         <tag>道德经</tag>
+        <tag>经典古籍</tag>
         <tag>道家</tag>
       </tags>
   </entry>
@@ -3213,19 +3384,19 @@
 
 <h2 id="Mojava-GTK-Theme"><a href="#Mojava-GTK-Theme" class="headerlink" title="Mojava-GTK-Theme"></a>Mojava-GTK-Theme</h2><p>Mac OSX风格的桌面主题。配合Gnome、Pantheon、XFCE、Mate使用。</p>
 <ul>
-<li><p>稳定版（推荐）</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pikaur -S mojave-gtk-theme</span><br></pre></td></tr></table></figure>
+<li><p>稳定版（推荐，虽然我用的是git版）</p>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pikaur -S mojave-gtk-theme</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>git版</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pikaur -S mojava-gtk-theme-git</span><br></pre></td></tr></table></figure>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pikaur -S mojava-gtk-theme-git</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
-<h1 id="输入法"><a href="#输入法" class="headerlink" title="输入法"></a>输入法</h1><h2 id="IBus-amp-Rime（推荐）"><a href="#IBus-amp-Rime（推荐）" class="headerlink" title="IBus &amp; Rime（推荐）"></a>IBus &amp; Rime（推荐）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S ibus-rime</span><br></pre></td></tr></table></figure>
+<h1 id="输入法"><a href="#输入法" class="headerlink" title="输入法"></a>输入法</h1><h2 id="IBus-amp-Rime"><a href="#IBus-amp-Rime" class="headerlink" title="IBus &amp; Rime"></a>IBus &amp; Rime</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S ibus-rime</span><br></pre></td></tr></table></figure>
 
 <h2 id="Fcitx-amp-Rime"><a href="#Fcitx-amp-Rime" class="headerlink" title="Fcitx &amp; Rime"></a>Fcitx &amp; Rime</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S fcitx-im</span><br></pre></td></tr></table></figure>
 
-<h1 id="网页浏览"><a href="#网页浏览" class="headerlink" title="网页浏览"></a>网页浏览</h1><h2 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h2><h3 id="Firefox"><a href="#Firefox" class="headerlink" title="Firefox"></a>Firefox</h3><p>火狐浏览器。</p>
+<h1 id="互联网"><a href="#互联网" class="headerlink" title="互联网"></a>互联网</h1><h2 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h2><h3 id="Firefox"><a href="#Firefox" class="headerlink" title="Firefox"></a>Firefox</h3><p>火狐浏览器。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S firefox firefox-i18n</span><br></pre></td></tr></table></figure>
 
 <h3 id="Chrome"><a href="#Chrome" class="headerlink" title="Chrome"></a>Chrome</h3><p>谷歌浏览器</p>
@@ -3237,16 +3408,22 @@
 <h2 id="科学上网工具"><a href="#科学上网工具" class="headerlink" title="科学上网工具"></a>科学上网工具</h2><h3 id="Lantern"><a href="#Lantern" class="headerlink" title="Lantern"></a>Lantern</h3><p>蓝灯。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -Ss lantern-bin</span><br></pre></td></tr></table></figure>
 
-<h1 id="聊天软件"><a href="#聊天软件" class="headerlink" title="聊天软件"></a>聊天软件</h1><h2 id="QQ"><a href="#QQ" class="headerlink" title="QQ"></a>QQ</h2><p>运行在<code>deepin-wine</code>上，可以选择安装TIM或者QQ（个人比较喜欢TIM，比较轻量级）。</p>
+<h1 id="聊天软件"><a href="#聊天软件" class="headerlink" title="聊天软件"></a>聊天软件</h1><h2 id="QQ"><a href="#QQ" class="headerlink" title="QQ"></a>QQ</h2><ol>
+<li><p>腾讯官方的 <strong>Linux</strong> 版 <strong>QQ</strong>。这个版本的 <strong>QQ</strong> 非常简陋，但是对于仅有聊天发送文件需求、并且没有其他 <code>wine</code> 需求的人来说，使用这个版本的 <strong>QQ</strong> 后就可以把 <code>deepin-wine</code> 卸载了，感觉还是挺爽的。</p>
+ <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pikaur -S linuxqq</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>运行在<code>deepin-wine</code>上，可以选择安装 <strong>TIM</strong> 或者 <strong>QQ</strong>（个人比较喜欢 <strong>TIM</strong>，比较轻量级）。</p>
 <ul>
 <li><p>TIM</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S deepin.com.qq.office</span><br></pre></td></tr></table></figure>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S deepin.com.qq.office</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>QQ</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S deepin.com.qq.im</span><br></pre></td></tr></table></figure>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S deepin.com.qq.im</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
+</li>
+</ol>
 <h2 id="米聊"><a href="#米聊" class="headerlink" title="米聊"></a>米聊</h2><p>小米公司出品，真正跨平台的国产聊天软件。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pikaur -S mitalk</span><br></pre></td></tr></table></figure>
 
@@ -3298,26 +3475,32 @@
 <h3 id="OpenJDK"><a href="#OpenJDK" class="headerlink" title="OpenJDK"></a>OpenJDK</h3><p>开源的JDK，由Redhat社区维护。稳定性不及Oracle JDK，但是它免费啊！Oracle JDK说不定什么时候就收费了。<code>Java EE</code>已经改名叫<code>Jakarta EE</code>已经说明很多问题了。</p>
 <ol>
 <li><p>安装OpenJDK</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S jdk-openjdk</span><br></pre></td></tr></table></figure>
+ <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S jdk-openjdk</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>安装Maven：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S maven</span><br></pre></td></tr></table></figure>
+ <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S maven</span><br></pre></td></tr></table></figure>
 
 </li>
 </ol>
+<h3 id="Julia"><a href="#Julia" class="headerlink" title="Julia"></a>Julia</h3><p><strong>Julia</strong> 语言编译器</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S julia</span><br></pre></td></tr></table></figure>
+
 <h2 id="文本编辑器"><a href="#文本编辑器" class="headerlink" title="文本编辑器"></a>文本编辑器</h2><h3 id="Vim"><a href="#Vim" class="headerlink" title="Vim"></a>Vim</h3><p>Linux上的著名文本编辑器vi的加强版。系统内置的好像不完整，需要自己更新。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S vim</span><br></pre></td></tr></table></figure>
 
 <h3 id="VSCode"><a href="#VSCode" class="headerlink" title="VSCode"></a>VSCode</h3><p>VScode，微软出品的轻量级文本编辑器。开源、免费、跨平台、易扩展、功能强大、性能优良。爱死这破软件了，自从装了这软件后再也没用过其他的图形文本编辑器。这不是在打广告！</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S code</span><br></pre></td></tr></table></figure>
 
-<h2 id="IDE"><a href="#IDE" class="headerlink" title="IDE"></a>IDE</h2><h3 id="Intellij-Idea"><a href="#Intellij-Idea" class="headerlink" title="Intellij Idea"></a>Intellij Idea</h3><p>IDEA 全称 IntelliJ IDEA，是java编程语言开发的集成环境。IntelliJ在业界被公认为最好的java开发工具之一，尤其在智能代码助手、代码自动提示、重构、J2EE支持、各类版本工具(git、svn等)、JUnit、CVS整合、代码分析、 创新的GUI设计等方面的功能可以说是超常的。旗舰版是要收费的，要是有教育邮箱的话可以免费订阅一年。</p>
+<h3 id="Joe-Editor"><a href="#Joe-Editor" class="headerlink" title="Joe Editor"></a>Joe Editor</h3><p>一个很强大的编辑器。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S joe</span><br></pre></td></tr></table></figure>
+
+<h3 id="Emacs"><a href="#Emacs" class="headerlink" title="Emacs"></a>Emacs</h3><h2 id="IDE"><a href="#IDE" class="headerlink" title="IDE"></a>IDE</h2><h3 id="Intellij-Idea"><a href="#Intellij-Idea" class="headerlink" title="Intellij Idea"></a>Intellij Idea</h3><p>IDEA 全称 IntelliJ IDEA，是java编程语言开发的集成环境。IntelliJ在业界被公认为最好的java开发工具之一，尤其在智能代码助手、代码自动提示、重构、J2EE支持、各类版本工具(git、svn等)、JUnit、CVS整合、代码分析、 创新的GUI设计等方面的功能可以说是超常的。旗舰版是要收费的，要是有教育邮箱的话可以免费订阅一年。</p>
 <ul>
 <li><p>社区版：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S intellij-idea-community-edition</span><br></pre></td></tr></table></figure>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S intellij-idea-community-edition</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>旗舰版：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pikaur -S intellij-idea-ultimate-edition`</span><br></pre></td></tr></table></figure>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pikaur -S intellij-idea-ultimate-edition`</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
@@ -3342,12 +3525,16 @@
 <h3 id="Devhelp"><a href="#Devhelp" class="headerlink" title="Devhelp"></a>Devhelp</h3><p>没用过。。据说可以查看GTK的开发文档。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S devhelp</span><br></pre></td></tr></table></figure>
 
-<h1 id="办公软件"><a href="#办公软件" class="headerlink" title="办公软件"></a>办公软件</h1><h2 id="LibreOffice"><a href="#LibreOffice" class="headerlink" title="LibreOffice"></a>LibreOffice</h2><p>开源、自由、跨平台的免费办公套件。<br>稳定版：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S libreoffice-still</span><br></pre></td></tr></table></figure>
+<h1 id="办公软件"><a href="#办公软件" class="headerlink" title="办公软件"></a>办公软件</h1><h2 id="LibreOffice"><a href="#LibreOffice" class="headerlink" title="LibreOffice"></a>LibreOffice</h2><p>开源、自由、跨平台的免费办公套件。</p>
+<ul>
+<li><p>稳定版：</p>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S libreoffice-still</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>尝鲜版（beta版）：</p>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S libreoffice-fresh</span><br></pre></td></tr></table></figure>
 
-<p>尝鲜版（beta版）：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S libreoffice-fresh</span><br></pre></td></tr></table></figure>
-
+</li>
+</ul>
 <h2 id="Gimp"><a href="#Gimp" class="headerlink" title="Gimp"></a>Gimp</h2><p>Gimp全名GNU Image Manipulation Program，是一款跨平台、自由的图像处理程序，功能丰富，号称“Linux下的PhotoShop”。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S gimp</span><br></pre></td></tr></table></figure>
 
