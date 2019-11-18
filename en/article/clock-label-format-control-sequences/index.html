@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh,en,default">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.1">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.4.1" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.4.1">
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.4.1',
+    exturl: false,
+    sidebar: {"position":"right","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="The following is a list of available label format control sequences copied from a date utility manual (man date), reduced by those that are not supported by GDateTime:">
+<meta name="keywords" content="linux,clock format">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Clock Label Format Control Sequences">
+<meta property="og:url" content="https://thouen.github.io/en/article/clock-label-format-control-sequences/index.html">
+<meta property="og:site_name" content="Thouen&#39;s 博客">
+<meta property="og:description" content="The following is a list of available label format control sequences copied from a date utility manual (man date), reduced by those that are not supported by GDateTime:">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-11-18T13:25:18.628Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Clock Label Format Control Sequences">
+<meta name="twitter:description" content="The following is a list of available label format control sequences copied from a date utility manual (man date), reduced by those that are not supported by GDateTime:">
+  <link rel="canonical" href="https://thouen.github.io/en/article/clock-label-format-control-sequences/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>Clock Label Format Control Sequences | Thouen's 博客</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Thouen's 博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">哲学 | 科技 | 读书 | IT | 文史 | 社科 | 生活 | 休闲 | 猎奇 | 其他</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-links">
+      
+    
+
+    <a href="/links/" rel="section"><i class="fa fa-fw fa-link"></i>链接</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
+    <link itemprop="mainEntityOfPage" href="https://thouen.github.io/en/article/clock-label-format-control-sequences/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kan Thouen">
+      <meta itemprop="description" content="部分文章内容不完善或格式乱，考完研之后再整理……">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Thouen's 博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Clock Label Format Control Sequences
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2019-11-18 21:21:59 / Modified: 21:25:18" itemprop="dateCreated datePublished" datetime="2019-11-18T21:21:59+08:00">2019-11-18</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/it/" itemprop="url" rel="index"><span itemprop="name">IT</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/it/linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>The following is a list of available label format control sequences copied from a date utility manual (man date), reduced by those that are not supported by GDateTime:</p>
+<a id="more"></a>
+
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>%%</td>
+<td>a literal %</td>
+</tr>
+<tr>
+<td>%a</td>
+<td>locale’s abbreviated weekday name (e.g., Sun)</td>
+</tr>
+<tr>
+<td>%A</td>
+<td>locale’s full weekday name (e.g., Sunday)</td>
+</tr>
+<tr>
+<td>%b</td>
+<td>locale’s abbreviated month name (e.g., Jan)</td>
+</tr>
+<tr>
+<td>%B</td>
+<td>locale’s full month name (e.g., January)</td>
+</tr>
+<tr>
+<td>%c</td>
+<td>locale’s date and time (e.g., Thu Mar 3 23:05:25 2005)</td>
+</tr>
+<tr>
+<td>%C</td>
+<td>century; like %Y, except omit last two digits (e.g., 21)</td>
+</tr>
+<tr>
+<td>%d</td>
+<td>day of month (e.g, 01)</td>
+</tr>
+<tr>
+<td>%e</td>
+<td>day of month, space padded; same as %_d</td>
+</tr>
+<tr>
+<td>%F</td>
+<td>full date; same as %Y-%m-%d</td>
+</tr>
+<tr>
+<td>%g</td>
+<td>last two digits of year of ISO week number (see %G)</td>
+</tr>
+<tr>
+<td>%G</td>
+<td>year of ISO week number (see %V); normally useful only with %V</td>
+</tr>
+<tr>
+<td>%h</td>
+<td>same as %b</td>
+</tr>
+<tr>
+<td>%H</td>
+<td>hour (00..23)</td>
+</tr>
+<tr>
+<td>%I</td>
+<td>hour (01..12)</td>
+</tr>
+<tr>
+<td>%j</td>
+<td>day of year (001..366)</td>
+</tr>
+<tr>
+<td>%k</td>
+<td>hour ( 0..23)</td>
+</tr>
+<tr>
+<td>%l</td>
+<td>hour ( 1..12)</td>
+</tr>
+<tr>
+<td>%m</td>
+<td>month (01..12)</td>
+</tr>
+<tr>
+<td>%M</td>
+<td>minute (00..59)</td>
+</tr>
+<tr>
+<td>%n</td>
+<td>a newline</td>
+</tr>
+<tr>
+<td>%p</td>
+<td>locale’s equivalent of either AM or PM; blank if not known</td>
+</tr>
+<tr>
+<td>%P</td>
+<td>like %p, but lower case</td>
+</tr>
+<tr>
+<td>%r</td>
+<td>locale’s 12-hour clock time (e.g., 11:11:04 PM)</td>
+</tr>
+<tr>
+<td>%R</td>
+<td>24-hour hour and minute; same as %H:%M</td>
+</tr>
+<tr>
+<td>%s</td>
+<td>seconds since 1970-01-01 00:00:00 UTC</td>
+</tr>
+<tr>
+<td>%S</td>
+<td>second (00..60)</td>
+</tr>
+<tr>
+<td>%t</td>
+<td>a tab</td>
+</tr>
+<tr>
+<td>%T</td>
+<td>time; same as %H:%M:%S</td>
+</tr>
+<tr>
+<td>%u</td>
+<td>day of week (1..7); 1 is Monday</td>
+</tr>
+<tr>
+<td>%V</td>
+<td>ISO week number, with Monday as first day of week (01..53)</td>
+</tr>
+<tr>
+<td>%w</td>
+<td>day of week (0..6); 0 is Sunday</td>
+</tr>
+<tr>
+<td>%x</td>
+<td>locale’s date representation (e.g., 12/31/99)</td>
+</tr>
+<tr>
+<td>%X</td>
+<td>locale’s time representation (e.g., 23:13:48)</td>
+</tr>
+<tr>
+<td>%y</td>
+<td>last two digits of year (00..99)</td>
+</tr>
+<tr>
+<td>%Y</td>
+<td>year</td>
+</tr>
+<tr>
+<td>%z</td>
+<td>+hhmm numeric timezone (e.g., -0400)</td>
+</tr>
+<tr>
+<td>%:z</td>
+<td>+hh:mm numeric timezone (e.g., -04:00)</td>
+</tr>
+<tr>
+<td>%::z</td>
+<td>+hh:mm:ss numeric time zone (e.g., -04:00:00)</td>
+</tr>
+<tr>
+<td>%:::z</td>
+<td>numeric time zone with : to necessary precision (e.g., -04, +05:30)</td>
+</tr>
+<tr>
+<td>%Z</td>
+<td>alphabetic time zone abbreviation (e.g., EDT)</td>
+</tr>
+</tbody></table>
+<p>By default, numeric fields are padded with 0’s. The following optional flags may follow %:<br>Flag | Meaning<br>– | –<br>- (hyphen) | do not pad the field<br>_ (underscore) | pad with spaces<br>0 (zero) | pad with zeros<br>^ | use upper case if possible<br># | use opposite case if possible</p>
+<p>After any flags comes an optional field width, as a decimal number; then an optional modifier, which is either E (to use the locale’s alternate representations if available), or O (to use the locale’s alternate numeric symbols if available). </p>
+
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/linux/" rel="tag"># linux</a>
+            
+              <a href="/tags/clock-format/" rel="tag"># clock format</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/zh/article/huawei-dev-code/" rel="next" title="华为手机代码">
+                  <i class="fa fa-chevron-left"></i> 华为手机代码
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/avatar.jpg"
+      alt="Kan Thouen">
+  <p class="site-author-name" itemprop="name">Kan Thouen</p>
+  <div class="site-description" itemprop="description">部分文章内容不完善或格式乱，考完研之后再整理……</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">47</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        <span class="site-state-item-count">60</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        <span class="site-state-item-count">70</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/thouen" title="GitHub &rarr; https://github.com/thouen" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="mailto:thouen@163.com" title="E-Mail &rarr; mailto:thouen@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+    
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Kan Thouen</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a></div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+<script src="/js/utils.js?v=7.4.1"></script>
+<script src="/js/schemes/pisces.js?v=7.4.1"></script>
+
+<script src="/js/next-boot.js?v=7.4.1"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

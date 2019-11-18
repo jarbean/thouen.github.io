@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh,en,default">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.1">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.4.1" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.4.1">
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.4.1',
+    exturl: false,
+    sidebar: {"position":"right","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="转自开膛手约翰的初学者指南（第2部分） By pip 原文估计是用翻译软件翻译出来的，但我找不到这篇文章最初的出处。  在本文中，我们将使用John the Ripper破解某些文件格式（如zip，rar，pdf等）的密码哈希值。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="约翰开膛手教程">
+<meta property="og:url" content="https://thouen.github.io/zh/article/john-turtorial/index.html">
+<meta property="og:site_name" content="Thouen&#39;s 博客">
+<meta property="og:description" content="转自开膛手约翰的初学者指南（第2部分） By pip 原文估计是用翻译软件翻译出来的，但我找不到这篇文章最初的出处。  在本文中，我们将使用John the Ripper破解某些文件格式（如zip，rar，pdf等）的密码哈希值。">
+<meta property="og:locale" content="zh">
+<meta property="og:updated_time" content="2019-11-10T12:49:23.288Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="约翰开膛手教程">
+<meta name="twitter:description" content="转自开膛手约翰的初学者指南（第2部分） By pip 原文估计是用翻译软件翻译出来的，但我找不到这篇文章最初的出处。  在本文中，我们将使用John the Ripper破解某些文件格式（如zip，rar，pdf等）的密码哈希值。">
+  <link rel="canonical" href="https://thouen.github.io/zh/article/john-turtorial/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>约翰开膛手教程 | Thouen's 博客</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Thouen's 博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">哲学 | 科技 | 读书 | IT | 文史 | 社科 | 生活 | 休闲 | 猎奇 | 其他</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-links">
+      
+    
+
+    <a href="/links/" rel="section"><i class="fa fa-fw fa-link"></i>链接</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh">
+    <link itemprop="mainEntityOfPage" href="https://thouen.github.io/zh/article/john-turtorial/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kan Thouen">
+      <meta itemprop="description" content="部分文章内容不完善或格式乱，考完研之后再整理……">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Thouen's 博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">约翰开膛手教程
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-11-10 20:38:05 / 修改时间：20:49:23" itemprop="dateCreated datePublished" datetime="2019-11-10T20:38:05+08:00">2019-11-10</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <ul>
+<li>转自<a href="http://bbs.mayidui.net/t2289.html" target="_blank" rel="noopener">开膛手约翰的初学者指南（第2部分）</a> By <a href="http://bbs.mayidui.net/hacker-3129" target="_blank" rel="noopener">pip</a></li>
+<li>原文估计是用翻译软件翻译出来的，但我找不到这篇文章最初的出处。</li>
+</ul>
+<p>在本文中，我们将使用John the Ripper破解某些文件格式（如zip，rar，pdf等）的密码哈希值。</p>
+<a id="more"></a>
+
+<p>为了破解这些密码哈希，我们将使用一些内置的和一些其他实用程序从锁定文件中提取密码哈希。有些实用程序内置了john，可以使用以下命令找到它们。<br>以下演示其中一些实用程序。</p>
+<h1 id="破解SSH密码哈希"><a href="#破解SSH密码哈希" class="headerlink" title="破解SSH密码哈希"></a>破解SSH密码哈希</h1><p>John the Ripper可以破解在RSA加密中创建的SSH私钥。要测试私钥的破解，首先我们必须创建一组新的私钥。为此，我们将使用ssh附带的实用程序，称为“ssh-keygen”。</p>
+<p>打开后，它询问我们想要公共/私人rsa密钥对存储的位置？您可以使用任何位置，也可以将其保留为默认位置。</p>
+<p>之后它要求输入密码，再次输入密码后，我们成功生成了rsa私钥。（参见截图）</p>
+<p>当您尝试打开文件时，将出现以下提示。</p>
+<p>现在John无法直接破解这个密钥，首先我们必须改变它的格式，这可以使用名为“ssh2john”的john实用程序来完成。</p>
+<p>语法： ssh2john [key的位置]</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh2john /home/pavan/.ssh/id_rsa &gt; crack.txt</span><br><span class="line">ssh2john /home/pavan/.ssh/id_rsa &gt; crack.txt</span><br></pre></td></tr></table></figure>
+
+<p>您可以看到我们将密钥转换为可破解的哈希，然后将其输入到名为id_rsa.txt的文本文件中。</p>
+<p>现在让我们使用John the Ripper破解这个哈希值。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">john --wordlist=/usr/share/wordlists/rockyou.txt id_rsa.txt</span><br><span class="line">john --wordlist=/usr/share/wordlists/rockyou.txt id_rsa.txt</span><br></pre></td></tr></table></figure>
+
+<p>大！我们已成功破解用于创建私有ssh密钥的密码为“password123”</p>
+<h1 id="破解KeepPass2密码哈希"><a href="#破解KeepPass2密码哈希" class="headerlink" title="破解KeepPass2密码哈希"></a>破解KeepPass2密码哈希</h1><p>开膛手约翰可以破解KeepPass2密钥。要测试密钥的破解，首先我们必须创建一组新密钥。为此，我们将使用一个名为“kpcli”的实用程序。</p>
+<p>kpcli</p>
+<p>现在我们将使用命令“saveas”创建一个数据库文件，并将数据库文件命名为ignite.kdb并输入密码来保护它。</p>
+<p>当您尝试打开文件时，将出现以下提示。</p>
+<p>现在John无法直接破解此密钥，首先我们必须更改格式，这可以使用名为“keepass2john”的john实用程序来完成。</p>
+<p>语法： keepass2john [key的位置]</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">keepass2john ignite.kdb &gt; crack.txt</span><br><span class="line">keepass2john ignite.kdb &gt; crack.txt</span><br></pre></td></tr></table></figure>
+
+<p>现在让我们使用John the Ripper破解这个哈希值。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">john --wordlist=/usr/share/wordlists/rockyou.txt crack.txt</span><br><span class="line">john --wordlist=/usr/share/wordlists/rockyou.txt crack.txt</span><br></pre></td></tr></table></figure>
+
+<p>大！我们已成功破解用于创建密钥的密码“12345678”</p>
+<h1 id="破解RAR密码哈希"><a href="#破解RAR密码哈希" class="headerlink" title="破解RAR密码哈希"></a>破解RAR密码哈希</h1><p>现在我们将破解一些压缩文件，为此我们必须创建一个要压缩的文件，所以让我们使用echo命令来执行此操作，如给定的屏幕截图所示。</p>
+<p>您可以看到我们创建了一个file.txt，我们将用它来创建压缩文件。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> hackingarticles.in &gt; file.txt</span><br><span class="line"><span class="built_in">echo</span> hackingarticles.in &gt; file.txt</span><br></pre></td></tr></table></figure>
+
+<p>John the Ripper可以破解RAR文件密码。要测试密码的破解，首先让我们创建一个压缩的加密rar文件。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rar a -hpabc123 file.rar file.txt</span><br><span class="line">rar a -hpabc123 file.rar file.txt</span><br></pre></td></tr></table></figure>
+
+<p>a =添加要归档的文件<br>hp [密码] =加密文件数据和标头<br>这将压缩和加密我们的file.txt到file.rar。因此，当您尝试打开文件时，您将看到以下提示。<br>现在John无法直接破解这个密钥，首先我们必须改变它的格式，这可以使用名为“rar2john”的john实用程序来完成。<br>语法： rar2john [key的位置]</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rar2john file.rar &gt; crack.txt</span><br><span class="line">rar2john file.rar &gt; crack.txt</span><br></pre></td></tr></table></figure>
+
+<p>现在让我们使用John the Ripper破解这个哈希值。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">john --wordlist=/usr/share/wordlists/rockyou.txt crack.txt</span><br><span class="line">john --wordlist=/usr/share/wordlists/rockyou.txt crack.txt</span><br></pre></td></tr></table></figure>
+
+<p>大！我们已成功破解用于创建密钥为“abc123”的密码<br>破解ZIP密码哈希<br>John the Ripper可以破解ZIP文件密码。要测试密码破解，首先让我们创建一个压缩的加密zip文件。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zip -er file.zip file.txt</span><br></pre></td></tr></table></figure>
+
+<p>e =加密<br>r =递归到目录中<br>这将压缩和加密我们的file.txt到file.zip。因此，当您尝试打开文件时，您将看到以下提示。<br>现在John无法直接破解这个密钥，首先我们必须改变它的格式，这可以使用名为“zip2john”的john实用程序来完成。<br>语法： zip2john [key的位置]</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">zip2john file.zip &gt; crack.txt</span><br><span class="line">zip2john file.zip &gt; crack.txt</span><br></pre></td></tr></table></figure>
+
+<p>现在让我们使用John the Ripper破解这个哈希值。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">john --wordlist=/usr/share/wordlists/rockyou.txt crack.txt</span><br><span class="line">john --wordlist=/usr/share/wordlists/rockyou.txt crack.txt</span><br></pre></td></tr></table></figure>
+
+<p>大！我们已成功破解用于创建密钥为“654321”的密码</p>
+<h1 id="破解7-Zip密码哈希"><a href="#破解7-Zip密码哈希" class="headerlink" title="破解7-Zip密码哈希"></a>破解7-Zip密码哈希</h1><p>开膛手约翰可以破解7-Zip文件密码。要测试密码的破解，首先让我们创建一个压缩的加密7z文件。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">7z a -mhe file.7z file.txt -p“password”</span><br></pre></td></tr></table></figure>
+
+<p>a =添加要归档的文件<br>m =设置压缩方法<br>h =计算文件的哈希值<br>e =加密文件<br>p =设置密码<br>这将压缩和加密我们的file.txt到file.7z。因此，当您尝试打开文件时，您将看到以下提示。<br>现在John无法直接破解这个密钥，首先我们必须改变它的格式，这可以使用名为“7z2john”的john实用程序来完成。这不是内置实用程序，可以从这里下载。<br>语法： zip2john [key的位置]</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python 7z2john.py file.7z &gt; crack.txt</span><br><span class="line">python 7z2john.py file.7z &gt; crack.txt</span><br></pre></td></tr></table></figure>
+
+<p>现在让我们使用John the Ripper破解这个哈希值。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">john –wordlist=/usr/share/wordlists/rockyou.txt crack.txt</span><br><span class="line">john –wordlist=/usr/share/wordlists/rockyou.txt crack.txt</span><br></pre></td></tr></table></figure>
+
+<p>大！我们已成功破解用于创建密钥的密码“密码”</p>
+<h1 id="破解PDF密码哈希"><a href="#破解PDF密码哈希" class="headerlink" title="破解PDF密码哈希"></a>破解PDF密码哈希</h1><p>开膛手约翰可以破解PDF文件密码。您可以使用本网站在线加密您的pdf 。这会将我们的pdf压缩并加密成受密码保护的文件.pdf。因此，当您尝试打开文件时，您将看到以下提示。<br>现在约翰不能直接破解这个密钥，首先我们必须改变它的格式，这可以使用名为“pdf2john”的john实用程序来完成。这不是内置实用程序，可以从这里下载。<br>语法： pdf2john [key的位置]</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python pdf2john.py file.pdf &gt; crack.txt</span><br><span class="line">python pdf2john.py file.pdf &gt; crack.txt</span><br></pre></td></tr></table></figure>
+
+<p>现在让我们使用John the Ripper破解这个哈希值。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">john –w=/usr/share/wordlists/rockyou.txt crack.txt</span><br><span class="line">john –w=/usr/share/wordlists/rockyou.txt crack.txt</span><br></pre></td></tr></table></figure>
+
+<p>大！我们已成功破解用于创建密钥“密码123”的密码。</p>
+<h1 id="破解PuTTY密码哈希"><a href="#破解PuTTY密码哈希" class="headerlink" title="破解PuTTY密码哈希"></a>破解PuTTY密码哈希</h1><p>John the Ripper可以破解在RSA加密中创建的PuTTY私钥。要测试私钥的破解，首先我们必须创建一组新的私钥。为此，我们将使用PuTTY附带的实用程序，称为“PuTTY Key Generator”。<br>单击“生成”。生成密钥后，我们会得到一个窗口，我们将在其中输入密钥密码，如屏幕截图所示。<br>输入密码后，单击保存私钥以获取.ppk文件形式的私钥<br>生成后将此.ppk文件传输到Kali Linux。<br>现在John无法直接破解这个密钥，首先我们必须改变它的格式，这可以使用名为“putty2john”的john实用程序来完成。<br>语法： putty2john [key的位置]</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">putty2john file.ppk &gt; crack.txt</span><br><span class="line">putty2john file.ppk &gt; crack.txt</span><br></pre></td></tr></table></figure>
+
+<p>您可以看到我们将密钥转换为可破解的哈希，然后将其输入到名为crack.txt的文本文件中。<br>现在让我们使用John the Ripper破解这个哈希值。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">john –w=/usr/share/wordlists/rockyou.txt id_rsa.txt</span><br><span class="line">john –w=/usr/share/wordlists/rockyou.txt id_rsa.txt</span><br></pre></td></tr></table></figure>
+
+<p>大！我们已成功破解用于创建私有PuTTY密钥的密码为“password”。<br>破解“密码安全”密码哈希<br>开膛手约翰可以破解密码安全软件的密钥。要测试密钥的破解，首先我们必须创建一组新密钥。为此，我们将在Windows 10系统上安装密码安全软件。<br>要获取新密钥，请单击“新建”<br>提示中，选中显示组合框。之后输入要用于生成密钥的密码短语。这将生成.psafe3文件。<br>生成后将.safe3文件传输到Kali Linux。<br>现在John无法直接破解这个密钥，首先我们必须改变它的格式，这可以使用名为“pwsafe2john”的john实用程序来完成。<br>语法： pwsafe2john [key的位置]</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pwsafe2john ignite.psafe3 &gt; crack.txt</span><br><span class="line">pwsafe2john ignite.psafe3 &gt; crack.txt</span><br></pre></td></tr></table></figure>
+
+<p>您可以看到我们将密钥转换为可破解的哈希，然后将其输入到名为crack.txt的文本文件中。<br>现在让我们使用John the Ripper破解这个哈希值。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">john –w=/usr/share/wordlists/rockyou.txt crack.txt</span><br><span class="line">john –w=/usr/share/wordlists/rockyou.txt crack.txt</span><br></pre></td></tr></table></figure>
+
+<p>大！我们已成功破解用于创建私有pwsafe密钥的密码为“password123”</p>
+
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/zh/article/complete-collection-of-symbols/" rel="next" title="符号大全">
+                  <i class="fa fa-chevron-left"></i> 符号大全
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/zh/article/huawei-dev-code/" rel="prev" title="华为手机代码">
+                  华为手机代码 <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#破解SSH密码哈希"><span class="nav-number">1.</span> <span class="nav-text">破解SSH密码哈希</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#破解KeepPass2密码哈希"><span class="nav-number">2.</span> <span class="nav-text">破解KeepPass2密码哈希</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#破解RAR密码哈希"><span class="nav-number">3.</span> <span class="nav-text">破解RAR密码哈希</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#破解7-Zip密码哈希"><span class="nav-number">4.</span> <span class="nav-text">破解7-Zip密码哈希</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#破解PDF密码哈希"><span class="nav-number">5.</span> <span class="nav-text">破解PDF密码哈希</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#破解PuTTY密码哈希"><span class="nav-number">6.</span> <span class="nav-text">破解PuTTY密码哈希</span></a></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/avatar.jpg"
+      alt="Kan Thouen">
+  <p class="site-author-name" itemprop="name">Kan Thouen</p>
+  <div class="site-description" itemprop="description">部分文章内容不完善或格式乱，考完研之后再整理……</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">47</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        <span class="site-state-item-count">60</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        <span class="site-state-item-count">70</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/thouen" title="GitHub &rarr; https://github.com/thouen" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="mailto:thouen@163.com" title="E-Mail &rarr; mailto:thouen@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+    
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Kan Thouen</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a></div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+<script src="/js/utils.js?v=7.4.1"></script>
+<script src="/js/schemes/pisces.js?v=7.4.1"></script>
+
+<script src="/js/next-boot.js?v=7.4.1"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
