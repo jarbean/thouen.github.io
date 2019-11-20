@@ -4,7 +4,7 @@
 
 
 
-<html lang="zh,en,default">
+<html lang="en,zh,default">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -47,9 +47,9 @@
     path: '',
     motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     translation: {
-      copy_button: '复制',
-      copy_success: '复制成功',
-      copy_failure: '复制失败'
+      copy_button: 'Copy',
+      copy_success: 'Copied',
+      copy_failure: 'Copy failed'
     },
     sidebarPadding: 40
   };
@@ -60,7 +60,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="遗失的著作">
 <meta property="og:url" content="https://thouen.github.io/zh/article/lost-books/index.html">
-<meta property="og:site_name" content="Thouen&#39;s 博客">
+<meta property="og:site_name" content="Thouen&#39;s Blog">
 <meta property="og:description" content="原创文章，转载请注明出处。   整理历年来明确遗失的经典著作及遗失原因。持续更新中……">
 <meta property="og:locale" content="zh">
 <meta property="og:image" content="https://pic2.zhimg.com/602f84df4185167ec1b694b68d1ba61e_r.jpg">
@@ -101,7 +101,7 @@
   };
 </script>
 
-  <title>遗失的著作 | Thouen's 博客</title>
+  <title>遗失的著作 | Thouen's Blog</title>
   
 
 
@@ -148,7 +148,7 @@
     <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Thouen's 博客</span>
+        <span class="site-title">Thouen's Blog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -157,7 +157,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
+    <div class="toggle" aria-label="Toggle navigation bar">
       <span class="toggle-line toggle-line-first"></span>
       <span class="toggle-line toggle-line-middle"></span>
       <span class="toggle-line toggle-line-last"></span>
@@ -177,7 +177,7 @@
       
     
 
-    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
 
   </li>
       
@@ -188,7 +188,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
 
   </li>
       
@@ -199,7 +199,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
 
   </li>
       
@@ -210,7 +210,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
 
   </li>
       
@@ -221,7 +221,18 @@
       
     
 
-    <a href="/links/" rel="section"><i class="fa fa-fw fa-link"></i>链接</a>
+    <a href="/links/" rel="section"><i class="fa fa-fw fa-link"></i>Links</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-motto">
+      
+    
+
+    <a href="/motto/" rel="section"><i class="fa fa-fw fa-book"></i>Motto</a>
 
   </li>
   </ul>
@@ -259,7 +270,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Thouen's 博客">
+      <meta itemprop="name" content="Thouen's Blog">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">遗失的著作
@@ -688,8 +699,8 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">47</span>
-          <span class="site-state-item-name">日志</span>
+          <span class="site-state-item-count">48</span>
+          <span class="site-state-item-name">posts</span>
         </a>
       </div>
     
@@ -702,7 +713,7 @@
           
         
         <span class="site-state-item-count">60</span>
-        <span class="site-state-item-name">分类</span>
+        <span class="site-state-item-name">categories</span>
         </a>
       </div>
     
@@ -714,8 +725,8 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">70</span>
-        <span class="site-state-item-name">标签</span>
+        <span class="site-state-item-count">71</span>
+        <span class="site-state-item-name">tags</span>
         </a>
       </div>
     
@@ -766,9 +777,9 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Kan Thouen</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
   <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a></div>
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a></div>
 
         
 
